@@ -12,16 +12,216 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label :parent %><br>
+    <%= f.number_field :parent %>
   </div>
   <div class="field">
-    <%= f.label :date %><br>
-    <%= f.text_field :date %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :open %><br>
-    <%= f.text_field :open %>
+    <%= f.label :created %><br>
+    <%= f.datetime_select :created %>
+  </div>
+  <div class="field">
+    <%= f.label :start %><br>
+    <%= f.datetime_select :start %>
+  </div>
+  <div class="field">
+    <%= f.label :end %><br>
+    <%= f.datetime_select :end %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :owner %><br>
+    <%= f.text_field :owner %>
+  </div>
+  <div class="field">
+    <%= f.label :URL %><br>
+    <%= f.text_field :URL %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :metaname %><br>
+    <%= f.text_field :metaname %>
+  </div>
+  <div class="field">
+    <%= f.label :metakeywords %><br>
+    <%= f.text_field :metakeywords %>
+  </div>
+  <div class="field">
+    <%= f.label :metadescription %><br>
+    <%= f.text_field :metadescription %>
+  </div>
+  <div class="field">
+    <%= f.label :recurring %><br>
+    <%= f.check_box :recurring %>
+  </div>
+  <div class="field">
+    <%= f.label :registration %><br>
+    <%= f.check_box :registration %>
+  </div>
+  <div class="field">
+    <%= f.label :comments %><br>
+    <%= f.check_box :comments %>
+  </div>
+  <div class="field">
+    <%= f.label :icon %><br>
+    <%= f.text_field :icon %>
+  </div>
+  <div class="field">
+    <%= f.label :repeat_interval %><br>
+    <%= f.check_box :repeat_interval %>
+  </div>
+  <div class="field">
+    <%= f.label :repeat_type %><br>
+    <%= f.number_field :repeat_type %>
+  </div>
+  <div class="field">
+    <%= f.label :repeat_end %><br>
+    <%= f.datetime_select :repeat_end %>
+  </div>
+  <div class="field">
+    <%= f.label :start_registration %><br>
+    <%= f.datetime_select :start_registration %>
+  </div>
+  <div class="field">
+    <%= f.label :end_registration %><br>
+    <%= f.datetime_select :end_registration %>
+  </div>
+  <div class="field">
+    <%= f.label :unsubscribe_date %><br>
+    <%= f.datetime_select :unsubscribe_date %>
+  </div>
+  <div class="field">
+    <%= f.label :payments %><br>
+    <%= f.check_box :payments %>
+  </div>
+  <div class="field">
+    <%= f.label :max_tickets %><br>
+    <%= f.number_field :max_tickets %>
+  </div>
+  <div class="field">
+    <%= f.label :max_tickets_amount %><br>
+    <%= f.number_field :max_tickets_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :notify_me %><br>
+    <%= f.check_box :notify_me %>
+  </div>
+  <div class="field">
+    <%= f.label :notify_me_unsubscribe %><br>
+    <%= f.check_box :notify_me_unsubscribe %>
+  </div>
+  <div class="field">
+    <%= f.label :overbooking %><br>
+    <%= f.check_box :overbooking %>
+  </div>
+  <div class="field">
+    <%= f.label :overbooking_amount %><br>
+    <%= f.number_field :overbooking_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :show_registered %><br>
+    <%= f.check_box :show_registered %>
+  </div>
+  <div class="field">
+    <%= f.label :automatically_approve %><br>
+    <%= f.check_box :automatically_approve %>
+  </div>
+  <div class="field">
+    <%= f.label :paypal_email %><br>
+    <%= f.text_field :paypal_email %>
+  </div>
+  <div class="field">
+    <%= f.label :discounts %><br>
+    <%= f.check_box :discounts %>
+  </div>
+  <div class="field">
+    <%= f.label :form %><br>
+    <%= f.check_box :form %>
+  </div>
+  <div class="field">
+    <%= f.label :early_fee %><br>
+    <%= f.check_box :early_fee %>
+  </div>
+  <div class="field">
+    <%= f.label :early_fee_type %><br>
+    <%= f.number_field :early_fee_type %>
+  </div>
+  <div class="field">
+    <%= f.label :early_fee_end %><br>
+    <%= f.datetime_select :early_fee_end %>
+  </div>
+  <div class="field">
+    <%= f.label :late_fee %><br>
+    <%= f.datetime_select :late_fee %>
+  </div>
+  <div class="field">
+    <%= f.label :late_fee_type %><br>
+    <%= f.number_field :late_fee_type %>
+  </div>
+  <div class="field">
+    <%= f.label :late_fee_start %><br>
+    <%= f.datetime_select :late_fee_start %>
+  </div>
+  <div class="field">
+    <%= f.label :options %><br>
+    <%= f.text_field :options %>
+  </div>
+  <div class="field">
+    <%= f.label :archived %><br>
+    <%= f.check_box :archived %>
+  </div>
+  <div class="field">
+    <%= f.label :published %><br>
+    <%= f.check_box :published %>
+  </div>
+  <div class="field">
+    <%= f.label :completed %><br>
+    <%= f.check_box :completed %>
+  </div>
+  <div class="field">
+    <%= f.label :approved %><br>
+    <%= f.check_box :approved %>
+  </div>
+  <div class="field">
+    <%= f.label :ticket_pdf %><br>
+    <%= f.check_box :ticket_pdf %>
+  </div>
+  <div class="field">
+    <%= f.label :ticket_pdf_layout %><br>
+    <%= f.text_field :ticket_pdf_layout %>
+  </div>
+  <div class="field">
+    <%= f.label :properties %><br>
+    <%= f.text_field :properties %>
+  </div>
+  <div class="field">
+    <%= f.label :gallery_tags %><br>
+    <%= f.text_field :gallery_tags %>
+  </div>
+  <div class="field">
+    <%= f.label :allday %><br>
+    <%= f.check_box :allday %>
+  </div>
+  <div class="field">
+    <%= f.label :featured %><br>
+    <%= f.check_box :featured %>
   </div>
   <div class="actions">
     <%= f.submit %>
