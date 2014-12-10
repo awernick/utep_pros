@@ -1,11 +1,17 @@
 # Define roles, user and IP address of deployment server
 # role :name, %{[user]@[IP adde.]}
+# role :app, %w{deployer@workshops.utep.edu}
+# role :web, %w{deployer@workshops.utep.edu}
+# role :db,  %w{deployer@workshops.utep.edu}
+
 role :app, %w{deployer@workshops.utep.edu}
 role :web, %w{deployer@workshops.utep.edu}
 role :db,  %w{deployer@workshops.utep.edu}
 
 # Define server(s)
 server 'workshops.utep.edu', user: 'deployer', roles: %w{web}
+
+set :stage, :production
 
 # SSH Options
 # See the example commented out section in the file
