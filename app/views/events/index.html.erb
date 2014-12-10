@@ -3,11 +3,16 @@
   <hr>
   <div class="event-elements-wrapper">
   <% @events.each do |event| %>
-    <div class="event-element">
+    <div class="event-element"><%= link_to event do %>
       <div class="event-element-title"><%= event.name %></div>
-      <div class="event-element-date">On <%= event.start %></div>
+      <div class="event-element-date">On <%= event.parse_date(event.start) %></div>
       <div class="event-element-location">Location: <%= event.location %></div>
-      <div class="event-element-categories"><span class="label label-default event-tag-label"><a href="#">Workshops</a></span> <span class="label label-default event-tag-label"><a href="#">Joomla!</a></span> <span class="label label-default event-tag-label"><a href="#">Drupal</a></span></div>
+      <div class="event-element-categories">
+        <span class="label label-default event-tag-label">Workshops</span>
+        <span class="label label-default event-tag-label">Joomla!</span>
+        <span class="label label-default event-tag-label">Drupal</span>
+      </div>
+    <% end %>
     </div>
     <% end %>
   </div>
