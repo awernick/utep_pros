@@ -2,13 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /*Event Elements Styling*/
-.event-element {
+.event-element a {
 	padding:20px;
 	background-color: #ffffff;
 	color: #333;
 	line-height: 25px;
 	margin: 5px 0;
+	display: block;
 }
+.event-element a:hover {
+	background-color: #00ABC4;
+	text-decoration: none;
+} 
 .event-element-title {
 	font-weight: bold;
 	font-size: 1.7em;
