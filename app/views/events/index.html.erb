@@ -4,9 +4,9 @@
   <div class="event-elements-wrapper">
   <% @events.each do |event| %>
     <div class="event-element">
-      <div class="event-element-title"><%= event.title %></div>
-      <div class="event-element-date">On <%= event.date %></div>
-      <div class="event-element-location">Location: <%= event.open %></div>
+      <div class="event-element-title"><%= event.name %></div>
+      <div class="event-element-date">On <%= event.start %></div>
+      <div class="event-element-location">Location: <%= event.location %></div>
       <div class="event-element-categories"><span class="label label-default event-tag-label"><a href="#">Workshops</a></span> <span class="label label-default event-tag-label"><a href="#">Joomla!</a></span> <span class="label label-default event-tag-label"><a href="#">Drupal</a></span></div>
     </div>
     <% end %>
@@ -40,3 +40,72 @@
 
 <%= link_to 'New Event', new_event_path %>
 </div>
+
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.parent %></td>
+        <td><%= event.name %></td>
+        <td><%= event.created %></td>
+        <td><%= event.start %></td>
+        <td><%= event.end %></td>
+        <td><%= event.description %></td>
+        <td><%= event.location %></td>
+        <td><%= event.owner %></td>
+        <td><%= event.URL %></td>
+        <td><%= event.email %></td>
+        <td><%= event.phone %></td>
+        <td><%= event.metaname %></td>
+        <td><%= event.metakeywords %></td>
+        <td><%= event.metadescription %></td>
+        <td><%= event.recurring %></td>
+        <td><%= event.registration %></td>
+        <td><%= event.comments %></td>
+        <td><%= event.icon %></td>
+        <td><%= event.repeat_interval %></td>
+        <td><%= event.repeat_type %></td>
+        <td><%= event.repeat_end %></td>
+        <td><%= event.start_registration %></td>
+        <td><%= event.end_registration %></td>
+        <td><%= event.unsubscribe_date %></td>
+        <td><%= event.payments %></td>
+        <td><%= event.max_tickets %></td>
+        <td><%= event.max_tickets_amount %></td>
+        <td><%= event.notify_me %></td>
+        <td><%= event.notify_me_unsubscribe %></td>
+        <td><%= event.overbooking %></td>
+        <td><%= event.overbooking_amount %></td>
+        <td><%= event.show_registered %></td>
+        <td><%= event.automatically_approve %></td>
+        <td><%= event.paypal_email %></td>
+        <td><%= event.discounts %></td>
+        <td><%= event.form %></td>
+        <td><%= event.early_fee %></td>
+        <td><%= event.early_fee_type %></td>
+        <td><%= event.early_fee_end %></td>
+        <td><%= event.late_fee %></td>
+        <td><%= event.late_fee_type %></td>
+        <td><%= event.late_fee_start %></td>
+        <td><%= event.options %></td>
+        <td><%= event.archived %></td>
+        <td><%= event.published %></td>
+        <td><%= event.completed %></td>
+        <td><%= event.approved %></td>
+        <td><%= event.ticket_pdf %></td>
+        <td><%= event.ticket_pdf_layout %></td>
+        <td><%= event.properties %></td>
+        <td><%= event.gallery_tags %></td>
+        <td><%= event.allday %></td>
+        <td><%= event.featured %></td>
+        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event', new_event_path %>
