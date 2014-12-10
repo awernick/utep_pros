@@ -69,6 +69,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :date, :open)
+      params.require(:event).permit(:parent, :name, :created, :start, :end, :description, :location, :owner, :URL, :email, :phone, :metaname, :metakeywords, :metadescription, :recurring, :registration, :comments, :icon, :repeat_interval, :repeat_type, :repeat_end, :start_registration, :end_registration, :unsubscribe_date, :payments, :max_tickets, :max_tickets_amount, :notify_me, :notify_me_unsubscribe, :overbooking, :overbooking_amount, :show_registered, :automatically_approve, :paypal_email, :discounts, :form, :early_fee, :early_fee_type, :early_fee_end, :late_fee, :late_fee_type, :late_fee_start, :options, :archived, :published, :completed, :approved, :ticket_pdf, :ticket_pdf_layout, :properties, :gallery_tags, :allday, :featured)
     end
 end

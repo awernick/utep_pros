@@ -1,11 +1,111 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  date: MyString
-  open: MyString
+  parent: 1
+  name: MyString
+  created: 2014-12-10 10:54:09
+  start: 2014-12-10 10:54:09
+  end: 2014-12-10 10:54:09
+  description: MyString
+  location: MyString
+  owner: MyString
+  URL: MyString
+  email: MyString
+  phone: MyString
+  metaname: MyString
+  metakeywords: MyString
+  metadescription: MyString
+  recurring: false
+  registration: false
+  comments: false
+  icon: MyString
+  repeat_interval: false
+  repeat_type: 1
+  repeat_end: 2014-12-10 10:54:09
+  start_registration: 2014-12-10 10:54:09
+  end_registration: 2014-12-10 10:54:09
+  unsubscribe_date: 2014-12-10 10:54:09
+  payments: false
+  max_tickets: 1
+  max_tickets_amount: 1
+  notify_me: false
+  notify_me_unsubscribe: false
+  overbooking: false
+  overbooking_amount: 1
+  show_registered: false
+  automatically_approve: false
+  paypal_email: MyString
+  discounts: false
+  form: false
+  early_fee: false
+  early_fee_type: 1
+  early_fee_end: 2014-12-10 10:54:09
+  late_fee: 2014-12-10 10:54:09
+  late_fee_type: 1
+  late_fee_start: 2014-12-10 10:54:09
+  options: MyString
+  archived: false
+  published: false
+  completed: false
+  approved: false
+  ticket_pdf: false
+  ticket_pdf_layout: MyString
+  properties: MyString
+  gallery_tags: MyString
+  allday: false
+  featured: false
 
 two:
-  title: MyString
-  date: MyString
-  open: MyString
+  parent: 1
+  name: MyString
+  created: 2014-12-10 10:54:09
+  start: 2014-12-10 10:54:09
+  end: 2014-12-10 10:54:09
+  description: MyString
+  location: MyString
+  owner: MyString
+  URL: MyString
+  email: MyString
+  phone: MyString
+  metaname: MyString
+  metakeywords: MyString
+  metadescription: MyString
+  recurring: false
+  registration: false
+  comments: false
+  icon: MyString
+  repeat_interval: false
+  repeat_type: 1
+  repeat_end: 2014-12-10 10:54:09
+  start_registration: 2014-12-10 10:54:09
+  end_registration: 2014-12-10 10:54:09
+  unsubscribe_date: 2014-12-10 10:54:09
+  payments: false
+  max_tickets: 1
+  max_tickets_amount: 1
+  notify_me: false
+  notify_me_unsubscribe: false
+  overbooking: false
+  overbooking_amount: 1
+  show_registered: false
+  automatically_approve: false
+  paypal_email: MyString
+  discounts: false
+  form: false
+  early_fee: false
+  early_fee_type: 1
+  early_fee_end: 2014-12-10 10:54:09
+  late_fee: 2014-12-10 10:54:09
+  late_fee_type: 1
+  late_fee_start: 2014-12-10 10:54:09
+  options: MyString
+  archived: false
+  published: false
+  completed: false
+  approved: false
+  ticket_pdf: false
+  ticket_pdf_layout: MyString
+  properties: MyString
+  gallery_tags: MyString
+  allday: false
+  featured: false
