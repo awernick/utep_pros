@@ -1,3 +1,34 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*Event Elements Styling*/
+.event-element {
+	padding:20px;
+	background-color: #ffffff;
+	color: #333;
+	line-height: 25px;
+	margin: 5px 0;
+}
+.event-element-title {
+	font-weight: bold;
+	font-size: 1.7em;
+}
+.event-element-date {
+	font-size: 1.2em;
+}
+.event-element-location {
+	font-size: 1.2em;
+}
+.event-element-categories {
+	font-size: 1.2em;
+}
+.event-tag-label a {
+	color: #ffffff !important;
+	text-decoration: none !important;
+	background-color:transparent !important;
+}
+.event-tag-label a:hover {
+	color: #ffffff !important;
+	text-decoration: underline !important;
+}
+/*----------------------*/
