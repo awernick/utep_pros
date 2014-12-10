@@ -1,0 +1,42 @@
+<div class="container body-content-wrapper">
+  <h1>All events</h1>
+  <hr>
+  <div class="event-elements-wrapper">
+  <% @events.each do |event| %>
+    <div class="event-element">
+      <div class="event-element-title"><%= event.title %></div>
+      <div class="event-element-date">On <%= event.date %></div>
+      <div class="event-element-location">Location: <%= event.open %></div>
+      <div class="event-element-categories"><span class="label label-default event-tag-label"><a href="#">Workshops</a></span> <span class="label label-default event-tag-label"><a href="#">Joomla!</a></span> <span class="label label-default event-tag-label"><a href="#">Drupal</a></span></div>
+    </div>
+    <% end %>
+  </div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Open</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event', new_event_path %>
+</div>

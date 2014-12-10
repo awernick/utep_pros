@@ -1,0 +1,51 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+
+  .navbar {
+  	border-radius: 0;
+  	min-height: 80px;
+  }
+  .navbar-default {
+  	background: #333;
+  	border-color: transparent;
+  	box-shadow: 1px 2px 3px #999;
+  }
+  .navbar-toggle {
+  	margin-top: 20px;
+  	margin-bottom: 20px;
+  }
+
+  /*Modify the way the nav pills look*/
+.nav>li>a:hover, .nav>li>a:focus {
+	text-decoration: none;
+	background-color: #00ABC4;
+}
+.nav-pills>li>a {
+	border-radius: 0;
+	color: #dddddd;
+	font-weight: bold;
+}
+.nav-pills>li {
+	width: 100%;
+	line-height: 20px;
+}
+.navbar-collapse {
+	padding-left: 0;
+	padding-right: 0;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+border-color: #333;
+}
+.nav-pills>li+li {
+	margin-left: 0px;
+}
+  /*---------------------------------*/
+.nav>li>a {
+	padding: 10px 0;
+	padding-left: 16px;
+}

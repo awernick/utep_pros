@@ -1,0 +1,54 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-kit-rails/open-sans
+ */
+
+ /*Main Header Styling*/
+ body {
+ 	font-family: "Open Sans", Arial, sans-serif;
+ }
+ .custom-container-header {
+ 	padding: 0;
+ }
+ .header-wrapper  {
+ 	background-color: #333;
+ 	padding:15px;
+ }
+ .page-title {
+ 	font-size: 1.5em;
+ 	font-variant: uppercase;
+ 	color: #ddd;
+ 	padding-bottom: 10px;
+ 	padding-left: 15px;
+ }
+ .custom-menu-wrapper {
+ 	margin-top: 20px;
+ 	text-transform: capitalize;
+ }
+ .navbar-title-and-buttons {
+ 	padding: 5px 0;
+ 	margin-right: 5px;
+ }
+ .nav-pills>li {
+	float: left;
+}
+ /*-------------------*/
+
+ /*Content Page Wrapper*/
+ .body-content-wrapper {
+ 	background: #F2F2F2;
+ 	margin-top: -17px;
+ }
+ /*--------------------*/
