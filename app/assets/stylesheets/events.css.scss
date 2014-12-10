@@ -37,3 +37,37 @@
 	text-decoration: underline !important;
 }
 /*----------------------*/
+
+/* Detail View Styling */
+.back-button-component {
+margin: 0 0 30px 0;
+}
+.back-button-component a {
+	background: #00ABC4;
+	padding: 10px 20px;
+	text-align: center;
+	color: #ffffff;
+}
+.back-button-component a:hover {
+	text-decoration: none;
+}
+.event-detail-view-wrapper {
+	background: #F2F2F2;
+	margin-top: -20px;
+}
+.event-detail-view-title {
+	color: #7A7A7A;
+	margin: 20px 0;
+	font-size: 32px;
+	line-height: 1.2em;
+	font-weight: lighter;
+}
+.event-detail-view-date {
+	font-size: 18px;
+	font-weight: normal;
+}
+.event-detail-view-location {
+	font-size: 14px;
+
+}
+/*---------------------*/

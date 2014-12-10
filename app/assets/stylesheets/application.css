@@ -18,6 +18,7 @@
  /*Main Header Styling*/
  body {
  	font-family: "Open Sans", Arial, sans-serif;
+ 	background: #F2F2F2;
  }
  .custom-container-header {
  	padding: 0;

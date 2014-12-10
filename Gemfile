@@ -40,8 +40,8 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 # Twitter Bootstrap
-gem "twitter-bootstrap-rails"
-
+#gem "twitter-bootstrap-rails"
+gem "bootstrap-sass"
 #Added a font kit.
 gem 'font-kit-rails'
 

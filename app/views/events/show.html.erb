@@ -1,4 +1,14 @@
-<p id="notice"><%= notice %></p>
+<div class="back-button-component"><%= link_to 'Back', events_path %></div>
+<div class="container event-detail-view-wrapper">
+    <div class="event-detail-view-title"><%= @event.name %>.</div>
+    <div class="event-detail-view-date">Date: <%= @event.parse_date(@event.start) %></div>
+    <div class="event-detail-view-location">At: <%= @event.location %>.</div>
+</div>
+
+
+
+
+<!-- <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Parent:</strong>
@@ -263,7 +273,7 @@
 <p>
   <strong>Featured:</strong>
   <%= @event.featured %>
-</p>
+</p> -->
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
