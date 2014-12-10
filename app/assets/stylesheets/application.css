@@ -16,10 +16,15 @@
  */
 
  /*Main Header Styling*/
+ img {
+ 	max-width: 100%;
+	height: auto;
+ }
  body {
  	font-family: "Open Sans", Arial, sans-serif;
  	background: #F2F2F2;
  }
+
  .custom-container-header {
  	padding: 0;
  }
