@@ -27,6 +27,8 @@ gem 'spring',        group: :development
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'mysql2'
+
+gem 'sqlite3'
 # Use unicorn as the app server
 # gem 'unicorn'
 
@@ -51,5 +53,4 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-passenger'
   gem 'web-console'
-  gem 'sqlite3'
 end
