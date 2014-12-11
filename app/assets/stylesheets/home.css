@@ -2,3 +2,29 @@
 	margin-top: -20px;
 	padding: 0 !important;
 }
+.home-body-wrapper {
+	padding-top: 20px;
+}
+.home-welcome-title {
+	font-size: 30px;
+	font-weight: lighter;
+	padding: 20px 0;
+}
+.home-welcome-text {
+}
+.home-buttons {
+	margin-top: 50px;
+}
+.home-button-component {
+	float: left;
+}
+.home-button-component a {
+	background: #00ABC4;
+	padding: 10px 20px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 16px;
+}
+.home-button-component a {
+	text-decoration: none;
+}

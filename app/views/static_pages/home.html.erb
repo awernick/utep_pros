@@ -1,4 +1,23 @@
 <div class="slideshow-wrapper container" id="homePageSlideShow">
-	<%= image_tag "header.png" %>
+	<img alt="Header" src="/assets/header.png">
 </div>
-<div class="container">Hello</div>
+
+<div class="container home-body-wrapper">
+	
+<div class="home-welcome-title">Welcome to UTEP Pros!</div>
+	<div class="home-welcome-text">
+		<p>As a part of UTEP’s commitment to professional development, Academic Technologies (AT) has provided a number of opportunities to participate in workshops and trainings geared specifically to meet the needs of faculty, staff, students at UTEP.</p>
+
+		<p>This website serves as a centralized location to view and register for workshops and trainings that are being offered at UTEP through Academic Technologies and/or partnering organizations on campus.</p>
+
+		<p>In addition to the offerings found on UTEP Pros, The Office of Human Resources Talent Development also provides a wide variety of free, onsite training for all faculty, staff and student employees.  We encourage you to visit their website to see what they offer for professional development HERE.</p>
+
+		<p>We believe professional development thrives when inquiry, exploration, and researched “best practices” are valued and encouraged as meaningful learning experiences. Come join us to learn, collaborate, and network!</p>
+	</div>
+
+	<div class="home-buttons">
+		<div class="home-button-component"><%= link_to 'View Events', events_path %></div>
+		<div class="home-button-component"><%= link_to 'Sign In', events_path %></div>
+	</div>
+
+</div>
