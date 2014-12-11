@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141211011105) do
+ActiveRecord::Schema.define(version: 20141211180814) do
 
   create_table "atw_rseventspro_events", force: true do |t|
     t.integer  "parent"
@@ -67,6 +67,22 @@ ActiveRecord::Schema.define(version: 20141211011105) do
     t.string   "gallery_tags"
     t.boolean  "allday"
     t.boolean  "featured"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "taggings", force: true do |t|
+    t.integer  "event_id"
+    t.integer  "tag_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "taggings", ["event_id"], name: "index_taggings_on_event_id"
+  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id"
+
+  create_table "tags", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
