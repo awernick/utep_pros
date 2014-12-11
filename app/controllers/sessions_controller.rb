@@ -1,4 +1,4 @@
-class SessionController < ApplicationController
+class SessionsController < ApplicationController
 	def create
 		user = User.from_sso
 		session[:user_id] = user.id

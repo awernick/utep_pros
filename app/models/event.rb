@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-
+	self.table_name = "atw_rseventspro_events"
 	# Method for parsing the date to a readable format.
 	# Require Ruby's date library
 	require 'date'
