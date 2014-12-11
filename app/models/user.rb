@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
 	require 'savon'
-	
+
 	self.table_name = "atw_users"
 
 
@@ -18,5 +18,4 @@ class User < ActiveRecord::Base
 			user.save!
 		end
 	end
->>>>>>> sso-implementation
 end
