@@ -37,7 +37,7 @@
 				<li role="presentation" class="custom-nav-pills"><a href="#">Evaluation Form</a></li>
 				<li role="presentation" class="custom-nav-pills">
 				<% if current_user %>
-				 <%= link_to "#{current_user.username} Sign out", signout_path, id: "sign_out" %>
+				 <%= link_to "#{@current_user.username} Sign out", signout_path, id: "sign_out" %>
 				<% else %>
 				 <%= link_to 'Sign-In', "https://adminapps.utep.edu/sso?redirectURL=http://socrates.utep.edu" %></li>
 				 <% end %>
