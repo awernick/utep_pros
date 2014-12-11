@@ -30,10 +30,21 @@ class ApplicationController < ActionController::Base
 					user.email = sso_response[:email_address]
 					user.params = " "
 					user.save!
+					session[:user_id] = user.id
+					return user
 				end
 			end
 		end
 	end
+
+	def sso_signout
+		utep_cookie = cookies[:UTEP_SE]
+		session[:user_id] = nil
+		client = Savon.client(wsdl: 'http://websvs.utep.edu/databaseservices/public/ExternalSignon.asmx?wsdl')
+		client.call(:log_off, message: { sessionId: utep_cookie.to_s })
+	end
+
+	helper_method :sso_signout
 
   helper_method :current_user
 end
