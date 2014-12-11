@@ -28,6 +28,8 @@ class ApplicationController < ActionController::Base
 					user.name = sso_response[:full_name]
 					user.username = sso_response[:user_name]
 					user.email = sso_response[:email_address]
+					user.params = " "
+					user.save!
 				end
 			end
 		end
