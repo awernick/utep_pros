@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20141211011105) do
 
-  create_table "events", force: true do |t|
+  create_table "atw_rseventspro_events", force: true do |t|
     t.integer  "parent"
     t.string   "name"
     t.datetime "created"
