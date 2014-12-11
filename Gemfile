@@ -29,6 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'mysql2'
 
 gem 'sqlite3'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
