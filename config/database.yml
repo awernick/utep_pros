@@ -25,3 +25,4 @@ production:
   host: localhost
   user: root
   password: ILy5V9Kee9E9qh5c
+  database: zadmin_utepprosbackup
