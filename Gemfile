@@ -45,6 +45,12 @@ gem "twitter-bootstrap-rails"
 #Added a font kit.
 gem 'font-kit-rails'
 
+# Simple forms
+gem 'simple_form'
+
+#Captcha for Rails for the Contact Form
+gem "recaptcha", :require => "recaptcha/rails"
+
 group :development do
 	gem 'capistrano-rvm'
   gem 'capistrano-rails'
