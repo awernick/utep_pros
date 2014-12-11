@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  username: MyString
+  email: MyString
+  password: MyString
+  usertype: MyString
+  block: false
+  sendEmail: false
+  registerDate: 2014-12-10 18:11:05
+  lastvisitDate: 2014-12-10 18:11:05
+  activation: false
+  params: MyString
+  lastResetTime: 2014-12-10 18:11:05
+  resetCount: 1
+
+two:
+  name: MyString
+  username: MyString
+  email: MyString
+  password: MyString
+  usertype: MyString
+  block: false
+  sendEmail: false
+  registerDate: 2014-12-10 18:11:05
+  lastvisitDate: 2014-12-10 18:11:05
+  activation: false
+  params: MyString
+  lastResetTime: 2014-12-10 18:11:05
+  resetCount: 1

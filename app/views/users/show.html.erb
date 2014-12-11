@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @user.username %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p>
+
+<p>
+  <strong>Usertype:</strong>
+  <%= @user.usertype %>
+</p>
+
+<p>
+  <strong>Block:</strong>
+  <%= @user.block %>
+</p>
+
+<p>
+  <strong>Sendemail:</strong>
+  <%= @user.sendEmail %>
+</p>
+
+<p>
+  <strong>Registerdate:</strong>
+  <%= @user.registerDate %>
+</p>
+
+<p>
+  <strong>Lastvisitdate:</strong>
+  <%= @user.lastvisitDate %>
+</p>
+
+<p>
+  <strong>Activation:</strong>
+  <%= @user.activation %>
+</p>
+
+<p>
+  <strong>Params:</strong>
+  <%= @user.params %>
+</p>
+
+<p>
+  <strong>Lastresettime:</strong>
+  <%= @user.lastResetTime %>
+</p>
+
+<p>
+  <strong>Resetcount:</strong>
+  <%= @user.resetCount %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
