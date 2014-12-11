@@ -16,13 +16,20 @@ class ApplicationController < ActionController::Base
 
 		if utep_cookie && utep_salt
 			client = Savon.client(wsdl: 'http://websvs.utep.edu/databaseservices/public/ExternalSignon.asmx?wsdl')
-			response = client.call(:get_user_by_ssiu, message: { sessionId: utep_cookie, salt: utep_salt, ipAdress: request.host, userAgent: request.user_agent})
-			user.name = response.body[:get_user_by_ssiu_response][:FullName]
-			user.username = response.body[:get_user_by_ssiu_response][:UserName]
-			user.email = response.body[:get_user_by_ssiu_response][:EmailAddress]
-			user.save!
+			response = client.call(:get_user, message: { sessionId: utep_cookie.to_s, salt: utep_salt.to_s})
+			if response.body[:get_user_response][:Authenticated]
+				sso_response = response.body[:get_user_response]
+				if(User.find_by_username(sso_response[:UserName]))
+					user ||= User.find_by_username(sso_response[:UserName])  
+				else 
+					user = User.new
+					user.name = sso_response[:FullName]
+					user.username = sso_response[:UserName]
+					user.email = sso_response[:EmailAddress]
+				end
+			end
 		end
-  end
+	end
 
   helper_method :current_user
 end
