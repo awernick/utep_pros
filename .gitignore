@@ -17,3 +17,6 @@
 
 #Ignore Capistrano
 .capistrano/metrics
+
+#Ignore Gemfile.lock
+Gemfile.lock
