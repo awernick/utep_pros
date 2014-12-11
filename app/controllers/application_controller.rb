@@ -16,16 +16,18 @@ class ApplicationController < ActionController::Base
 
 		if utep_cookie && utep_salt
 			client = Savon.client(wsdl: 'http://websvs.utep.edu/databaseservices/public/ExternalSignon.asmx?wsdl')
-			response = client.call(:get_user, message: { sessionId: utep_cookie.to_s, salt: utep_salt.to_s})
-			if response.body[:get_user_response][:Authenticated]
-				sso_response = response.body[:get_user_response]
-				if(User.find_by_username(sso_response[:UserName]))
-					user ||= User.find_by_username(sso_response[:UserName])  
+			response = client.call(:get_user_by_ssiu, message: { sessionId: utep_cookie.to_s, salt: utep_salt.to_s })
+
+			#{:get_user_by_ssiu_result=>{:user_name=>"gavargas", :full_name=>"Guillermo  Vargas", :email_address=>"gavargas@miners.utep.edu", :authenticated=>true, :role_value=>"1080", :external_user=>false}, :@xmlns=>"http://tempuri.org/"}
+			if response.body[:get_user_by_ssiu_response][:get_user_by_ssiu_result][:authenticated]
+				sso_response = response.body[:get_user_by_ssiu_response][:get_user_by_ssiu_result]
+				if User.find_by_username(sso_response[:user_name])
+					user ||= User.find_by_username(sso_response[:user_name])  
 				else 
 					user = User.new
-					user.name = sso_response[:FullName]
-					user.username = sso_response[:UserName]
-					user.email = sso_response[:EmailAddress]
+					user.name = sso_response[:full_name]
+					user.username = sso_response[:user_name]
+					user.email = sso_response[:email_address]
 				end
 			end
 		end
