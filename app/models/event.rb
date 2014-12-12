@@ -18,23 +18,14 @@ class Event < ActiveRecord::Base
 		return month + " " + day + ", " + year
 	end
 
+	#Simple tagging system
 	def parse_tags
 		gallery_tags.split(/\W+/)
 	end
 
-	#Create associations between events and tags through Active Record
-	has_many :taggings
-	has_many :tags, through: :taggings
-
-	#Code that handles the creation of tags
-	def all_tags=(names)
-		self.tags = name.split(",").map do |name|
-			Tag.where(name: name.strip).first_or_create!
-		end
+	require 'time'
+	def check_if_event_has_passed 
+		#Get the time that the event is going to start and the current time
+		#timeRightNow = Time.today 
 	end
-
-	def all_tags
-		self.tags.map(&:name).join(", ")
-	end
-
 end
