@@ -33,8 +33,10 @@ class Event < ActiveRecord::Base
 		#Compare the two times
 		if startEventTime < timeRightNow and timeRightNow > endingEventTime
 			answer = "Sorry, the event has passed!"
+			buttonClass = "event-alert"
 		elsif startEventTime > timeRightNow and endingEventTime > timeRightNow
-			answer = "Event is in the future, you can register"
+			answer = "Tap here to RSVP"
+			buttonClass = "event-join"
 		elsif startEventTime <= timeRightNow and endingEventTime > timeRightNow
 			answer = "Event is happening now!"
 		end
