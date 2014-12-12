@@ -8,7 +8,7 @@ class Event < ActiveRecord::Base
 	def parse_date
 
 		# Convert date to string so that the method can work.
-		parsedDate = Date.parse(start.to_s)
+		parsedDate = Date.parse(starttime.to_s)
 
 		# Separate the date elements to display them with commas and space.
 		month = parsedDate.strftime('%B')
@@ -18,23 +18,29 @@ class Event < ActiveRecord::Base
 		return month + " " + day + ", " + year
 	end
 
+	#Simple tagging system
 	def parse_tags
 		gallery_tags.split(/\W+/)
 	end
 
-	#Create associations between events and tags through Active Record
-	has_many :taggings
-	has_many :tags, through: :taggings
+	require 'time'
+	def check_if_event_has_passed 
+		#Get the time that the event is going to start and the current time
+		timeRightNow = Time.new.to_i
+		endingEventTime = self.endtime.to_i
+		startEventTime = self.starttime.to_i
 
-	#Code that handles the creation of tags
-	def all_tags=(names)
-		self.tags = name.split(",").map do |name|
-			Tag.where(name: name.strip).first_or_create!
+		#Compare the two times
+		if startEventTime < timeRightNow and timeRightNow > endingEventTime
+			answer = "Sorry, the event has passed!"
+			buttonClass = "event-alert"
+		elsif startEventTime > timeRightNow and endingEventTime > timeRightNow
+			answer = "Tap here to RSVP"
+			buttonClass = "event-join"
+		elsif startEventTime <= timeRightNow and endingEventTime > timeRightNow
+			answer = "Event is happening now!"
 		end
-	end
-
-	def all_tags
-		self.tags.map(&:name).join(", ")
+		return answer
 	end
 
 end

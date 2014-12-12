@@ -8,7 +8,7 @@
       <div class="event-element-date">On <%= event.parse_date %></div>
       <div class="event-element-location">Location: <%= event.location %></div>
       <div class="event-element-categories">
-      <% event.parse_tags.each do |tag| %>
+        <% event.parse_tags.each do |tag| %>
           <span class="label label-default event-tag-label"><%= tag %></span>
         <% end %>
       </div>
@@ -52,9 +52,9 @@
       <tr>
         <td><%= event.parent %></td>
         <td><%= event.name %></td>
-        <td><%= event.created %></td>
-        <td><%= event.start %></td>
-        <td><%= event.end %></td>
+        <td><%= event.createdtime %></td>
+        <td><%= event.starttime %></td>
+        <td><%= event.endtime %></td>
         <td><%= event.description %></td>
         <td><%= event.location %></td>
         <td><%= event.owner %></td>
