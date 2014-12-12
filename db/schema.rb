@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 20141211180814) do
   create_table "atw_rseventspro_events", force: true do |t|
     t.integer  "parent"
     t.string   "name"
-    t.datetime "created"
-    t.datetime "start"
-    t.datetime "end"
+    t.datetime "createdtime"
+    t.datetime "starttime"
+    t.datetime "endtime"
     t.string   "description"
     t.string   "location"
     t.string   "owner"

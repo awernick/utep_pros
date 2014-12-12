@@ -8,7 +8,7 @@ class Event < ActiveRecord::Base
 	def parse_date
 
 		# Convert date to string so that the method can work.
-		parsedDate = Date.parse(start.to_s)
+		parsedDate = Date.parse(starttime.to_s)
 
 		# Separate the date elements to display them with commas and space.
 		month = parsedDate.strftime('%B')
@@ -26,6 +26,19 @@ class Event < ActiveRecord::Base
 	require 'time'
 	def check_if_event_has_passed 
 		#Get the time that the event is going to start and the current time
-		#timeRightNow = Time.today 
+		timeRightNow = Time.new.to_i
+		endingEventTime = self.endtime.to_i
+		startEventTime = self.starttime.to_i
+
+		#Compare the two times
+		if startEventTime < timeRightNow and timeRightNow > endingEventTime
+			answer = "Sorry, the event has passed!"
+		elsif startEventTime > timeRightNow and endingEventTime > timeRightNow
+			answer = "Event is in the future, you can register"
+		elsif startEventTime <= timeRightNow and endingEventTime > timeRightNow
+			answer = "Event is happening now!"
+		end
+		return answer
 	end
+
 end
