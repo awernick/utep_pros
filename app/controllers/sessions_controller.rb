@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-	
+
 	def create
 		user = User.from_sso(cookies[:UTEP_SE], cookies[:UTEP_SA])
 		if user
