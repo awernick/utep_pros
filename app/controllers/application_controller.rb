@@ -7,7 +7,13 @@ class ApplicationController < ActionController::Base
   private
   
   def current_user
-  	@current_user ||= User.find(session[:user_id]) if session[:user_id]
+  	if session[:user_id]
+  	 @curret_user = User.find(session[:user_id])
+  	else
+  		@current_user = User.from_sso(cookies[:UTEP_SE], cookies[:UTEP_SA])
+  		session[:user_id] = @current_user.id
+  		return @current_user
+  	end
   end
 
 
