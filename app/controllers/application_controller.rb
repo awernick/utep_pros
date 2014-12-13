@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
   end
 
   def create_session
+    puts "Creating Session"
     user = User.from_sso(cookies[:UTEP_SE], cookies[:UTEP_SA])
     if user
       session[:user_id] = user.id
@@ -24,6 +25,7 @@ class ApplicationController < ActionController::Base
   end
 
   def session_destroy
+    puts "Destroying Session"
     utep_cookie = cookies[:UTEP_SE]
     session[:user_id] = nil
     client = Savon.client(wsdl: 'http://websvs.utep.edu/databaseservices/public/ExternalSignon.asmx?wsdl')
