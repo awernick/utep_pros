@@ -10,12 +10,9 @@ class ApplicationController < ActionController::Base
   	if session[:user_id]
       @curret_user = User.find(session[:user_id])
     else
-      @current_user = User.from_sso(cookies[:UTEP_SE], cookies[:UTEP_SA])
-        if @current_user
-          session[:user_id] = @current_user.id
-        end
-      return @current_user
+      @curret_user = create_session_path
     end
+    return @current_user
   end
 
   helper_method :current_user
