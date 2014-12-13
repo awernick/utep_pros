@@ -1,18 +1,18 @@
 <div class="action-button-wrapper">
   <div class="action-button-component back-button-component"><%= link_to 'Back', events_path %></div>
   <div class="action-button-component join-or-alert-button" style="float:right !important;">
-    <a href="#">
-      <% if @event.check_if_event_has_passed == -1 %>
-        <%= "Sorry, the event has passed!" %>
-      <% elsif @event.check_if_event_has_passed == 1 %>
-        <%= "Tap here to RSVP" %>
-      <% end %>
-    </a>
+    <% if check_if_event_has_passed == -1 %>
+    <%= link_to 'Sorry, the event has passed!', events_path %>
+    <% elsif check_if_event_has_passed == 1 %>
+      <a href="register" class="event-join">Tap here to RSVP</a>
+    <% end %>
+
+    
     </div>
 </div>
 <div class="container event-detail-view-wrapper">
     <div class="event-detail-view-title"><%= @event.name %>.</div>
-    <div class="event-detail-view-date">Date: <%= @event.parse_date %></div>
+    <div class="event-detail-view-date">Date: <%= parse_date(@event.starttime) %></div>
     <div class="event-detail-view-date">Time: <%= @event.starttime%></div>
     <div class="event-detail-view-location">At: <%= @event.location %></div>
 </div>

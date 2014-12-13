@@ -5,7 +5,7 @@
   <% @events.each do |event| %>
     <div class="event-element"><%= link_to event do %>
       <div class="event-element-title"><%= event.name %></div>
-      <div class="event-element-date">On <%= event.parse_date %></div>
+      <div class="event-element-date">On <%= parse_date(event.starttime) %></div>
       <div class="event-element-location">Location: <%= event.location %></div>
       <div class="event-element-categories">
         <% event.parse_tags.each do |tag| %>
