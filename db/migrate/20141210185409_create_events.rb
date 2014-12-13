@@ -1,11 +1,11 @@
 class CreateEvents < ActiveRecord::Migration
   def change
-    create_table :events do |t|
+    create_table :atw_rseventspro_events do |t|
       t.integer :parent
       t.string :name
-      t.datetime :created
-      t.datetime :start
-      t.datetime :end
+      t.datetime :createdtime
+      t.datetime :starttime
+      t.datetime :endtime
       t.string :description
       t.string :location
       t.string :owner

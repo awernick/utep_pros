@@ -5,19 +5,19 @@
   <% @events.each do |event| %>
     <div class="event-element"><%= link_to event do %>
       <div class="event-element-title"><%= event.name %></div>
-      <div class="event-element-date">On <%= event.parse_date(event.start) %></div>
+      <div class="event-element-date">On <%= event.parse_date %></div>
       <div class="event-element-location">Location: <%= event.location %></div>
       <div class="event-element-categories">
-        <span class="label label-default event-tag-label">Workshops</span>
-        <span class="label label-default event-tag-label">Joomla!</span>
-        <span class="label label-default event-tag-label">Drupal</span>
+        <% event.parse_tags.each do |tag| %>
+          <span class="label label-default event-tag-label"><%= tag %></span>
+        <% end %>
       </div>
     <% end %>
     </div>
     <% end %>
   </div>
 
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th>Title</th>
@@ -52,9 +52,9 @@
       <tr>
         <td><%= event.parent %></td>
         <td><%= event.name %></td>
-        <td><%= event.created %></td>
-        <td><%= event.start %></td>
-        <td><%= event.end %></td>
+        <td><%= event.createdtime %></td>
+        <td><%= event.starttime %></td>
+        <td><%= event.endtime %></td>
         <td><%= event.description %></td>
         <td><%= event.location %></td>
         <td><%= event.owner %></td>
@@ -111,6 +111,6 @@
   </tbody>
 </table>
 
-<br>
+<br> -->
 
 <%= link_to 'New Event', new_event_path %>
