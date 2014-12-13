@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   match '/create_session', to: 'sessions#create', as: 'create_session', via: [:get, :post]
-  match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
+  match 'signout', to: 'session_destroy', as: 'signout', via: [:get, :post]
   root 'static_pages#home'
   match '/contact' => 'static_pages#contact', via: [:get, :post]
 

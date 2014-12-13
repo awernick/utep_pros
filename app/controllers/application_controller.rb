@@ -33,6 +33,5 @@ class ApplicationController < ActionController::Base
     redirect_to root_url
   end
 
-  helper_method :session_destroy
   helper_method :current_user
 end
