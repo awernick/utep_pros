@@ -36,12 +36,10 @@
 				<li role="presentation" class="custom-nav-pills"><a href="#">About</a></li>
 				<li role="presentation" class="custom-nav-pills"><a href="#">Evaluation Form</a></li>
 				<li role="presentation" class="custom-nav-pills">
-				<% if @current_user = current_user %>
+				<% if current_user %>
 				 <%= link_to "#{current_user.name}, Sign out", signout_path, id: "sign_out" %>
-				<% elsif cookies[:UTEP_SE] && cookies[:UTEP_SA] %>
-					<% 'auth/sso' %>
 				<% else %>
-				 <%= link_to 'Sign-In', "https://adminapps.utep.edu/sso?redirectURL=#{request.host}" %></li>
+				 <%= link_to 'Sign-In', "https://adminapps.utep.edu/sso?redirectURL=#{request.original_url}" %></li>
 				<% end %>
 				<li role="presentation" class="custom-nav-pills"><a href="#">RSS</a></li>
 			</ul>
