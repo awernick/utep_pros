@@ -33,6 +33,7 @@ gem 'mysql2'
 
 gem 'sqlite3'
 
+gem 'utep_sso'
 # Use unicorn as the app server
 # gem 'unicorn'
 
