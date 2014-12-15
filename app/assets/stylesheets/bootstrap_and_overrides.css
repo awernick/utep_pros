@@ -23,13 +23,10 @@
   	margin-bottom: 20px;
   }
 
-
-@media (min-width: 1200px) {
   .navbar-default .navbar-nav>li>a:hover
   {
     color: #FFF;
   }
-}
 
 @media (max-width: 768px) {
 
@@ -40,7 +37,6 @@
 
   .navbar-default .navbar-nav>li>a:hover,  .navbar-default .navbar-nav>li>a:focus
   {
-    color: #FFF;
     text-decoration: none;
     background-color: #00ABC4;
   }
