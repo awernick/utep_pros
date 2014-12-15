@@ -40,6 +40,8 @@
  	padding-left: 15px;
  }
  .custom-menu-wrapper {
+ 	padding-left: 16px;
+ 	margin-right: 10px;
  	margin-top: 20px;
  	text-transform: capitalize;
  }
@@ -50,6 +52,7 @@
  .nav-pills>li {
 	float: left;
 }
+
  /*-------------------*/
 
  /*Content Page Wrapper*/
