@@ -5,7 +5,7 @@ set :application, 'utep_pros'
 # set :repo_url, 'https://github.com/[user name]/[application name].git'
 set :scm, :git
 set :repo_url, 'git@git.at.utep.edu:applications-development/uteppros-templating.git'
-set :branch, "sso-implementation"
+#set :branch, "sso-implementation"
 
 # Define where to put your application code
 set :deploy_to, "/var/sentora/hostdata/zadmin/public_html/socrates_utep_edu"
