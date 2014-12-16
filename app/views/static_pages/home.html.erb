@@ -1,6 +1,15 @@
 <% provide(:title, "Home") %>
 
-<div class="slideshow-wrapper container" id="homePageSlideShow">
+<script>
+    $(function(){
+      $("#slides").slidesjs({
+        width: 940,
+        height: 528
+      });
+    });
+  </script>
+
+<div class="slideshow-wrapper container" id="slides">
 	<img alt="Header" src="/assets/header.png">
 </div>
 
