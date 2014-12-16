@@ -1,6 +1,6 @@
 <div class="action-button-wrapper">
   <div class="action-button-component back-button-component"><%= link_to 'Back', events_path %></div>
-  <div class="action-button-component join-or-alert-button" style="float:right !important;">
+  <div class="action-button-component join-or-alert-button" style="float:right !important; margin-right:-15px">
     <% if check_if_event_has_passed == -1 %>
     <%= link_to 'Sorry, the event has passed!', events_path %>
     <% elsif check_if_event_has_passed == 1 %>

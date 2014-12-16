@@ -18,7 +18,7 @@
 	<div class="home-buttons">
 		<div class="home-button-component"><%= link_to 'View Events', events_path %></div>
 		<div class="home-button-component">
-			<% if session[:user_id] %>
+			<% if current_user %>
 				<%= link_to 'Sign Out', signout_path, id: "sign_out" %>
 			<% else %>
 				<%= link_to 'Sign In', "https://adminapps.utep.edu/sso?redirectURL=#{request.original_url}" %>
