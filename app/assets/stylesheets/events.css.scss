@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /*Event Elements Styling*/
+
+.day-of-the-week-separator {
+ background: #ededed;
+ color: #333;
+ margin-top: 20px;
+ padding:10px;
+}
+.event-element {
+	margin-top: -5px;
+}
 .event-element a {
 	padding:20px;
 	background-color: #ffffff;
@@ -53,7 +63,7 @@
 .event-alert a {
 	background-color: #CD2928;
 }
-.event-join a {
+a.event-join {
 	background-color: #77cc33;
 }
 .back-button-component {
@@ -80,11 +90,11 @@ margin: 0 0 30px -15px;
 	font-weight: lighter;
 }
 .event-detail-view-date {
-	font-size: 18px;
+	font-size: 11px;
 	font-weight: normal;
 }
 .event-detail-view-location {
-	font-size: 14px;
+	font-size: 12px;
 
 }
 /*---------------------*/

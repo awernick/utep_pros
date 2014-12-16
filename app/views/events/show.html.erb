@@ -6,15 +6,17 @@
     <% elsif check_if_event_has_passed == 1 %>
       <a href="register" class="event-join">Tap here to RSVP</a>
     <% end %>
-
-    
-    </div>
+  </div>
 </div>
+
 <div class="container event-detail-view-wrapper">
     <div class="event-detail-view-title"><%= @event.name %>.</div>
+    <hr>
+    <%= parse_time_accounting_for_timezone(@event.starttime, @event.endtime) %>
     <div class="event-detail-view-date">Date: <%= parse_date(@event.starttime) %></div>
     <div class="event-detail-view-date">Time: <%= @event.starttime%></div>
     <div class="event-detail-view-location">At: <%= @event.location %></div>
 </div>
+
 
 <%= link_to 'Edit', edit_event_path(@event) %> |

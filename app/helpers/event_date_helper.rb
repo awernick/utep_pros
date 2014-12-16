@@ -8,7 +8,7 @@ module EventDateHelper
   	def parse_date (unparsedDate)
 
 		# Convert date to string so that the method can work.
-		parsedDate = Date.parse(unparsedDate.to_s)
+		parsedDate = Date.parse(unparsedDate)
 
 		# Separate the date elements to display them with commas and space.
 		month = parsedDate.strftime('%B')
@@ -34,5 +34,27 @@ module EventDateHelper
 			answer =  0
 		end
 		return answer
+	end
+
+	def parse_time_accounting_for_timezone (unparsedUTCTStartTime, unparsedUTCTEndTime)
+
+		#unparsedUTCTStartTime.
+		
+		# # Get start time and parse it.
+		# #parsedUTCStartTime = DateTime.new(unparsedUTCTStartTime.to_s).in_time_zone(localTimeZone)
+		# #parsedUTCStartTime = Time.parse(unparsedUTCTStartTime).in_time_zone(localTimeZone)
+
+		# #Get end time and parse it.
+		# parsedUTCEndTime = DateTime.new(unparsedUTCTEndTime.to_s).in_time_zone(localTimeZone)
+		# #parsedUTCEndTime = Time.parse(unparsedUTCTEndTime).in_time_zone(localTimeZone)
+
+		# # Separate time into elements.
+		# parsedStartHours = parsedUTCStartTime.strptime('%l')
+		# parsedStartMinutes = parsedUTCStartTime.strptime('%M')
+
+		# parsedEndHours = parsedUTCEndTime.strptime('%l')
+		# parsedEndMinutes = parsedUTCEndTime.strptime('%M')
+
+		#return parsedStartHours, parsedStartMinutes, parsedEndHours, parsedEndMinutes
 	end
 end
