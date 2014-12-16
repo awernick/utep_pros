@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 	def self.from_sso(utep_cookie, utep_salt)
 		user = User.new
     
-    sso_reponse = UTEPSSO.authenticate(utep_cookie, utep_salt)
+    sso_response = UTEPSSO.authenticate(utep_cookie, utep_salt)
 
 		if User.find_by_username(sso_response[:user_name])
 			User.find_by_username(sso_response[:user_name])  
