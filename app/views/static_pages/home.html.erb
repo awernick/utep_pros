@@ -1,38 +1,5 @@
 <% provide(:title, "Home") %>
 
-<script>
-    $(function() {
-      $('#homepage-slides').slidesjs({
-      	play: {
-      		interval: 4000,
-      		auto: true,
-      		effect: "fade"
-      	},
-        width: 1000,
-        height: 420,
-        navigation: {
-          	active: false
-        },
-        pagination: {
-        	active: false,
-          	effect: "fade"
-        },
-        effect: {
-          fade: {
-            speed: 800
-          }
-        }
-      });
-    });
-  </script>
-
-  <style>
-    /* Prevents slides from flashing */
-    #slides {
-      display:none;
-    }
-  </style>
-
 <div class="slideshow-wrapper container" id="homepage-slides">
 	<img alt="Header" src="/assets/header.png">
 	<img src="http://at.utep.edu/uteppros/images/banner1/header_1_dreamlearncreateshare_ORANGE.png?1418764096890">

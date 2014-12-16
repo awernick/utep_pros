@@ -25,6 +25,10 @@
  	background: #F2F2F2;
  }
 
+/* Prevents slides from flashing */
+#homepage-slides {
+  display:none;
+}
  .custom-container-header {
  	padding: 0;
  }
