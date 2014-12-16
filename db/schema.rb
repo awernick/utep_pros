@@ -71,23 +71,7 @@ ActiveRecord::Schema.define(version: 20141211180814) do
     t.datetime "updated_at"
   end
 
-  create_table "taggings", force: true do |t|
-    t.integer  "event_id"
-    t.integer  "tag_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "taggings", ["event_id"], name: "index_taggings_on_event_id"
-  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id"
-
-  create_table "tags", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "users", force: true do |t|
+  create_table "atw_users", force: true do |t|
     t.string   "name"
     t.string   "username"
     t.string   "email"
@@ -101,6 +85,22 @@ ActiveRecord::Schema.define(version: 20141211180814) do
     t.string   "params"
     t.datetime "lastResetTime"
     t.integer  "resetCount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "taggings", force: true do |t|
+    t.integer  "event_id"
+    t.integer  "tag_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "taggings", ["event_id"], name: "index_taggings_on_event_id"
+  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id"
+
+  create_table "tags", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

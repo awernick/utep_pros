@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title><%= yield (:title) %> | UTEP Pros</title>
-	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-	<%= csrf_meta_tags %>
-</head>
-<body>
-	<%= render './layouts/header' %>
-	<%= yield %>
-</body>
-	<div class="container custom-container-header">
+<div class="container custom-container-header">
 		<nav class="navbar navbar-default" role="navigation">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -52,8 +39,3 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 	</div>
-
-	<%= yield %>
-
-</body>
-</html>

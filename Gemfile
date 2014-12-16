@@ -49,6 +49,9 @@ gem 'font-kit-rails'
 # Simple forms
 gem 'simple_form'
 
+# Install HAML Support
+gem 'haml-rails'
+
 #Captcha for Rails for the Contact Form
 gem "recaptcha", :require => "recaptcha/rails"
 

@@ -1,3 +1,5 @@
+<% provide(:title, "Home") %>
+
 <div class="slideshow-wrapper container" id="homePageSlideShow">
 	<img alt="Header" src="/assets/header.png">
 </div>
@@ -21,7 +23,7 @@
 			<% if session[:user_id] %>
 				<%= link_to 'Sign Out', signout_path, id: "sign_out" %>
 			<% else %>
-				<%= link_to 'Sign In', "https://adminapps.utep.edu/sso?redirectURL=#{request.original_url}" %>
+				<%= link_to 'Sign In', "https://adminapps.utep.edu/sso?redirectURL=#{request.original_url}create_session" %>
 			<% end %>
 		</div>
 	</div>
