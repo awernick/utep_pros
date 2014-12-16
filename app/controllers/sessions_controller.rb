@@ -7,9 +7,8 @@ class SessionsController < ApplicationController
 	end
 
 	def destroy
-		UTEPSSO.deauthenticate(cookies[:UTEP_SE])
+		session[:user_id] = nil
+		UTEPSSO.deauthenticate(cookies[:UTEP_SE], cookies[:UTEP_SA])
 		redirect_to root_url
 	end
-
-	helper_method :create
 end
