@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
 		if user
 			session[:user_id] = user.id
 		end
+		redirect_to root_url
 	end
 
 	def destroy
