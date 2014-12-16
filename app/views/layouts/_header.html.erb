@@ -1,0 +1,41 @@
+<div class="container custom-container-header">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="navbar-header">
+						<a class="navbar-brand" href="/">
+							<%= image_tag "at_logo_retina.png" %>
+						</a>
+					</div>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right custom-menu-wrapper" id="custom-navbar">
+						<div class="page-title">UTEP PROFESSIONAL DEVELOPMENT</div>	
+						<li role="presentation" class="custom-nav-pills"><a href="/">Home</a></li>
+						<li role="presentation" class="custom-nav-pills"><a href="/contact">Contact</a></li>
+						<li role="presentation" class="custom-nav-pills"><%= link_to 'All Events', events_path %></li>
+						<li role="presentation" class="custom-nav-pills"><a href="#">About</a></li>
+						<li role="presentation" class="custom-nav-pills"><a href="#">Evaluation Form</a></li>
+						<li role="presentation" class="custom-nav-pills">
+							<% if session[:user_id] && UTEPSSO.authenticated?(cookies[:UTEP_SE], cookies[:UTEP_SA]) %>
+								<% @current_user = current_user %>
+								<%= link_to "#{@current_user.name.split(' ').first}, Sign Out", signout_path, id: "sign_out" %>
+							<% else %>
+								<%= link_to 'Sign-In', "https://adminapps.utep.edu/sso?redirectURL=#{request.original_url}create_session" %>
+							<% end %>
+						</li>
+						<li role="presentation" class="custom-nav-pills"><a href="#">RSS</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+	</div>
