@@ -8,7 +8,7 @@ module EventDateHelper
   	def parse_date (unparsedDate)
 
 		# Convert date to string so that the method can work.
-		parsedDate = Date.parse(unparsedDate)
+		parsedDate = Date.parse(unparsedDate.to_s)
 
 		# Separate the date elements to display them with commas and space.
 		month = parsedDate.strftime('%B')
