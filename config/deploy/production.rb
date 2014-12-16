@@ -11,6 +11,7 @@ role :db,  %w{deployer@workshops.utep.edu}
 # Define server(s)
 server 'workshops.utep.edu', user: 'deployer', roles: %w{web}
 
+set :deploy_to, "/var/sentora/hostdata/zadmin/public_html/socrates_utep_edu"
 set :stage, :production
 
 # SSH Options
