@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
 			user.email = sso_response[:email_address]
 			user.params = " "
 			user.save!
+			return user
 		end
 	end
 end
