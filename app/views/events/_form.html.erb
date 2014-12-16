@@ -84,7 +84,7 @@
   </div>
   <div class="field">
     <%= f.label :repeat_interval %><br>
-    <%= f.check_box :repeat_interval %>
+    <%= f.number_field :repeat_interval %>
   </div>
   <div class="field">
     <%= f.label :repeat_type %><br>
@@ -93,6 +93,10 @@
   <div class="field">
     <%= f.label :repeat_end %><br>
     <%= f.datetime_select :repeat_end %>
+  </div>
+   <div class="field">
+    <%= f.label :repeat_also %><br>
+    <%= f.datetime_select :repeat_also %>
   </div>
   <div class="field">
     <%= f.label :start_registration %><br>
@@ -168,7 +172,7 @@
   </div>
   <div class="field">
     <%= f.label :late_fee %><br>
-    <%= f.datetime_select :late_fee %>
+    <%= f.number_field :late_fee %>
   </div>
   <div class="field">
     <%= f.label :late_fee_type %><br>
