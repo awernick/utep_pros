@@ -11,7 +11,7 @@
   <div class="day-of-the-week-separator"><%= parse_date(event.starttime) %></div>
     <div class="event-element"><%= link_to event do %>
       <div class="event-element-title"><%= event.name %></div>
-      <div class="event-element-date">Time: <%= #event.starttime.to_i %></div>
+      <div class="event-element-date">Time: </div>
       <div class="event-element-location">Location: <%= event.location %></div>
       <div class="event-element-categories">
         <% event.parse_tags.each do |tag| %>
