@@ -11,7 +11,7 @@ role :db,  %w{deployer@area51.at.utep.edu}
 # Define server(s)
 server 'area51.at.utep.edu', user: 'deployer', roles: %w{web}
 
-set :deploy_to, "/var/www/html/utep_pros"
+set :deploy_to, "/var/www/utep_pros"
 set :branch, "sso-implementation"
 set :stage, :production
 
