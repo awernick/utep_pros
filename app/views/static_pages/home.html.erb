@@ -4,7 +4,7 @@
 
 <div class="container home-body-wrapper">
 	
-<div class="home-welcome-title">Welcome to UTEP Pros!</div>
+	<div class="home-welcome-title">Welcome to UTEP Pros!</div>
 	<div class="home-welcome-text">
 		<p>As a part of UTEP’s commitment to professional development, Academic Technologies (AT) has provided a number of opportunities to participate in workshops and trainings geared specifically to meet the needs of faculty, staff, students at UTEP.</p>
 
@@ -18,7 +18,7 @@
 	<div class="home-buttons">
 		<div class="home-button-component"><%= link_to 'View Events', events_path %></div>
 		<div class="home-button-component">
-			<% if current_user %>
+			<% if session[:user_id] %>
 				<%= link_to 'Sign Out', signout_path, id: "sign_out" %>
 			<% else %>
 				<%= link_to 'Sign In', "https://adminapps.utep.edu/sso?redirectURL=#{request.original_url}" %>
