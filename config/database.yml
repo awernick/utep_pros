@@ -23,6 +23,6 @@ test:
 production:
   adapter: mysql2
   host: localhost
-  user: root
+  username: root
   password: ILy5V9Kee9E9qh5c
   database: zadmin_utepprosbackup

@@ -12,7 +12,7 @@ role :db,  %w{deployer@area51.at.utep.edu}
 server 'area51.at.utep.edu', user: 'deployer', roles: %w{web}
 
 set :deploy_to, "/var/www/utep_pros"
-set :branch, "sso-implementation"
+set :branch, "staging"
 set :stage, :production
 
 # SSH Options
