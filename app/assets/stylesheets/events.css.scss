@@ -98,3 +98,17 @@ margin: 0 0 30px -15px;
 
 }
 /*---------------------*/
+
+/*Pagination*/
+#infinite-scrolling {
+	text-align: center;
+}
+#infinite-scrolling .pagination a {
+	padding: 10px;
+	text-decoration:none;
+	font-size: 14px;
+}
+#infinite-scrolling .pagination a:hover {
+	background-color: #00ABC4;
+}
+/*----------*/
