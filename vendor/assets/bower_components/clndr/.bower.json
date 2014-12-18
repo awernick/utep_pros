@@ -1,0 +1,13 @@
+{
+  "name": "clndr",
+  "_cacheHeaders": {
+    "ETag": "\"ca7fe748d2521fd2e33ce00dcbf6970d20b8cb91\"",
+    "Content-Length": "34043",
+    "Content-Type": "text/plain; charset=utf-8"
+  },
+  "_release": "e-tag:ca7fe748d",
+  "main": "index.js",
+  "_source": "https://raw.githubusercontent.com/kylestetz/CLNDR/master/src/clndr.js",
+  "_target": "*",
+  "_originalSource": "https://raw.githubusercontent.com/kylestetz/CLNDR/master/src/clndr.js"
+}
