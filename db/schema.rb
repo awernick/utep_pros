@@ -29,7 +29,11 @@ ActiveRecord::Schema.define(version: 20141211180814) do
     t.string   "metakeywords"
     t.string   "metadescription"
     t.boolean  "recurring"
+<<<<<<< HEAD
+    t.string   "repeat_also"
+=======
     t.boolean  "repeat_also"
+>>>>>>> templates
     t.boolean  "registration"
     t.boolean  "comments"
     t.string   "icon"

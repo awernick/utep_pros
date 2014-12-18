@@ -1,14 +1,42 @@
 <div class="container admin-dashboard-header">
-  <h3>Dashboard | Activity</h3>
+	<h3>Dashboard</h3>
 </div>
 
 <%= render 'action_header' %>
 
 <div class="container admin-activity-wrapper">
-  <div class="admin-activity-element">
-    <div class="admin-activity-title">
-      <a href="#">Alan Wernick</a> has created a new event <a href="#">Joomla! Training</a>
-    </div>
-    <div class="admin-activity-details">The Event will happen on Saturday, December 45 of December 2014.</div>
-  </div>
+	<div class="col-lg-9">
+		<div class="panel panel-info">
+			<div class="panel-heading">What's going on.</div>
+			<div class="panel-body">
+				<ul class="list-group">
+					<li class="list-group-item">
+						<div class="list-group-item-title">New Event Created | Wordpress Training 2.0</div>
+						<div class="list-group-item-info-wrapper">By Alan Wernick</div>
+					</li>
+				</ul>
+			</div>
+			<!-- <div class="panel-footer">Panel Footer</div> -->
+		</div>
+	</div>
+	<div class="col-lg-3">
+		
+		<div class="panel panel-info">
+			<div class="panel-heading">Notifications</div>
+			<div class="panel-body">
+				<h2>3 Alerts</h2>
+			</div>
+			<!-- <div class="panel-footer">Panel Footer</div> -->
+		</div>
+
+		<div class="panel panel-primary">
+		<div class="panel-heading">Actions Panel</div>
+			<div class="panel-body">
+				<ul class="actions-wrapper">
+					<li>+ Create New Event</li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
 </div>
