@@ -27,12 +27,13 @@
 .event-element-title {
 	font-weight: bold;
 	font-size: 1.7em;
+	padding-bottom: 10px;
 }
 .event-element-date {
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
 .event-element-location {
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
 .event-element-categories {
 	font-size: 1.2em;
@@ -98,3 +99,17 @@ margin: 0 0 30px -15px;
 
 }
 /*---------------------*/
+
+/*Pagination*/
+#infinite-scrolling {
+	text-align: center;
+}
+#infinite-scrolling .pagination a {
+	padding: 10px;
+	text-decoration:none;
+	font-size: 14px;
+}
+#infinite-scrolling .pagination a:hover {
+	background-color: #00ABC4;
+}
+/*----------*/

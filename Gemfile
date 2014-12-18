@@ -38,7 +38,9 @@ gem 'font-kit-rails'
 gem 'simple_form'
 # Install HAML Support
 gem 'haml-rails'
-# Captcha for Rails for the Contact Form
+# Install Kaminari for infinite scroll
+gem 'will_paginate'
+#Captcha for Rails for the Contact Form
 gem "recaptcha", :require => "recaptcha/rails"
 # Underscore for clndr
 gem 'underscore-rails'
