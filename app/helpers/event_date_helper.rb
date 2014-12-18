@@ -36,25 +36,17 @@ module EventDateHelper
 		return answer
 	end
 
-	def parse_time_accounting_for_timezone (unparsedUTCTStartTime, unparsedUTCTEndTime)
+	def parse_time_accounting_for_timezone (unparsedUTCTStartTime)
 
-		#unparsedUTCTStartTime.
-		
-		# # Get start time and parse it.
-		# #parsedUTCStartTime = DateTime.new(unparsedUTCTStartTime.to_s).in_time_zone(localTimeZone)
-		# #parsedUTCStartTime = Time.parse(unparsedUTCTStartTime).in_time_zone(localTimeZone)
+		# Get the starte event time and then parse it.
 
-		# #Get end time and parse it.
-		# parsedUTCEndTime = DateTime.new(unparsedUTCTEndTime.to_s).in_time_zone(localTimeZone)
-		# #parsedUTCEndTime = Time.parse(unparsedUTCTEndTime).in_time_zone(localTimeZone)
+		#Obtain the local machine's time zone
+		localTimeZone = Time.zone
 
-		# # Separate time into elements.
-		# parsedStartHours = parsedUTCStartTime.strptime('%l')
-		# parsedStartMinutes = parsedUTCStartTime.strptime('%M')
+		#Parse the time object and then apply the local time zone.
+		parsedTime = DateTime.parse(unparsedUTCTStartTime.to_s)
+		zonedTime = parsedTime.in_time_zone(localTimeZone).strftime("%I:%M%p")
 
-		# parsedEndHours = parsedUTCEndTime.strptime('%l')
-		# parsedEndMinutes = parsedUTCEndTime.strptime('%M')
-
-		#return parsedStartHours, parsedStartMinutes, parsedEndHours, parsedEndMinutes
+		return zonedTime
 	end
 end

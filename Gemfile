@@ -52,6 +52,9 @@ gem 'simple_form'
 # Install HAML Support
 gem 'haml-rails'
 
+# Install Kaminari for infinite scroll
+gem 'will_paginate'
+
 #Captcha for Rails for the Contact Form
 gem "recaptcha", :require => "recaptcha/rails"
 

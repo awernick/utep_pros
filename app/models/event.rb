@@ -7,4 +7,6 @@ class Event < ActiveRecord::Base
 		gallery_tags.split(/\W+/)
 	end
 
+	self.per_page = 5
+
 end
