@@ -16,7 +16,7 @@
   .navbar-default {
   	background: #333;
   	border-color: transparent;
-  	box-shadow: 1px 2px 3px #999;
+  	box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
   }
   .navbar-toggle {
   	margin-top: 20px;
