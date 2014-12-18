@@ -1,0 +1,13 @@
+{
+  "name": "moment",
+  "_cacheHeaders": {
+    "ETag": "\"85e190d4aeef2efa92ec57b7f2524f5b8a2b0100\"",
+    "Content-Length": "96381",
+    "Content-Type": "text/plain; charset=utf-8"
+  },
+  "_release": "e-tag:85e190d4a",
+  "main": "index.js",
+  "_source": "https://raw.githubusercontent.com/moment/moment/develop/moment.js",
+  "_target": "*",
+  "_originalSource": "https://raw.githubusercontent.com/moment/moment/develop/moment.js"
+}

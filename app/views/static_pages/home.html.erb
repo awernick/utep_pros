@@ -7,26 +7,97 @@
 
 <div class="container home-body-wrapper">
 	
-	<div class="home-welcome-title">Welcome to UTEP Pros!</div>
-	<div class="home-welcome-text">
-		<p>As a part of UTEP’s commitment to professional development, Academic Technologies (AT) has provided a number of opportunities to participate in workshops and trainings geared specifically to meet the needs of faculty, staff, students at UTEP.</p>
+	<div class="col-md-4">
+		<div class="home-welcome-title">Welcome to UTEP Pros!</div>
+		<div class="home-welcome-text">
+			<p>As a part of UTEP’s commitment to professional development, Academic Technologies (AT) has provided a number of opportunities to participate in workshops and trainings geared specifically to meet the needs of faculty, staff, students at UTEP.</p>
 
-		<p>This website serves as a centralized location to view and register for workshops and trainings that are being offered at UTEP through Academic Technologies and/or partnering organizations on campus.</p>
+			<p>This website serves as a centralized location to view and register for workshops and trainings that are being offered at UTEP through Academic Technologies and/or partnering organizations on campus.</p>
 
-		<p>In addition to the offerings found on UTEP Pros, The Office of Human Resources Talent Development also provides a wide variety of free, onsite training for all faculty, staff and student employees.  We encourage you to visit their website to see what they offer for professional development HERE.</p>
+			<p>In addition to the offerings found on UTEP Pros, The Office of Human Resources Talent Development also provides a wide variety of free, onsite training for all faculty, staff and student employees.  We encourage you to visit their website to see what they offer for professional development HERE.</p>
 
-		<p>We believe professional development thrives when inquiry, exploration, and researched “best practices” are valued and encouraged as meaningful learning experiences. Come join us to learn, collaborate, and network!</p>
+			<p>We believe professional development thrives when inquiry, exploration, and researched “best practices” are valued and encouraged as meaningful learning experiences. Come join us to learn, collaborate, and network!</p>
+		</div>
+	</div>
+
+	<div class="col-md-8" >
+		<div id="mini-clndr">
+			<script id="mini-clndr-template" type="text/template">
+				<div class="controls">
+					<div class="clndr-previous-button">&lsaquo;</div><div class="month">{{= month }}</div><div class="clndr-next-button">&rsaquo;</div>
+				</div>
+
+				<div class="days-container">
+					<div class="days">
+						<div class="headers">
+							{{ _.each(daysOfTheWeek, function(day) { }}<div class="day-header">{{= day }}</div>{{ }); }}
+						</div>
+						{{ _.each(days, function(day) { }}<div class="{{= day.classes }}" id="{{= day.id }}">{{= day.day }}</div>{{ }); }}
+					</div>
+					<div class="events">
+						<div class="headers">
+							<div class="x-button">x</div>
+							<div class="event-header">EVENTS</div>
+						</div>
+						<div class="events-list">
+							{{ _.each(eventsThisMonth, function(event) { }}
+								<div class="event">
+									<a href="{{= event.url }}">{{= moment(event.date).format('MMMM Do') }}: {{= event.title }}</a>
+								</div>
+								{{ }); }}
+						</div>
+					</div>
+				</div>
+			</script>
+		</div>
 	</div>
 
 	<div class="home-buttons">
 		<div class="home-button-component"><%= link_to 'View Events', events_path %></div>
 		<div class="home-button-component">
 			<% if session[:user_id] %>
-				<%= link_to 'Sign Out', signout_path, id: "sign_out" %>
+			<%= link_to 'Sign Out', signout_path, id: "sign_out" %>
 			<% else %>
-				<%= link_to 'Sign In', "https://adminapps.utep.edu/sso?redirectURL=#{request.original_url}create_session" %>
+			<%= link_to 'Sign In', "https://adminapps.utep.edu/sso?redirectURL=#{request.original_url}create_session" %>
 			<% end %>
 		</div>
 	</div>
 
+	<script>
+		var clndr = {};
+
+		$(document).ready(function () {
+
+  // PARDON ME while I do a little magic to keep these events relevant for the rest of time...
+  var currentMonth = moment().format('YYYY-MM');
+  var nextMonth    = moment().add('month', 1).format('YYYY-MM');
+
+  var events = [
+  { date: currentMonth + '-' + '10', title: 'Persian Kitten Auction', location: 'Center for Beautiful Cats' },
+  { date: currentMonth + '-' + '19', title: 'Cat Frisbee', location: 'Jefferson Park' },
+  { date: currentMonth + '-' + '23', title: 'Kitten Demonstration', location: 'Center for Beautiful Cats' },
+  { date: nextMonth + '-' + '07',    title: 'Small Cat Photo Session', location: 'Center for Cat Photography' }
+  ];
+
+
+  $('#mini-clndr').clndr({
+  	template: $('#mini-clndr-template').html(),
+  	events: events,
+  	clickEvents: {
+  		click: function(target) {
+  			if(target.events.length) {
+  				var daysContainer = $('#mini-clndr').find('.days-container');
+  				daysContainer.toggleClass('show-events', true);
+  				$('#mini-clndr').find('.x-button').click( function() {
+  					daysContainer.toggleClass('show-events', false);
+  				});
+  			}
+  		}
+  	},
+  	adjacentDaysChangeMonth: true,
+  	forceSixRows: true
+  });
+});
+
+</script>
 </div>
