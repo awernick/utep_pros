@@ -15,6 +15,10 @@
 /log/*.log
 /tmp
 
+#Ignore OSX file 
+*/.DS_Store
+.DS_Store
+
 #Ignore Capistrano
 .capistrano/metrics
 
