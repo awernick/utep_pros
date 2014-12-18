@@ -7,25 +7,10 @@
       <a href="#" class="btn btn-default" role="button">Calendar View</a>
     </div>
   <div class="event-elements-wrapper">
-  <% @events.each do |event| %>
-  <div class="day-of-the-week-separator"><%= parse_date(event.starttime) %></div>
-    <div class="event-element">
-    <%= link_to event do %>
-      <div class="event-element-title"><%= event.name %></div>
-      <div class="event-element-date">Time: <%= parse_time_accounting_for_timezone(event.starttime) %></div>
-      <div class="event-element-location">Location: <%= event.location %></div>
-      <div class="event-element-categories">
-        <% event.parse_tags.each do |tag| %>
-          <span class="label label-default event-tag-label"><%= tag %></span>
-        <% end %>
-      </div>
-    <% end %>
-    </div>
-    <% end %>
-  </div>
-  <div id="infinite-scrolling">
-    <%= will_paginate @posts, :page_links => false %>
+  <%= render "event", :locals => { :events => @events}  %>
   </div>
 
 
-<%= link_to 'New Event', new_event_path %>
+  <%= link_to 'Load More Events', events_path(:page => @events.next_page), :class => 'load-more-events', :remote => true if @events.next_page %>
+
+  <%= link_to 'New Event', new_event_path %>
