@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20141211180814) do
     t.string   "metakeywords"
     t.string   "metadescription"
     t.boolean  "recurring"
+    t.string   "repeat_also"
     t.boolean  "registration"
     t.boolean  "comments"
     t.string   "icon"

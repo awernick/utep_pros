@@ -23,6 +23,7 @@
  body {
  	font-family: "Open Sans", Arial, sans-serif;
  	background: #F2F2F2;
+ 	-webkit-font-smoothing: antialiased;
  }
 
 /* Prevents slides from flashing */

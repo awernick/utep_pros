@@ -16,6 +16,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string :metakeywords
       t.string :metadescription
       t.boolean :recurring
+      t.string  :repeat_also
       t.boolean :registration
       t.boolean :comments
       t.string :icon
