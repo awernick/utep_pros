@@ -1,0 +1,245 @@
+$light-gray:  #dedede;
+$dark-gray: #343434;
+$light-black: #333333; /*#69a776;*/
+$black-text:  #212121;
+$at-blue: #00A9C5; /*#97ce7f;  */
+$trans-white: rgba(255, 255, 255, 0.5);
+$time: 0.5s;
+$time-quick: 0.25s;
+
+@mixin noselect
+{
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+@mixin vertical-padding($size: 5px)
+{
+  padding-top: $size;
+  padding-bottom: $size;
+}
+
+@mixin transition($transition-property, $transition-time) {
+    -webkit-transition: $transition-property $transition-time;
+    -moz-transition: $transition-property $transition-time;
+    -ms-transition: $transition-property $transition-time;
+    -o-transition: $transition-property $transition-time;
+    transition: $transition-property $transition-time;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+#mini-clndr
+{
+  font-family: Asap, Helvetica, Arial;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #f2f2f2; 
+  /*-moz-box-shadow: 4px 4px 0 darken($dark-gray, 5%);
+  -webkit-box-shadow: 4px 4px 0 darken($dark-gray, 5%);
+  box-shadow: 4px 4px 0 darken($dark-gray, 5%);*/
+}
+
+#mini-clndr .clndr
+{
+  overflow: hidden;
+  border-bottom: 7px solid $light-black;
+  padding-top: 20px;
+
+  .controls
+  {
+    background-color: $light-black;
+    color: white;
+    font-size: 16px;
+
+    .clndr-previous-button, .clndr-next-button
+    {
+      width: 15%;
+      @include vertical-padding(10px);
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+      @include noselect;
+      @include transition(background-color, $time);
+      &:hover
+      {
+        background-color: darken($light-black, 10%);
+      }
+    }
+    .month
+    {
+      width: 70%;
+      @include vertical-padding;
+      display: inline-block;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+  }
+
+  .days-container
+  {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    @include clearfix;
+    background-color: $light-gray;
+
+    .days
+    {
+      position: absolute;
+      left: 0;
+      width: 102%;
+      height: 61%;
+      @include transition(left, $time);
+
+      .day, .empty
+      {
+        width: 14%;
+        height: 26%;
+        display: inline-block;
+        @include vertical-padding(8px);
+
+        font-size: 17px;
+        font-weight: 300;
+        text-align: center;
+        color: $black-text;
+
+        border-right: 1px solid $trans-white;
+        border-bottom: 1px solid $trans-white;
+
+        &.event
+        {
+          background-color: darken($light-gray, 10%);
+          @include transition(background-color, $time);
+          cursor: pointer;
+          &:hover
+          {
+            background-color: darken($light-gray, 20%);
+          }
+        }
+
+        &.adjacent-month
+        {
+          color: rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      .empty
+      {
+        height: 31px;
+        vertical-align: bottom;
+      }
+
+      .headers
+      {
+        background-color: $at-blue;
+        @include vertical-padding;
+
+        .day-header
+        {
+          width: 14%;
+          display: inline-block;
+          text-align: center;
+          color: white;
+          font-size: 15px;
+        }
+      }
+    }
+
+    .events
+    {
+      position: absolute;
+      left: 100%;
+      width: 100%;
+      height: 100%;
+      @include transition(left, $time);
+      background-color: $light-gray;
+
+      .headers
+      {
+        position: relative;
+      }
+
+      .event-header
+      {
+        width: 100%;
+        background-color: $at-blue;
+        @include vertical-padding;
+        text-align: center;
+        color: white;
+        font-size: 15px;
+      }
+
+      .x-button
+      {
+        position: absolute;
+        font-size: 80%;
+        top: 4px;
+        left: 20px;
+        cursor: pointer;
+        @include transition(color, $time-quick);
+        &:hover
+        {
+          color: white;
+        }
+      }
+
+      .events-list
+      {
+        overflow: scroll;
+        height: 185px;
+
+        .event
+        {
+          @include vertical-padding(8px);
+          padding-left: 10px;
+          border-bottom: 1px solid $trans-white;
+          @include transition(background-color, $time-quick);
+
+          &:hover
+          {
+            background-color: lighten($light-gray, 4%);
+          }
+
+          a
+          {
+            position: relative;
+            font-size: 15px;
+            // font-weight: 700;
+            letter-spacing: 1px;
+            background-color: transparent;
+            color: $black-text;
+            text-decoration: none;
+            @include transition(color, $time-quick);
+            &:hover
+            {
+              background-color: transparent;
+              color: $light-black;
+            }
+          }
+        }
+      }
+    }
+
+    &.show-events
+    {
+      .days
+      {
+        left: -294px;
+      }
+      .events
+      {
+        left: 0;
+      }
+    }
+  }
+}
