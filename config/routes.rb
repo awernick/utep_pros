@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  
+  resources :dashboard
+  get 'dashboard/new'
+  get 'dashboard/create'
+
   resources :users
 
   get 'static_pages/home'
@@ -12,10 +17,16 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  match '/create_session', to: 'sessions#create', as: 'create_session', via: [:get, :post]
-  match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
+
+  #Front End
   root 'static_pages#home'
   match '/contact' => 'static_pages#contact', via: [:get, :post]
+
+  #Single Sign On Routes
+  match '/create_session', to: 'sessions#create', as: 'create_session', via: [:get, :post]
+  match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
+
+  #Administration Backend Routes
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
