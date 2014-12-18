@@ -78,7 +78,7 @@
 	  			<% @events.each_with_index do |event, index| %>
 	 				{ date: "<%= parse_date_for_calendar(event.starttime) %>", 
 	 				  title: "<%= event.name %>", location: "<%= event.location %>",
-	 				  url: "<%= event_url(event) %>"}
+	 				  url: "<%= event_path(event) %>"}
 	 				  <% if index != Event.count - 1 %>
 	 				  	 <%= ',' %>
 	 				  <% end %>
