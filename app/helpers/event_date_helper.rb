@@ -6,16 +6,17 @@ module EventDateHelper
 
 	# Method for parsing the date to a readable format.
   def parse_date (unparsedDate)
-
 		# Convert date to string so that the method can work.
 		parsedDate = Date.parse(unparsedDate.to_s)
 
 		# Separate the date elements to display them with commas and space.
-		month = parsedDate.strftime('%B')
-		day = parsedDate.strftime('%d')
-		year = parsedDate.strftime('%Y')
-		# Show the date as we want it.
-		return month + " " + day + ", " + year
+		parsedDate.strftime('%B %d, %Y')
+	end
+
+	def parse_date_for_calendar(date)
+		parsed_date = Date.parse(date.to_s)
+		#Formats date as YYYY-MM
+		parsed_date.strftime('%Y-%m-%d')
 	end
 
 	def check_if_event_has_passed
