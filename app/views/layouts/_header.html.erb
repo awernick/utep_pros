@@ -30,7 +30,7 @@
 								<% @current_user = current_user %>
 								<%= link_to "#{@current_user.name.split(' ').first}, Sign Out", signout_path, id: "sign_out" %>
 							<% else %>
-								<%= link_to 'Sign-In', "https://adminapps.utep.edu/sso?redirectURL=#{request.original_url}create_session" %>
+								<%= link_to 'Sign-In', "https://adminapps.utep.edu/sso?redirectURL=#{create_session_url}" %>
 							<% end %>
 						</li>
 						<li role="presentation" class="custom-nav-pills"><a href="#">RSS</a></li>
