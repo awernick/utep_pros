@@ -23421,3 +23421,1960 @@ Started GET "/assets/at_logo_retina.png" for 127.0.0.1 at 2014-12-19 00:05:02 -0
 
 
 Started GET "/assets/header.png" for 127.0.0.1 at 2014-12-19 00:05:02 -0700
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-12-19 00:10:07 -0700
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-12-19 00:10:07 -0700
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-12-19 00:10:07 -0700
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2014-12-19 00:10:07 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-19 00:10:07 -0700
+
+
+Started GET "/assets/clndr.css?body=1" for 127.0.0.1 at 2014-12-19 00:10:07 -0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-12-19 00:10:07 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-19 00:10:07 -0700
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-12-19 00:10:07 -0700
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-12-19 00:10:07 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-19 00:10:07 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-19 00:10:07 -0700
+
+
+Started GET "/assets/font-kit-rails/open-sans.css?body=1" for 127.0.0.1 at 2014-12-19 00:10:07 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-19 00:15:36 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mEvent Load (1.2ms)[0m  [1mSELECT "atw_rseventspro_events".* FROM "atw_rseventspro_events"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.2ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  Rendered static_pages/home.html.erb within layouts/application (279.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 787ms (Views: 781.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-12-19 00:15:37 -0700
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-12-19 00:15:37 -0700
+
+
+Started GET "/assets/clndr.css?body=1" for 127.0.0.1 at 2014-12-19 00:15:37 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-19 00:15:37 -0700
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-12-19 00:15:37 -0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-12-19 00:15:37 -0700
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2014-12-19 00:15:37 -0700
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-12-19 00:15:37 -0700
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-12-19 00:15:37 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-19 00:15:37 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-19 00:15:37 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-19 00:15:37 -0700
+
+
+Started GET "/assets/font-kit-rails/open-sans.css?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/jquery.slides.min.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/slideshowInit.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/moment/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/jquery.inview.min.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/clndr/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/at_logo_retina.png" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/assets/header.png" for 127.0.0.1 at 2014-12-19 00:15:38 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-19 00:16:03 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mEvent Load (1.0ms)[0m  SELECT "atw_rseventspro_events".* FROM "atw_rseventspro_events"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  Rendered static_pages/home.html.erb within layouts/application (73.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 535ms (Views: 532.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/clndr.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/font-kit-rails/open-sans.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/jquery.slides.min.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/slideshowInit.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/moment/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/clndr/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/at_logo_retina.png" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/jquery.inview.min.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/header.png" for 127.0.0.1 at 2014-12-19 00:16:04 -0700
+
+
+Started GET "/assets/open-sans/OpenSans-Light-webfont.woff" for 127.0.0.1 at 2014-12-19 00:16:05 -0700
+
+
+Started GET "/assets/open-sans/OpenSans-Regular-webfont.woff" for 127.0.0.1 at 2014-12-19 00:16:05 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-19 00:16:32 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mEvent Load (1.1ms)[0m  [1mSELECT "atw_rseventspro_events".* FROM "atw_rseventspro_events"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  Rendered static_pages/home.html.erb within layouts/application (89.4ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 509ms (Views: 505.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/clndr.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/font-kit-rails/open-sans.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/jquery.slides.min.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/slideshowInit.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/moment/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/jquery.inview.min.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/clndr/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/at_logo_retina.png" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/assets/header.png" for 127.0.0.1 at 2014-12-19 00:16:33 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-19 00:16:43 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mEvent Load (0.8ms)[0m  SELECT "atw_rseventspro_events".* FROM "atw_rseventspro_events"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  Rendered static_pages/home.html.erb within layouts/application (84.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 506ms (Views: 502.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/clndr.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/font-kit-rails/open-sans.css?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/jquery.slides.min.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/slideshowInit.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/clndr/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/moment/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/jquery.inview.min.js?body=1" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/at_logo_retina.png" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/assets/header.png" for 127.0.0.1 at 2014-12-19 00:16:44 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-19 00:17:48 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mEvent Load (1.2ms)[0m  [1mSELECT "atw_rseventspro_events".* FROM "atw_rseventspro_events"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  Rendered static_pages/home.html.erb within layouts/application (86.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 708ms (Views: 703.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/clndr.css?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/font-kit-rails/open-sans.css?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/jquery.slides.min.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/slideshowInit.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/moment/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/jquery.inview.min.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/clndr/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/at_logo_retina.png" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/assets/header.png" for 127.0.0.1 at 2014-12-19 00:17:49 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-19 00:20:50 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mEvent Load (1.6ms)[0m  SELECT "atw_rseventspro_events".* FROM "atw_rseventspro_events"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  Rendered static_pages/home.html.erb within layouts/application (96.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 590ms (Views: 585.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/clndr.css?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/font-kit-rails/open-sans.css?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/jquery.slides.min.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/slideshowInit.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/moment/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/clndr/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/jquery.inview.min.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/at_logo_retina.png" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/assets/header.png" for 127.0.0.1 at 2014-12-19 00:20:51 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-19 00:24:10 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mEvent Load (0.9ms)[0m  [1mSELECT "atw_rseventspro_events".* FROM "atw_rseventspro_events"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  Rendered static_pages/home.html.erb within layouts/application (78.8ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 480ms (Views: 477.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/clndr.css?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/font-kit-rails/open-sans.css?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/jquery.slides.min.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/slideshowInit.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/moment/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/clndr/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/jquery.inview.min.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/at_logo_retina.png" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/assets/header.png" for 127.0.0.1 at 2014-12-19 00:24:11 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-19 00:28:58 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mEvent Load (1.6ms)[0m  SELECT "atw_rseventspro_events".* FROM "atw_rseventspro_events"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "atw_rseventspro_events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "atw_rseventspro_events"
+  Rendered static_pages/home.html.erb within layouts/application (70.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 554ms (Views: 549.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/clndr.css?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/font-kit-rails/open-sans.css?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/slideshowInit.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/clndr/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/jquery.slides.min.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/moment/index.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/jquery.inview.min.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/at_logo_retina.png" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
+
+
+Started GET "/assets/header.png" for 127.0.0.1 at 2014-12-19 00:28:59 -0700
