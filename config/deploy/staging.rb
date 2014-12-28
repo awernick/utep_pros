@@ -4,9 +4,9 @@
 # role :web, %w{deployer@workshops.utep.edu}
 # role :db,  %w{deployer@workshops.utep.edu}
 
-role :app, %w{deployer@area51.at.utep.edu}
-role :web, %w{deployer@area51.at.utep.edu}
-role :db,  %w{deployer@area51.at.utep.edu}
+role :app, %w{deployer@area51.utep.edu}
+role :web, %w{deployer@area51.utep.edu}
+role :db,  %w{deployer@area51.utep.edu}
 
 # Define server(s)
 server 'area51.at.utep.edu', user: 'deployer', roles: %w{web}
