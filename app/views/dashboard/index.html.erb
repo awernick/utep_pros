@@ -1,3 +1,5 @@
+<% provide(:title, "Dashboard") %>
+
 <div class="container admin-dashboard-header">
 	<h3>Dashboard</h3>
 </div>
@@ -60,13 +62,20 @@
 		</div>
 
 		<div class="panel panel-info">
-			<div class="panel-heading">What's new</div>
+			<div class="panel-heading"><%= "Whats going on, #{current_user.name}" %></div>
 			<div class="panel-body">
 				<ul class="list-group">
 					<li class="list-group-item">
 						<div class="list-group-item-title">Event Created</div>
 						<div class="list-group-item-info-wrapper">By Alan Wernick</div>
 					</li>
+					<% subscription_activities = PublicActivity::Activity.order("created_at desc").where(:recipient_id => current_user.event_ids, trackable_type: "Subscription")%>
+					<% event_activities = PublicActivity::Activity.order("created_at desc").where(:recipient_id => current_user.id)%>
+					<% @activities = subscription_activities + event_activities %>
+					<% @activities.sort_by(&:created_at) %>
+					<% @activities.each do |activity| %>
+						<%= render_activity activity %>
+					<% end %> 
 				</ul>
 			</div>
 			<!-- <div class="panel-footer">Panel Footer</div> -->

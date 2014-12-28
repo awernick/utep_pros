@@ -1,0 +1,70 @@
+= form_for @subscription do |f|
+  - if @subscription.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@subscription.errors.count, "error")} prohibited this attendee from being saved:"
+      %ul
+        - @subscription.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :event_id
+    = f.text_field :event_id
+  .field
+    = f.label :user_id
+    = f.number_field :user_id
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :date
+    = f.datetime_select :date
+  .field
+    = f.label :state
+    = f.number_field :state
+  .field
+    = f.label :verification
+    = f.text_field :verification
+  .field
+    = f.label :SubmissionId
+    = f.number_field :SubmissionId
+  .field
+    = f.label :gateway
+    = f.text_field :gateway
+  .field
+    = f.label :ip
+    = f.text_field :ip
+  .field
+    = f.label :URL
+    = f.text_field :URL
+  .field
+    = f.label :params
+    = f.text_field :params
+  .field
+    = f.label :discount
+    = f.text_field :discount
+  .field
+    = f.label :early_fee
+    = f.text_field :early_fee
+  .field
+    = f.label :late_fee
+    = f.text_field :late_fee
+  .field
+    = f.label :tax
+    = f.text_field :tax
+  .field
+    = f.label :log
+    = f.text_field :log
+  .field
+    = f.label :lang
+    = f.text_field :lang
+  .field
+    = f.label :coupon
+    = f.text_field :coupon
+  .field
+    = f.label :ideal
+    = f.text_field :ideal
+  .actions
+    = f.submit 'Save'

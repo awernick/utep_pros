@@ -1,0 +1,9 @@
+<% user = User.find_by_id(activity.owner_id) %>
+<% event = Event.find_by_id(activity.trackable_id)%>
+<% if user && event %>
+	<li class="list-group-item">
+		<div class="list-group-item-title">
+		<%= link_to "#{user.name}", user %> created new event: <%= link_to "#{event.name}", event %></div>
+		<div class="list-group-item-info-wrapper"><%= Time.now - activity.created_at %> ago </div>
+	</li>
+<% end %>
