@@ -9,7 +9,7 @@ role :web, %w{deployer@area51.utep.edu}
 role :db,  %w{deployer@area51.utep.edu}
 
 # Define server(s)
-server 'area51.at.utep.edu', user: 'deployer', roles: %w{web}
+server 'area51.utep.edu', user: 'deployer', roles: %w{web}
 
 set :deploy_to, "/var/www/utep_pros"
 set :branch, "staging"
