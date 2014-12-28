@@ -52,14 +52,18 @@
 		</div>
 	</div>
 
+	<div class="col-xs-12 col-md-4">
 	<div class="home-buttons">
-		<div class="home-button-component"><%= link_to 'View Events', events_path %></div>
+		<div class="home-button-component" style="border-right: white solid 1px">
+			<%= link_to 'View Events', events_path %>
+		</div>
 		<div class="home-button-component">
 			<% if session[:user_id] %>
 			<%= link_to 'Sign Out', signout_path, id: "sign_out" %>
 			<% else %>
 			<%= link_to 'Sign In', "https://adminapps.utep.edu/sso?redirectURL=#{request.original_url}create_session" %>
 			<% end %>
+		</div>
 		</div>
 	</div>
 

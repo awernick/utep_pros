@@ -1,0 +1,9 @@
+<% user = User.find_by_id(activity.owner_id) %>
+<% event = Event.find_by_id(activity.trackable_id)%>
+<% if user && event %>
+	<li class="list-group-item">
+		<div class="list-group-item-title">
+		Event Canceled </div>
+		<div class="list-group-item-info-wrapper">By <%= user.name  %></div>
+	</li>
+<% end %>

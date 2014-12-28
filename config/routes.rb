@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
   
+  resources :activities
+  resources :subscriptions
   resources :dashboard
-  get 'dashboard/new'
-  get 'dashboard/create'
-
+  resources :events
   resources :users
 
+  get 'dashboard/new'
+  get 'dashboard/create'
   get 'static_pages/home'
-
   get 'static_pages/about'
   get 'static_pages/contact'
 
-  resources :events
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   #Front End
   root 'static_pages#home'
-  match '/contact' => 'static_pages#contact', via: [:get, :post]
+  match '/contact', to: 'static_pages#contact', as: 'contact', via: [:get, :post]
 
   #Single Sign On Routes
   match '/create_session', to: 'sessions#create', as: 'create_session', via: [:get, :post]

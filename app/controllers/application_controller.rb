@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include PublicActivity::StoreController
   require 'savon'
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.

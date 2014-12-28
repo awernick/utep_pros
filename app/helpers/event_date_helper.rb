@@ -19,6 +19,27 @@ module EventDateHelper
 		parsed_date.strftime('%Y-%m-%d')
 	end
 
+	def activity_format_date (span)
+		time = Time.at(span)
+
+		if span < 60
+			unit = time.strftime("%S").to_i
+			return "#{pluralize(unit,'second')} ago"
+		elsif span < 3600
+			unit = time.strftime("%M").to_i
+			return "#{pluralize(unit,'minute')} ago"
+		elsif span < 86400
+			unit = time.strftime("%H").to_i
+			return "#{pluralize(unit,'hour')} ago"
+		elsif span < 31536000
+			unit = time.strftime("%d").to_i
+			return "#{pluralize(unit,'day')} ago"
+		else
+			unit = time.strftime("%y").to_i
+			return "#{pluralize(unit,'year')} ago"
+		end
+	end
+
 	def check_if_event_has_passed
 
 		#Get the time that the event is going to start and the current time

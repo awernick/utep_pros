@@ -1,4 +1,9 @@
 class Event < ActiveRecord::Base
+	include PublicActivity::Common
+	
+	has_many :subscriptions
+	has_many :users, :through => :subscriptions
+	
 	#Database look up name.
 	self.table_name = "atw_rseventspro_events"
 	

@@ -40,10 +40,12 @@ gem 'simple_form'
 gem 'haml-rails'
 # Install Kaminari for infinite scroll
 gem 'will_paginate'
-#Captcha for Rails for the Contact Form
+# Captcha for Rails for the Contact Form
 gem "recaptcha", :require => "recaptcha/rails"
 # Underscore for clndr
 gem 'underscore-rails'
+# Notification system for user actions
+gem 'public_activity'
 # Use unicorn as the app server
 # gem 'unicorn'
 # Use debugger

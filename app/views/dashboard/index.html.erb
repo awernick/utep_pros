@@ -1,3 +1,5 @@
+<% provide(:title, "Dashboard") %>
+
 <div class="container admin-dashboard-header">
 	<h3>Dashboard</h3>
 </div>
@@ -6,14 +8,74 @@
 
 <div class="container admin-activity-wrapper">
 	<div class="col-lg-9">
+
 		<div class="panel panel-info">
-			<div class="panel-heading">What's going on.</div>
+			<div class="panel-heading">Your created events</div>
+			<div class="panel-body">
+				<div class="event-list-element-wrapper table-responsive">
+					<table class="table table-condensed">
+				      <thead>
+				        <tr>
+				          <th>Event</th>
+				          <th>Actions</th>
+				        </tr>
+				      </thead>
+				      <tbody>
+				        <tr>
+				        <!-- Make sure to put line height of 30px -->
+				          <td><strong>Joomla Training</strong></td>
+				          <td>
+				          	<div class="btn-group" role="group" aria-label="...">
+							  <a href="#" class="btn btn-default btn-sm">Admin View</a>
+							  <a href="#" class="btn btn-default btn-sm">Edit</a>
+							  <a href="#" class="btn btn-default btn-sm">Delete</a>
+							</div>
+				          </td>
+
+				        </tr>
+				        <tr>
+				          <td>Other Event Title</td>
+				          <td>
+				          	<div class="btn-group" role="group" aria-label="...">
+							  <a href="#" class="btn btn-default btn-sm">Admin View</a>
+							  <a href="#" class="btn btn-default btn-sm">Edit</a>
+							  <a href="#" class="btn btn-default btn-sm">Delete</a>
+							</div>
+				          </td>
+				        </tr>
+				        <tr>
+				          <td>Yet another event title</td>
+				          <td>
+				          	<div class="btn-group" role="group" aria-label="...">
+							  <a href="#" class="btn btn-default btn-sm">Admin View</a>
+							  <a href="#" class="btn btn-default btn-sm">Edit</a>
+							  <a href="#" class="btn btn-default btn-sm">Delete</a>
+							</div>
+				          </td>
+				        </tr>
+				      </tbody>
+				    </table>
+				</div>
+				<a href="#" class="btn btn-primary btn-lg">Create New Event</a>
+			</div>
+			<!-- <div class="panel-footer">Panel Footer</div> -->
+		</div>
+
+		<div class="panel panel-info">
+			<div class="panel-heading"><%= "Whats going on, #{current_user.name}" %></div>
 			<div class="panel-body">
 				<ul class="list-group">
 					<li class="list-group-item">
-						<div class="list-group-item-title">New Event Created | Wordpress Training 2.0</div>
+						<div class="list-group-item-title">Event Created</div>
 						<div class="list-group-item-info-wrapper">By Alan Wernick</div>
 					</li>
+					<% subscription_activities = PublicActivity::Activity.order("created_at desc").where(:recipient_id => current_user.event_ids, trackable_type: "Subscription")%>
+					<% event_activities = PublicActivity::Activity.order("created_at desc").where(:recipient_id => current_user.id)%>
+					<% @activities = subscription_activities + event_activities %>
+					<% @activities.sort_by(&:created_at) %>
+					<% @activities.each do |activity| %>
+						<%= render_activity activity %>
+					<% end %> 
 				</ul>
 			</div>
 			<!-- <div class="panel-footer">Panel Footer</div> -->
