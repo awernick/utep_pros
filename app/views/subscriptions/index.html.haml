@@ -1,0 +1,59 @@
+%h1 Listing subscriptions
+
+%table
+  %thead
+    %tr
+      %th Event ID
+      %th User ID
+      %th Name
+      %th Email
+      %th Date
+      %th State
+      %th Verification
+      %th Submissionid
+      %th Gateway
+      %th Ip
+      %th Url
+      %th Params
+      %th Discount
+      %th Early fee
+      %th Late fee
+      %th Tax
+      %th Log
+      %th Lang
+      %th Coupon
+      %th Ideal
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @subscriptions.each do |subscription|
+      %tr
+        %td= subscription.event_id
+        %td= subscription.user_id
+        %td= subscription.name
+        %td= subscription.email
+        %td= subscription.date
+        %td= subscription.state
+        %td= subscription.verification
+        %td= subscription.SubmissionId
+        %td= subscription.gateway
+        %td= subscription.ip
+        %td= subscription.URL
+        %td= subscription.params
+        %td= subscription.discount
+        %td= subscription.early_fee
+        %td= subscription.late_fee
+        %td= subscription.tax
+        %td= subscription.log
+        %td= subscription.lang
+        %td= subscription.coupon
+        %td= subscription.ideal
+        %td= link_to 'Show', subscription
+        %td= link_to 'Edit', edit_subscription_path(subscription)
+        %td= link_to 'Destroy', subscription, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Subscription', new_subscription_path

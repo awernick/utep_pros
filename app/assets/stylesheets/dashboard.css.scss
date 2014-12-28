@@ -90,3 +90,33 @@ margin-bottom: 9.5px;
 	color: #aaa;
 }
 /*------------------------------------------------------------------------------------------------------*/
+
+/* Notifications */
+.list-group-item-title
+{
+
+  a {
+    color: #00a9c5;
+
+    &:hover
+    {
+      color: #00a9c5;
+      background: none;
+      text-decoration: underline;
+    }
+  }
+}
+
+.list-group-item-info-wrapper
+{
+  a {
+    color: #aaa;
+
+    &:hover {
+      color: #00a9c5;
+      background: none;
+    }
+  }
+}
+
+

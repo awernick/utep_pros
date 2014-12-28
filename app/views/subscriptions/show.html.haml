@@ -1,0 +1,66 @@
+%p#notice= notice
+
+%p
+  %b Event ID:
+  = @subscription.event_id
+%p
+  %b User ID:
+  = @subscription.user_id
+%p
+  %b Name:
+  = @subscription.name
+%p
+  %b Email:
+  = @subscription.email
+%p
+  %b Date:
+  = @subscription.date
+%p
+  %b State:
+  = @subscription.state
+%p
+  %b Verification:
+  = @subscription.verification
+%p
+  %b Submissionid:
+  = @subscription.SubmissionId
+%p
+  %b Gateway:
+  = @subscription.gateway
+%p
+  %b Ip:
+  = @subscription.ip
+%p
+  %b Url:
+  = @subscription.URL
+%p
+  %b Params:
+  = @subscription.params
+%p
+  %b Discount:
+  = @subscription.discount
+%p
+  %b Early fee:
+  = @subscription.early_fee
+%p
+  %b Late fee:
+  = @subscription.late_fee
+%p
+  %b Tax:
+  = @subscription.tax
+%p
+  %b Log:
+  = @subscription.log
+%p
+  %b Lang:
+  = @subscription.lang
+%p
+  %b Coupon:
+  = @subscription.coupon
+%p
+  %b Ideal:
+  = @subscription.ideal
+
+= link_to 'Edit', edit_subscription_path(@subscription)
+\|
+= link_to 'Back', subscriptions_path

@@ -1,13 +1,15 @@
 require 'utep_sso'
 
 class User < ActiveRecord::Base
-
+	has_many :subscriptions
+	has_many :events, :foreign_key => 'owner'
+	
 	self.table_name = "atw_users"
 
 	def self.from_sso(utep_cookie, utep_salt)
 		user = User.new
-    
-    sso_response = UTEPSSO.authenticate(utep_cookie, utep_salt)
+
+		sso_response = UTEPSSO.authenticate(utep_cookie, utep_salt)
 
 		if User.find_by_username(sso_response[:user_name])
 			User.find_by_username(sso_response[:user_name])  
