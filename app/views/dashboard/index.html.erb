@@ -10,7 +10,27 @@
 	<div class="col-lg-9">
 
 		<div class="panel panel-info">
-			<div class="panel-heading">Your created events</div>
+			<div class="panel-heading"><%= "Whats going on, #{current_user.name} this is the latest." %></div>
+			<div class="panel-body">
+				<ul class="list-group">
+					<li class="list-group-item">
+						<div class="list-group-item-title">Event Created</div>
+						<div class="list-group-item-info-wrapper">By Alan Wernick</div>
+					</li>
+					<% subscription_activities = PublicActivity::Activity.order("created_at desc").where(:recipient_id => current_user.event_ids, trackable_type: "Subscription")%>
+					<% event_activities = PublicActivity::Activity.order("created_at desc").where(:recipient_id => current_user.id)%>
+					<% @activities = subscription_activities + event_activities %>
+					<% @activities.sort_by(&:created_at) %>
+					<% @activities.each do |activity| %>
+						<%= render_activity activity %>
+					<% end %> 
+				</ul>
+			</div>
+			<!-- <div class="panel-footer">Panel Footer</div> -->
+		</div>
+
+		<div class="panel panel-info">
+			<div class="panel-heading">Your events</div>
 			<div class="panel-body">
 				<div class="event-list-element-wrapper table-responsive">
 					<table class="table table-condensed">
@@ -56,46 +76,21 @@
 				      </tbody>
 				    </table>
 				</div>
-				<a href="#" class="btn btn-primary btn-lg">Create New Event</a>
+				<!-- <a href="#" class="btn btn-primary btn-lg">Create New Event</a> -->
 			</div>
 			<!-- <div class="panel-footer">Panel Footer</div> -->
 		</div>
 
-		<div class="panel panel-info">
-			<div class="panel-heading"><%= "Whats going on, #{current_user.name}" %></div>
-			<div class="panel-body">
-				<ul class="list-group">
-					<li class="list-group-item">
-						<div class="list-group-item-title">Event Created</div>
-						<div class="list-group-item-info-wrapper">By Alan Wernick</div>
-					</li>
-					<% subscription_activities = PublicActivity::Activity.order("created_at desc").where(:recipient_id => current_user.event_ids, trackable_type: "Subscription")%>
-					<% event_activities = PublicActivity::Activity.order("created_at desc").where(:recipient_id => current_user.id)%>
-					<% @activities = subscription_activities + event_activities %>
-					<% @activities.sort_by(&:created_at) %>
-					<% @activities.each do |activity| %>
-						<%= render_activity activity %>
-					<% end %> 
-				</ul>
-			</div>
-			<!-- <div class="panel-footer">Panel Footer</div> -->
-		</div>
+		
 	</div>
 	<div class="col-lg-3">
-		
-		<div class="panel panel-info">
-			<div class="panel-heading">Notifications</div>
-			<div class="panel-body">
-				<h2>3 Alerts</h2>
-			</div>
-			<!-- <div class="panel-footer">Panel Footer</div> -->
-		</div>
 
 		<div class="panel panel-primary">
 		<div class="panel-heading">Actions Panel</div>
-			<div class="panel-body">
+			<div class="panel-body action-panel-styling">
 				<ul class="actions-wrapper">
-					<li>+ Create New Event</li>
+					<li><a href="#" class="new-event-action"><span class="glyphicon glyphicon-list-alt custom-glyphicon" aria-hidden="true"></span>NEW EVENT</a></li>
+					<li class="new-user-action"><span class="glyphicon glyphicon-user custom-glyphicon" aria-hidden="true"></span>NEW USER</li>
 				</ul>
 			</div>
 		</div>

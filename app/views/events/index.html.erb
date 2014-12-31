@@ -6,6 +6,21 @@
       <a href="/events" class="btn btn-default" role="button">List View</a>
       <a href="#" class="btn btn-default" role="button">Calendar View</a>
     </div>
+
+    <div class="sorting-button-wrapper">
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle custom-sort-button" data-toggle="dropdown" aria-expanded="false">
+          Event Sorting <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu custom-dropdown-menu" role="menu">
+          <li><a href="#">Sort by Date</a></li>
+          <li><a href="#">Sort by Name</a></li>
+          <li><a href="#">Newly Created</a></li>
+          <li><a href="#">Sort by people attending</a></li>
+        </ul>
+      </div>
+    </div>
+
   <div class="event-elements-wrapper">
   <%= render "event", :locals => { :events => @events}  %>
   </div>

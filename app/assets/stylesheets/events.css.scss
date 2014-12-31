@@ -119,3 +119,35 @@ margin: 0 0 30px -15px;
 	background-color: #00ABC4;
 }
 /*----------*/
+
+.sorting-button-wrapper {
+	padding-top: 10px;
+}
+button.custom-sort-button {
+	color: #00ABC4;
+	background-color: transparent;
+	border-color: transparent;
+	font-weight: bold;
+}
+button.custom-sort-button:hover {
+	color: #ffffff;
+	background-color: #333;
+	border-color: transparent;
+	font-weight: bold;
+}
+button.custom-sort-button:active {
+	color: #ffffff;
+	background-color: #333;
+	border-color: transparent;
+	font-weight: bold;
+}
+button.custom-sort-button:focus {
+	color: #ffffff;
+	background-color: #333;
+	border-color: transparent;
+	font-weight: bold;
+}
+ul.custom-dropdown-menu {
+	border: none;
+	border-radius: 0;
+}
