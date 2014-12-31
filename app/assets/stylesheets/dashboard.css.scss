@@ -119,4 +119,44 @@ margin-bottom: 9.5px;
   }
 }
 
+/*This contains the styling for the Actions Panel list*/
+.action-panel-styling {
+  padding: 0;
+}
+.action-panel-styling ul {
+  list-style: none;
+}
+.action-panel-styling ul li {
+  margin-left: -40px;
+  padding: 10px 0px 10px 14px;
+  border-top: 1px solid rgba(255,255,255,0.5);
+}
+.action-panel-styling ul li a {
+  font-weight: normal;
+  font-size: 1em;
+  font-family: "Helvetica Neue";
+  color: #fff;
+  display: block;
+}
+.action-panel-styling ul li a:hover {
+  font-weight: normal;
+  font-size: 1em;
+  font-family: "Helvetica Neue";
+  color: #fff;
+  display: block;
+  background: #333;
+}
+a.new-event-action {
+   background: #59538D;
+}
+li.new-user-action {
+  background: #54BD7B;
+}
+
+.custom-glyphicon {
+  margin-right: 5px;
+  top: 2px;
+}
+/*----------------------------------------------------*/
+
 
