@@ -50,6 +50,8 @@ gem 'public_activity'
 # gem 'unicorn'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+# Added AngularJS
+gem 'angularjs-rails'
 
 group :development do
 	gem 'capistrano-rvm'
