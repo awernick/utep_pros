@@ -17,6 +17,7 @@
 //= require moment
 //= require clndr
 //= require jquery.inview.min
+//= require angular
 
 $(document).ready(function() {
   if ($('.pagination').length) {
