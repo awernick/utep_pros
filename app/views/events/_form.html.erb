@@ -43,15 +43,22 @@
     <%= f.datetime_select :endtime %>
   </div>
 
-  <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
+  <div class="form-group form-field-spacer">
+    <%= f.label :location, :class => 'custom-contact-label', :for => 'locationField' do %>
+    Location of event
+    <% end %>
+    <%= f.text_field :location, :class => 'form-control custom-at-colors', :id => 'locationField', :placeholder => 'UGLC Room 308' %>
   </div>
-  <div class="field">
-    <%= f.label :owner %><br>
-    <%= f.text_field :owner %>
-  </div>
-  <div class="field">
+
+  <div class="form-group form-field-spacer">
+      <%= f.label :owner, :class => 'custom-contact-label', :for => 'eventOwnerField' do %>
+      Owner of Event
+      <% end %>
+      <br>
+      <%= f.select :owner, User.all.collect {|p| [ p.name, p.name]}, {}, :class => "form-control", :id => "eventOwnerField" %>
+      </div>
+
+  <!-- <div class="field">
     <%= f.label :URL %><br>
     <%= f.text_field :URL %>
   </div>
@@ -222,19 +229,21 @@
   <div class="field">
     <%= f.label :properties %><br>
     <%= f.text_field :properties %>
+  </div> -->
+   <div class="form-group form-field-spacer">
+    <%= f.label :gallery_tags, :class => 'custom-contact-label', :for => 'tagsField' do %>
+    Event Tags (Separated by commas)
+    <% end %>
+    <%= f.text_field :gallery_tags, :class => 'form-control custom-at-colors', :id => 'tagsField', :placeholder => 'computers, joomla' %>
   </div>
-  <div class="field">
-    <%= f.label :gallery_tags %><br>
-    <%= f.text_field :gallery_tags %>
-  </div>
-  <div class="field">
+  <!-- <div class="field">
     <%= f.label :allday %><br>
     <%= f.check_box :allday %>
   </div>
   <div class="field">
     <%= f.label :featured %><br>
     <%= f.check_box :featured %>
-  </div>
+  </div> -->
   <div class="actions">
     <%= f.submit :class => 'btn btn-default col-sm-3 btn-custom-black' %>
   </div>
