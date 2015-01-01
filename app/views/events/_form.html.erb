@@ -12,30 +12,37 @@
   <% end %>
 
 
-  <div class="field">
+  <!-- <div class="field">
     <%= f.label :parent %><br>
     <%= f.number_field :parent %>
+  </div> -->
+  <div class="form-group form-field-spacer">
+    <%= f.label :name, :class => 'custom-contact-label', :for => 'firstNameField' do %>
+    Name of Event
+    <% end %>
+    <%= f.text_field :name, :class => 'form-control custom-at-colors', :id => 'firstNameField', :placeholder => 'Software Defined Radio with HackRF' %>
   </div>
-  <div class="field">
-    <%= f.label :name, :class => 'custom-contact-label', :for => :name %><br>
-    <%= f.text_field :name, :class => 'form-control custom-at-colors', :id => 'firstNameField', :placeholder => 'Short training course on Wordpress 4.0' %>
-  </div>
-  <div class="field">
+
+  <div class="form-group form-field-spacer">
+    <%= f.label :description, :class => 'custom-contact-label', :for => 'descriptionField' do %>More details<% end %>
+    <%= f.text_area :description, :class => 'form-control custom-at-colors', :id => 'descriptionField', :placeholder => '', cols: 20, rows: 5 %>
+    </div>  
+
+      <!-- <div class="field">
     <%= f.label :created %><br>
     <%= f.datetime_select :createdtime %>
-  </div>
+  </div> -->
+
   <div class="field">
     <%= f.label :start %><br>
     <%= f.datetime_select :starttime %>
   </div>
+  
   <div class="field">
     <%= f.label :end %><br>
     <%= f.datetime_select :endtime %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
+
   <div class="field">
     <%= f.label :location %><br>
     <%= f.text_field :location %>
