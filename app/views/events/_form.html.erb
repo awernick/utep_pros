@@ -10,39 +10,55 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
+
+
+  <!-- <div class="field">
     <%= f.label :parent %><br>
     <%= f.number_field :parent %>
+  </div> -->
+  <div class="form-group form-field-spacer">
+    <%= f.label :name, :class => 'custom-contact-label', :for => 'firstNameField' do %>
+    Name of Event
+    <% end %>
+    <%= f.text_field :name, :class => 'form-control custom-at-colors', :id => 'firstNameField', :placeholder => 'Software Defined Radio with HackRF' %>
   </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
+
+  <div class="form-group form-field-spacer">
+    <%= f.label :description, :class => 'custom-contact-label', :for => 'descriptionField' do %>More details<% end %>
+    <%= f.text_area :description, :class => 'form-control custom-at-colors', :id => 'descriptionField', :placeholder => '', cols: 20, rows: 5 %>
+    </div>  
+
+      <!-- <div class="field">
     <%= f.label :created %><br>
     <%= f.datetime_select :createdtime %>
-  </div>
+  </div> -->
+
   <div class="field">
     <%= f.label :start %><br>
     <%= f.datetime_select :starttime %>
   </div>
+  
   <div class="field">
     <%= f.label :end %><br>
     <%= f.datetime_select :endtime %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+
+  <div class="form-group form-field-spacer">
+    <%= f.label :location, :class => 'custom-contact-label', :for => 'locationField' do %>
+    Location of event
+    <% end %>
+    <%= f.text_field :location, :class => 'form-control custom-at-colors', :id => 'locationField', :placeholder => 'UGLC Room 308' %>
   </div>
-  <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
-  </div>
-  <div class="field">
-    <%= f.label :owner %><br>
-    <%= f.text_field :owner %>
-  </div>
-  <div class="field">
+
+  <div class="form-group form-field-spacer">
+      <%= f.label :owner, :class => 'custom-contact-label', :for => 'eventOwnerField' do %>
+      Owner of Event
+      <% end %>
+      <br>
+      <%= f.select :owner, User.all.collect {|p| [ p.name, p.name]}, {}, :class => "form-control", :id => "eventOwnerField" %>
+      </div>
+
+  <!-- <div class="field">
     <%= f.label :URL %><br>
     <%= f.text_field :URL %>
   </div>
@@ -213,20 +229,22 @@
   <div class="field">
     <%= f.label :properties %><br>
     <%= f.text_field :properties %>
+  </div> -->
+   <div class="form-group form-field-spacer">
+    <%= f.label :gallery_tags, :class => 'custom-contact-label', :for => 'tagsField' do %>
+    Event Tags (Separated by commas)
+    <% end %>
+    <%= f.text_field :gallery_tags, :class => 'form-control custom-at-colors', :id => 'tagsField', :placeholder => 'computers, joomla' %>
   </div>
-  <div class="field">
-    <%= f.label :gallery_tags %><br>
-    <%= f.text_field :gallery_tags %>
-  </div>
-  <div class="field">
+  <!-- <div class="field">
     <%= f.label :allday %><br>
     <%= f.check_box :allday %>
   </div>
   <div class="field">
     <%= f.label :featured %><br>
     <%= f.check_box :featured %>
-  </div>
+  </div> -->
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => 'btn btn-default col-sm-3 btn-custom-black' %>
   </div>
 <% end %>

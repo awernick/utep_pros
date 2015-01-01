@@ -89,8 +89,15 @@
 		<div class="panel-heading">Actions Panel</div>
 			<div class="panel-body action-panel-styling">
 				<ul class="actions-wrapper">
-					<li><a href="#" class="new-event-action"><span class="glyphicon glyphicon-list-alt custom-glyphicon" aria-hidden="true"></span>NEW EVENT</a></li>
-					<li class="new-user-action"><span class="glyphicon glyphicon-user custom-glyphicon" aria-hidden="true"></span>NEW USER</li>
+					<li><%= link_to new_event_path, class: "new-event-action" do %>
+						<span class="glyphicon glyphicon-list-alt custom-glyphicon" aria-hidden="true"></span>CREATE NEW EVENT
+						<% end %>
+					</li>
+					<li>
+						<%= link_to new_user_path, class: "new-user-action" do %>
+						<span class="glyphicon glyphicon-user custom-glyphicon" aria-hidden="true"></span>CREATE NEW USER
+						<% end %>
+					</li>
 				</ul>
 			</div>
 		</div>

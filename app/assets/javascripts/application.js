@@ -18,6 +18,8 @@
 //= require clndr
 //= require jquery.inview.min
 //= require angular
+//= require moment
+//= require bootstrap-datetimepicker
 
 $(document).ready(function() {
   if ($('.pagination').length) {

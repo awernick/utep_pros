@@ -27,7 +27,6 @@ Rails.application.routes.draw do
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
   #Administration Backend Routes
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

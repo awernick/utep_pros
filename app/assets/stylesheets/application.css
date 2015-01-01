@@ -15,6 +15,8 @@
  *= require font-kit-rails/open-sans
  */
 
+
+
 /* Override Bootstrap 3 font locations */
 @font-face {
   font-family: 'Glyphicons Halflings';
@@ -25,6 +27,11 @@
   url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
+/*Date Time picker CSS Include*/
+/*import bootstrap-sprockets before bootstrap if using bootstrap >= 3.2*/
+@import "bootstrap-sprockets";
+@import 'bootstrap';
+@import 'bootstrap-datetimepicker';
  /*Main Header Styling*/
  img {
  	max-width: 100%;

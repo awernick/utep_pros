@@ -20,13 +20,14 @@ label.custom-contact-label {
 	font-weight: lighter;
 	font-size: 14px;
 }
-textarea.custom-at-colors-textarea {
+textarea.custom-at-colors {
 	border: 2px solid #fff;
 	font-weight: lighter;
 	background: #ddd;
 	color: #333;
 	height: 10em;
 }
+/*Custom submit button*/
 button.btn-custom-black {
 	color: #fff;
 	background: #333;
@@ -39,13 +40,26 @@ button.btn-custom-black:hover {
 	color: #fff;
 	font-weight: lighter;
 }
+input.btn-custom-black {
+	color: #fff;
+	background: #333;
+	border-color: #333;
+	font-weight: lighter;
+}
+input.btn-custom-black:hover {
+	background: #00a9c5;
+	border-color: #00a9c5;
+	color: #fff;
+	font-weight: lighter;
+}
+/*----------------------*/
 input.custom-at-colors:focus {
 	border-color: #00a9c5;
 	outline: 0;
 	webkit-box-shadow: none;
 	box-shadow: none;
 }
-textarea.custom-at-colors-textarea:focus {
+textarea.custom-at-colors:focus {
 	border-color: #00a9c5;
 	outline: 0;
 	webkit-box-shadow: none;
