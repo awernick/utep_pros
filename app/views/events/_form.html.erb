@@ -10,13 +10,15 @@
       </ul>
     </div>
   <% end %>
+
+
   <div class="field">
     <%= f.label :parent %><br>
     <%= f.number_field :parent %>
   </div>
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label :name, :class => 'custom-contact-label', :for => :name %><br>
+    <%= f.text_field :name, :class => 'form-control custom-at-colors', :id => 'firstNameField', :placeholder => 'Short training course on Wordpress 4.0' %>
   </div>
   <div class="field">
     <%= f.label :created %><br>
@@ -227,6 +229,6 @@
     <%= f.check_box :featured %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => 'btn btn-default col-sm-3 btn-custom-black' %>
   </div>
 <% end %>
