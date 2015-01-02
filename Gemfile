@@ -31,7 +31,7 @@ gem 'mysql2'
 gem 'utep_sso'
 # Twitter Bootstrap
 gem "twitter-bootstrap-rails"
-# gem "bootstrap-sass"
+gem "bootstrap-sass"
 # Added a font kit.
 gem 'font-kit-rails'
 # Simple forms
