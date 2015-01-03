@@ -1,6 +1,9 @@
 require 'utep_sso'
 
 class User < ActiveRecord::Base
+	#Add support for the messaging system
+	acts_as_messageable
+
 	has_many :subscriptions
 	has_many :events, :foreign_key => 'owner'
 	
@@ -19,7 +22,22 @@ class User < ActiveRecord::Base
 			user.email = sso_response[:email_address]
 			user.params = " "
 			user.save!
+
+			mailboxer_name_var = sso_response[:username]
+			mailboxer_email_var = sso_response[:email_address]
+
 			return user
+
 		end
+	end
+
+	#User Identities for Mailbox
+	def mailboxer_name
+		# return[:full_name]
+		return "gavargas"
+	end
+	def mailboxer_email
+		# return user.email
+		return "gavargas@miners.utep.edu"
 	end
 end
