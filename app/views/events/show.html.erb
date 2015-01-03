@@ -10,7 +10,7 @@
 </div>
 
 <div class="container event-detail-view-wrapper">
-    <div class="event-detail-view-title"><%= @event.name %>.</div>
+    <div class="event-detail-view-title"><legend><%= @event.name %>.</legend></div>
     <hr>
     <%= parse_time_accounting_for_timezone(@event.starttime) %>
     <div class="event-detail-view-date">Date: <%= parse_date(@event.starttime) %></div>

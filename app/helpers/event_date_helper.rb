@@ -19,6 +19,7 @@ module EventDateHelper
 		parsed_date.strftime('%Y-%m-%d')
 	end
 
+	#Functions for formatting the time elapsed since event occurred, this is for the notifications.
 	def activity_format_date (span)
 		time = Time.at(span)
 
