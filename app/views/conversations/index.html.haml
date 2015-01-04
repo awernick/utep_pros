@@ -1,13 +1,23 @@
 - provide(:title, "Conversations")
-.container
+
+.container.admin-dashboard-header
+  %h3 Mailbox
+
+.container{:style => "padding-top:40px;"}
   .row
     .col-lg-2.col-md-12
       .mb-boxes{:collapse => "mailboxMenuCollapsed", :style => "height: 0px;"}
         .panel.panel-default.m0
           .list-group
-            = link_to 'Inbox', "#", :class => "list-group-item"
-            = link_to 'Sent', "#", :class => "list-group-item"
-            = link_to 'Trash', "#", :class => "list-group-item"
+            = link_to "#", :class => "list-group-item" do
+              %span{:class => "glyphicon glyphicon-inbox"}
+              Inbox
+            = link_to "#", :class => "list-group-item" do
+              %span{:class => "glyphicon glyphicon-share-alt"}
+              Sent
+            = link_to "#", :class => "list-group-item" do
+              %span{:class => "glyphicon glyphicon-trash"}
+              Trash
     .col-lg-10
       .panel.panel-info
         .panel-heading Inbox
