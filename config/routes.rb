@@ -38,6 +38,15 @@ Rails.application.routes.draw do
       post :trash
       post :untrash
     end
+    collection do
+      get :trashbin
+      post :empty_trash
+    end
+  end
+  resources :messages do
+    member do
+      post :new
+    end
   end
 
   #Administration Backend Routes

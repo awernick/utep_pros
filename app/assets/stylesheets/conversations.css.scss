@@ -1,3 +1,19 @@
 // Place all the styles related to the conversations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+a.conversation-wrapper-link {
+  display: block;
+  color: #555;
+  border-bottom: 1px #efefef solid;
+  padding: 1px 0 26px 26px;
+}
+a.conversation-wrapper-link:hover {
+  background-color: #333;
+  text-decoration: none;
+}
+.conversation-wrapper {
+
+}
+.conversation-time-wrapper {
+}

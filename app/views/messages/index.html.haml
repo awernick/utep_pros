@@ -1,0 +1,35 @@
+.container
+  .row
+    .col-lg-2.col-md-12
+      .mb-boxes{:collapse => "mailboxMenuCollapsed", :style => "height: 0px;"}
+        .panel.panel-default.m0
+          .list-group
+            = link_to 'Inbox', "#", :class => "list-group-item"
+            = link_to 'Sent', "#", :class => "list-group-item"
+            = link_to 'Trash', "#", :class => "list-group-item"
+    .col-lg-10
+      .panel.panel-info
+        .panel-heading Inbox
+        .panel-body
+          %a{:href => "#", :class => "conversation-wrapper-link"}
+            .conversation-wrapper
+              %h3 Title of Message
+              %p Truncated body of message
+            .conversation-time-wrapper 09:00 AM
+          %a{:href => "#", :class => "conversation-wrapper-link"}
+            .conversation-wrapper
+              %h3 Title of Message
+              %p Truncated body of message
+            .conversation-time-wrapper 09:00 AM
+
+- conversation = current_user.mailbox.inbox.first
+- receipts = conversation.receipts_for current_user
+
+- receipts.each do |receipt|
+  = message =  receipt.message
+  %br
+  = read = receipt.is_unread?
+  %br
+  = receipt.message.subject
+  %br
+= conversation.updated_at.strftime("%a, %m/%e/%Y %I:%M %p")

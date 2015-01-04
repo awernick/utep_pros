@@ -1,9 +1,24 @@
-%h1 Conversations
-%h2 Inbox
-%ul= render collection: mailbox.inbox, partial: 'conversation'
-%h2 Sentbox
-%ul= render collection: mailbox.sentbox, partial: 'conversation'
-%h2 Trash
-%ul= render collection: mailbox.trash, partial: 'conversation'
+- provide(:title, "Conversations")
+.container
+  .row
+    .col-lg-2.col-md-12
+      .mb-boxes{:collapse => "mailboxMenuCollapsed", :style => "height: 0px;"}
+        .panel.panel-default.m0
+          .list-group
+            = link_to 'Inbox', "#", :class => "list-group-item"
+            = link_to 'Sent', "#", :class => "list-group-item"
+            = link_to 'Trash', "#", :class => "list-group-item"
+    .col-lg-10
+      .panel.panel-info
+        .panel-heading Inbox
+        .panel-body
+          - conversation = current_user.mailbox.inbox.first
+          - receipts = conversation.receipts_for current_user
+          - receipts.each do |receipt|
+            %a{:href => "#", :class => "conversation-wrapper-link"}
+              .conversation-wrapper
+                %h3=receipt.message.subject
+                %p=truncate(receipt.message.body)
+              .conversation-time-wrapper=conversation.updated_at.strftime("%A, %B %e, %Y %I:%M %p")
 
-= link_to 'Start Conversation', :new_conversation
+
