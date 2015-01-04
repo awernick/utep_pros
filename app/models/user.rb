@@ -34,10 +34,11 @@ class User < ActiveRecord::Base
 	#User Identities for Mailbox
 	def mailboxer_name
 		# return[:full_name]
-		return "gavargas"
+		return current_user.email
 	end
-	def mailboxer_email
+	def mailboxer_email(object)
 		# return user.email
-		return "gavargas@miners.utep.edu"
+		return current_user.email
 	end
+
 end

@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  
+
+
+  get 'conversations/new'
+
+  get 'conversations/create'
+
   resources :activities
   resources :subscriptions
   resources :dashboard
@@ -25,6 +30,15 @@ Rails.application.routes.draw do
   #Single Sign On Routes
   match '/create_session', to: 'sessions#create', as: 'create_session', via: [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
+
+  #Routes for conversations
+  resources :conversations, only: [:index, :show, :new, :create] do
+    member do
+      post :reply
+      post :trash
+      post :untrash
+    end
+  end
 
   #Administration Backend Routes
   # Example of regular route:
