@@ -85,20 +85,26 @@ margin: 0 0 30px -15px;
 }
 .event-detail-view-title {
 	color: #7A7A7A;
-	margin: 20px 0;
+	margin-bottom: 20px;
 	font-size: 32px;
 	line-height: 1.2em;
 	font-weight: lighter;
 }
 .event-detail-view-date {
-	font-size: 11px;
+	font-size: 1.4em;
 	font-weight: normal;
+	margin: 20px 0;
 }
 .event-detail-view-location {
-	font-size: 12px;
-
+	font-size: 1.2em;
+	margin: 0 0 10px 0;
 }
-
+.event-detail-view-description {
+	padding: 20px 0;
+	font-size: 1.1em;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	color: #555;
+}
 .load-more-events
 {
 	margin: 0 42%;
