@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  eventdate: 2015-01-05 15:13:07
+  referral: MyString
+  question2_1: 1
+  question2_2: 1
+  question2_3: 1
+  question2_4: 1
+  question2_5: 1
+  question2_6: 1
+  question2_6: 1
+  question2_7: 1
+  question3_1: 1
+  question3_2: 1
+  question3_3: 1
+  question4: MyString
+  question5: MyString
+  question6: MyString
+
+two:
+  title: MyString
+  description: MyText
+  eventdate: 2015-01-05 15:13:07
+  referral: MyString
+  question2_1: 1
+  question2_2: 1
+  question2_3: 1
+  question2_4: 1
+  question2_5: 1
+  question2_6: 1
+  question2_6: 1
+  question2_7: 1
+  question3_1: 1
+  question3_2: 1
+  question3_3: 1
+  question4: MyString
+  question5: MyString
+  question6: MyString

@@ -51,6 +51,8 @@ gem 'angularjs-rails'
 # Date & Time Picker for Bootstrap
 gem 'momentjs-rails', '>= 2.8.1'
 gem 'bootstrap3-datetimepicker-rails', '~> 3.1.3'
+# Mailboxer gem for the user to user messaging system
+gem 'mailboxer'
 # Use unicorn as the app server
 # gem 'unicorn'
 # Use debugger

@@ -1,6 +1,41 @@
-<h1>Editing event</h1>
+<% provide(:title, "Edit Event") %>
 
-<%= render 'form' %>
+<div class="container">
 
+	<div class="row">
+
+		<div class="col-sm-6">
+			<div class="panel panel-info">
+			<div class="panel-heading">Editing Event</div>
+			<div class="panel-body">
+				<%= render 'form' %>
+			</div>
+			<!-- <div class="panel-footer">Panel Footer</div> -->
+		</div>
+		</div>
+
+		<div class="col-sm-4 col-sm-offset-2">
+			<div class="panel panel-info">
+			<div class="panel-heading" style="background:#9455DB;">Latest Activity</div>
+			<div class="panel-body">
+				<ul class="list-group">
+					<li class="list-group-item">
+						<div class="list-group-item-title">Event Created</div>
+						<div class="list-group-item-info-wrapper">By Alan Wernick</div>
+					</li>
+					<% subscription_activities = PublicActivity::Activity.order("created_at desc").where(:recipient_id => current_user.event_ids, trackable_type: "Subscription")%>
+					<% event_activities = PublicActivity::Activity.order("created_at desc").where(:recipient_id => current_user.id)%>
+					<% @activities = subscription_activities + event_activities %>
+					<% @activities.sort_by(&:created_at) %>
+					<% @activities.each do |activity| %>
+						<%= render_activity activity %>
+					<% end %> 
+				</ul>
+			</div>
+			<!-- <div class="panel-footer">Panel Footer</div> -->
+		</div>
+		</div>
+	</div>
+</div>
 <%= link_to 'Show', @event %> |
 <%= link_to 'Back', events_path %>

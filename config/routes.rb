@@ -1,16 +1,24 @@
 Rails.application.routes.draw do
-  
+
+
+  get 'conversations/new'
+
+  get 'conversations/create'
+
   resources :activities
   resources :subscriptions
   resources :dashboard
   resources :events
   resources :users
+  resources :evaluations
 
   get 'dashboard/new'
   get 'dashboard/create'
   get 'static_pages/home'
   get 'static_pages/about'
   get 'static_pages/contact'
+  get 'evaluations/create'
+  get 'evaluations/create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -25,6 +33,24 @@ Rails.application.routes.draw do
   #Single Sign On Routes
   match '/create_session', to: 'sessions#create', as: 'create_session', via: [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
+
+  #Routes for conversations
+  resources :conversations, only: [:index, :show, :new, :create] do
+    member do
+      post :reply
+      post :trash
+      post :untrash
+    end
+    collection do
+      get :trashbin
+      post :empty_trash
+    end
+  end
+  resources :messages do
+    member do
+      post :new
+    end
+  end
 
   #Administration Backend Routes
   # Example of regular route:

@@ -19,6 +19,7 @@ module EventDateHelper
 		parsed_date.strftime('%Y-%m-%d')
 	end
 
+	#Functions for formatting the time elapsed since event occurred, this is for the notifications.
 	def activity_format_date (span)
 		time = Time.at(span)
 
@@ -67,7 +68,7 @@ module EventDateHelper
 
 		#Parse the time object and then apply the local time zone.
 		parsedTime = DateTime.parse(unparsedUTCTStartTime.to_s)
-		zonedTime = parsedTime.in_time_zone(localTimeZone).strftime("%I:%M%p")
+		zonedTime = parsedTime.in_time_zone(localTimeZone).strftime("%A, %B %e, %Y %I:%M %p")
 
 		return zonedTime
 	end

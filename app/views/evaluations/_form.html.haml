@@ -1,0 +1,68 @@
+= form_for @evaluation do |f|
+  - if @evaluation.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@evaluation.errors.count, "error")} prohibited this evaluation from being saved:"
+      %ul
+        - @evaluation.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group.form-field-spacer
+    = f.label :title, :class => 'custom-contact-label', :for => 'firstNameField'
+    = f.select :title, Event.all.collect {|p| [ p.name, p.name]}, {}, :class => "form-control", :id => "eventOwnerField"
+  .form-group.form-field-spacer
+    = f.label :eventdate, :class => 'custom-contact-label', :for => 'firstNameField'
+    = f.date_select :eventdate
+  .form-group.form-field-spacer
+    = f.label :referral, :class => 'custom-contact-label', :for => 'firstNameField'
+    = f.text_field :referral
+
+  %h2 Event Rating
+
+  .form-group.form-field-spacer
+    = f.label :question2_1, :class => 'custom-contact-label' do 
+      Rate how the meeting achieved the advertised outcomes/expectations.
+    = f.select :question2_1, 1..5
+  .form-group.form-field-spacer
+    = f.label :question2_2, :class => 'custom-contact-label' do
+      Rate the usefulness of information/content presented to my professional development
+    = f.select :question2_2, 1..5
+  .form-group.form-field-spacer
+    = f.label :question2_3, :class => 'custom-contact-label' do
+      Rate the usefulness of information/content presented to my professional development
+    = f.select :question2_3, 1..5
+  .form-group.form-field-spacer
+    = f.label :question2_4
+    = f.select :question2_4, 1..5  
+  .form-group.form-field-spacer
+    = f.label :question2_5
+    = f.select :question2_5, 1..5
+  .form-group.form-field-spacer
+    = f.label :question2_6
+    = f.select :question2_6, 1..5
+  .form-group.form-field-spacer
+    = f.label :question2_7
+    = f.select :question2_7, 1..5
+
+  %p
+    %strong Please provide your level of agreement with the following statements regarding the workshop/session using the scale provided.
+
+  .form-group.form-field-spacer
+    = f.label :question3_1
+    = f.select :question3_1, 1..5
+  .form-group.form-field-spacer
+    = f.label :question3_2
+    = f.select :question3_2, 1..5
+  .form-group.form-field-spacer
+    = f.label :question3_3
+    = f.select :question3_3, 1..5
+  .form-group.form-field-spacer
+    = f.label :question4
+    = f.text_field :question4
+  .form-group.form-field-spacer
+    = f.label :question5
+    = f.text_field :question5
+  .form-group.form-field-spacer
+    = f.label :question6
+    = f.text_field :question6
+  .actions
+    = f.submit 'Save'

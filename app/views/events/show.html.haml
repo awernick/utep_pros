@@ -1,0 +1,37 @@
+.container.action-button-wrapper
+  .action-button-component.back-button-component
+    = link_to 'Back', events_path
+  .action-button-component.join-or-alert-button{:style => "float:right !important; margin-right:-15px"}
+    - if check_if_event_has_passed == -1
+      = link_to 'Sorry, the event has passed!', events_path
+    - elsif check_if_event_has_passed == 1
+      = link_to "Tap here to RSVP", "#", :class => "event-join"
+.container
+  .row
+    .col-sm-9
+      .event-detail-view-title
+        = @event.name
+      .event-detail-view-date
+        %span{:class => "glyphicon glyphicon-calendar", "aria-hidden" => "true"}
+        = parse_time_accounting_for_timezone(@event.starttime)
+      .event-detail-view-location
+        %span{:class => "glyphicon glyphicon-globe", "aria-hidden" => "true"}
+        = @event.location
+      .event-detail-view-tags
+        .event-element-categories
+        - @event.parse_tags.each do |tag|
+          %span{:class => "label label-default event-tag-label"}
+            = tag
+      .event-detail-view-description
+        = @event.description
+
+    .col-sm-3 
+      .event-detail-view-counter 8 going
+      .event-detail-view-counter-items-wrapper
+        .event-detail-view-counter-items-element
+          .attendee-name Guillermo Vargas
+          .attendee-clearance Admin, Event Host
+
+
+/= @event.inspect
+= link_to 'Edit', edit_event_path(@event)

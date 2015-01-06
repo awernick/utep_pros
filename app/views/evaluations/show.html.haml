@@ -1,0 +1,60 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @evaluation.title
+%p
+  %b Description:
+  = @evaluation.description
+%p
+  %b Eventdate:
+  = @evaluation.eventdate
+%p
+  %b Referral:
+  = @evaluation.referral
+%p
+  %b Question2 1:
+  = @evaluation.question2_1
+%p
+  %b Question2 2:
+  = @evaluation.question2_2
+%p
+  %b Question2 3:
+  = @evaluation.question2_3
+%p
+  %b Question2 4:
+  = @evaluation.question2_4
+%p
+  %b Question2 5:
+  = @evaluation.question2_5
+%p
+  %b Question2 6:
+  = @evaluation.question2_6
+%p
+  %b Question2 6:
+  = @evaluation.question2_6
+%p
+  %b Question2 7:
+  = @evaluation.question2_7
+%p
+  %b Question3 1:
+  = @evaluation.question3_1
+%p
+  %b Question3 2:
+  = @evaluation.question3_2
+%p
+  %b Question3 3:
+  = @evaluation.question3_3
+%p
+  %b Question4:
+  = @evaluation.question4
+%p
+  %b Question5:
+  = @evaluation.question5
+%p
+  %b Question6:
+  = @evaluation.question6
+
+= link_to 'Edit', edit_evaluation_path(@evaluation)
+\|
+= link_to 'Back', evaluations_path
