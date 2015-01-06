@@ -31,7 +31,7 @@ gem 'mysql2'
 gem 'utep_sso'
 # Twitter Bootstrap
 gem "twitter-bootstrap-rails"
-# gem "bootstrap-sass"
+gem "bootstrap-sass"
 # Added a font kit.
 gem 'font-kit-rails'
 # Simple forms
@@ -40,14 +40,24 @@ gem 'simple_form'
 gem 'haml-rails'
 # Install Kaminari for infinite scroll
 gem 'will_paginate'
-#Captcha for Rails for the Contact Form
+# Captcha for Rails for the Contact Form
 gem "recaptcha", :require => "recaptcha/rails"
 # Underscore for clndr
 gem 'underscore-rails'
+# Notification system for user actions
+gem 'public_activity'
+# Added AngularJS
+gem 'angularjs-rails'
+# Date & Time Picker for Bootstrap
+gem 'momentjs-rails', '>= 2.8.1'
+gem 'bootstrap3-datetimepicker-rails', '~> 3.1.3'
+# Mailboxer gem for the user to user messaging system
+gem 'mailboxer'
 # Use unicorn as the app server
 # gem 'unicorn'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
 
 group :development do
 	gem 'capistrano-rvm'

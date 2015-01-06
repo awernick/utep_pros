@@ -3,6 +3,7 @@ class EventsController < ApplicationController
 
   # GET /events
   # GET /events.json
+
   def index
     #@events = Event.all
     @events = Event.paginate(page: params[:page], per_page: 5).order('starttime DESC')
@@ -33,6 +34,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
+        @event.create_activity :create, owner: User.find_by_id(@event.owner)
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
       else
@@ -59,6 +61,9 @@ class EventsController < ApplicationController
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy
+    @event.user_ids.each do |user_id|
+      @event.create_activity :cancel, owner: User.find_by_id(@event.owner), recipient: User.find_by_id(user_id)
+    end
     @event.destroy
     respond_to do |format|
       format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }

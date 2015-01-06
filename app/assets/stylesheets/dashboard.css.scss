@@ -90,3 +90,75 @@ margin-bottom: 9.5px;
 	color: #aaa;
 }
 /*------------------------------------------------------------------------------------------------------*/
+
+/* Notifications */
+.list-group-item-title
+{
+
+  a {
+    color: #00a9c5;
+
+    &:hover
+    {
+      color: #00a9c5;
+      background: none;
+      text-decoration: underline;
+    }
+  }
+}
+
+.list-group-item-info-wrapper
+{
+  a {
+    color: #aaa;
+
+    &:hover {
+      color: #00a9c5;
+      background: none;
+    }
+  }
+}
+
+/*This contains the styling for the Actions Panel list*/
+.action-panel-styling {
+  padding: 0;
+}
+.action-panel-styling ul {
+  list-style: none;
+}
+.action-panel-styling ul li {
+  margin-left: -40px;
+}
+.action-panel-styling ul li a {
+  font-weight: normal;
+  font-size: 1em;
+  font-family: "Helvetica Neue";
+  color: #fff;
+  display: block;
+  height: 40px;
+  padding: 12px 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.action-panel-styling ul li a:hover {
+  font-weight: normal;
+  font-size: 1em;
+  font-family: "Helvetica Neue";
+  color: #fff;
+  display: block;
+  background: #333;
+  text-decoration: none;
+}
+a.new-event-action {
+   background: #59538D;
+}
+a.new-user-action {
+  background: #54BD7B;
+}
+
+.custom-glyphicon {
+  margin-right: 5px;
+  top: 2px;
+}
+/*----------------------------------------------------*/
+
+

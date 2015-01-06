@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ide: 
+  idu: 1
+  name: MyString
+  email: MyString
+  date: 2014-12-19 02:01:32
+  state: 1
+  verification: MyString
+  SubmissionId: 1
+  gateway: MyString
+  ip: MyString
+  URL: MyString
+  params: MyString
+  discount: 9.99
+  early_fee: 9.99
+  late_fee: 9.99
+  tax: 9.99
+  log: MyString
+  lang: MyString
+  coupon: MyString
+  ideal: MyString
+
+two:
+  ide: 
+  idu: 1
+  name: MyString
+  email: MyString
+  date: 2014-12-19 02:01:32
+  state: 1
+  verification: MyString
+  SubmissionId: 1
+  gateway: MyString
+  ip: MyString
+  URL: MyString
+  params: MyString
+  discount: 9.99
+  early_fee: 9.99
+  late_fee: 9.99
+  tax: 9.99
+  log: MyString
+  lang: MyString
+  coupon: MyString
+  ideal: MyString

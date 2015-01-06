@@ -6,7 +6,7 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
-  .navbar {
+ .navbar {
   	border-radius: 0;
   	min-height: 80px;
   }
@@ -78,4 +78,9 @@ border-color: #333;
 /*Modify the default label CSS*/
 .label-default {
   background-color: #00ABC4;
+}
+
+
+h1, .h1 {
+  font-weight: lighter;
 }

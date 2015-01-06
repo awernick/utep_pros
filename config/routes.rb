@@ -1,17 +1,25 @@
 Rails.application.routes.draw do
-  
+
+
+  get 'conversations/new'
+
+  get 'conversations/create'
+
+  resources :activities
+  resources :subscriptions
   resources :dashboard
+  resources :events
+  resources :users
+  resources :evaluations
+
   get 'dashboard/new'
   get 'dashboard/create'
-
-  resources :users
-
   get 'static_pages/home'
-
   get 'static_pages/about'
   get 'static_pages/contact'
+  get 'evaluations/create'
+  get 'evaluations/create'
 
-  resources :events
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -20,14 +28,31 @@ Rails.application.routes.draw do
 
   #Front End
   root 'static_pages#home'
-  match '/contact' => 'static_pages#contact', via: [:get, :post]
+  match '/contact', to: 'static_pages#contact', as: 'contact', via: [:get, :post]
 
   #Single Sign On Routes
   match '/create_session', to: 'sessions#create', as: 'create_session', via: [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
-  #Administration Backend Routes
+  #Routes for conversations
+  resources :conversations, only: [:index, :show, :new, :create] do
+    member do
+      post :reply
+      post :trash
+      post :untrash
+    end
+    collection do
+      get :trashbin
+      post :empty_trash
+    end
+  end
+  resources :messages do
+    member do
+      post :new
+    end
+  end
 
+  #Administration Backend Routes
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

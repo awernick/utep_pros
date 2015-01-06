@@ -1,0 +1,33 @@
+- provide(:title, "Conversations")
+
+.container.admin-dashboard-header
+  %h3 Mailbox
+
+.container{:style => "padding-top:40px;"}
+  .row
+    .col-lg-2.col-md-12
+      .mb-boxes{:collapse => "mailboxMenuCollapsed", :style => "height: 0px;"}
+        .panel.panel-default.m0
+          .list-group
+            = link_to "#", :class => "list-group-item" do
+              %span{:class => "glyphicon glyphicon-inbox"}
+              Inbox
+            / = link_to "#", :class => "list-group-item" do
+            /   %span{:class => "glyphicon glyphicon-share-alt"}
+            /   Sent
+            = link_to "#", :class => "list-group-item" do
+              %span{:class => "glyphicon glyphicon-trash"}
+              Trash
+    .col-lg-10
+      .panel.panel-info
+        .panel-heading Inbox
+        .panel-body
+          - conversation = current_user.mailbox.inbox.first
+          - receipts = conversation.receipts_for current_user
+          - receipts.each do |receipt|
+            %a{:href => conversation.id, :class => "conversation-wrapper-link"}
+              .conversation-wrapper
+                %h3=receipt.message.subject
+                %p=truncate(receipt.message.body)
+              .conversation-time-wrapper=conversation.updated_at.strftime("%A, %B %e, %Y %I:%M %p")
+

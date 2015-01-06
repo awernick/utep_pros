@@ -6,6 +6,9 @@
       <a href="/events" class="btn btn-default" role="button">List View</a>
       <a href="#" class="btn btn-default" role="button">Calendar View</a>
     </div>
+    <!-- Render the components that have the search functions. -->
+    <%= render 'search_and_sort_components' %>  
+
   <div class="event-elements-wrapper">
   <%= render "event", :locals => { :events => @events}  %>
   </div>
