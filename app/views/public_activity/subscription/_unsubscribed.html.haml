@@ -1,0 +1,10 @@
+- user = User.find_by_id(activity.owner_id)
+- event = Event.find_by_id(activity.recipient_id)
+- if user && event
+  %li.list-group-item
+    .list-group-item-title
+      = link_to "#{user.name}", user
+      unsubscribed from #{link_to "#{event.name}", event}
+    .list-group-item-info-wrapper
+      = time_ago_in_words(activity.created_at)
+      ago

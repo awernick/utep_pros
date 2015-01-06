@@ -1,0 +1,27 @@
+- provide(:title, "Edit Event")
+.container
+  .row
+    .col-sm-6
+      .panel.panel-info
+        .panel-heading Editing Event
+        .panel-body
+          = render 'form'
+        / <div class="panel-footer">Panel Footer</div>
+    .col-sm-4.col-sm-offset-2
+      .panel.panel-info
+        .panel-heading{:style => "background:#9455DB;"} Latest Activity
+        .panel-body
+          %ul.list-group
+            %li.list-group-item
+              .list-group-item-title Event Created
+              .list-group-item-info-wrapper By Alan Wernick
+            - subscription_activities = PublicActivity::Activity.order("created_at desc").where(:recipient_id => current_user.event_ids, trackable_type: "Subscription")
+            - event_activities = PublicActivity::Activity.order("created_at desc").where(:recipient_id => current_user.id)
+            - @activities = subscription_activities + event_activities
+            - @activities.sort_by(&:created_at)
+            - @activities.each do |activity|
+              = render_activity activity
+        / <div class="panel-footer">Panel Footer</div>
+= link_to 'Show', @event
+|
+\#{link_to 'Back', events_path}

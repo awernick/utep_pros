@@ -1,0 +1,68 @@
+- provide(:title, "Dashboard")
+.container.admin-dashboard-header
+  %h3 Dashboard
+= render 'action_header'
+.container.admin-activity-wrapper
+  .col-lg-9
+    .panel.panel-info
+      .panel-heading= "Whats going on, #{current_user.name} this is the latest."
+      .panel-body
+        %ul.list-group
+          %li.list-group-item
+            .list-group-item-title Event Created
+            .list-group-item-info-wrapper By Alan Wernick
+          - subscription_activities = PublicActivity::Activity.order("created_at desc").where(:recipient_id => current_user.event_ids, trackable_type: "Subscription")
+          - event_activities = PublicActivity::Activity.order("created_at desc").where(:recipient_id => current_user.id)
+          - @activities = subscription_activities + event_activities
+          - @activities.sort_by(&:created_at)
+          - @activities.each do |activity|
+            = render_activity activity
+      / <div class="panel-footer">Panel Footer</div>
+    .panel.panel-info
+      .panel-heading Your events
+      .panel-body
+        .event-list-element-wrapper.table-responsive
+          %table.table
+            %thead
+              %tr
+                %th Event
+                %th Actions
+            %tbody
+              %tr
+                / Make sure to put line height of 30px
+                %td
+                  %strong Joomla Training
+                %td
+                  .btn-group{"aria-label" => "...", :role => "group"}
+                    %a.btn.btn-default.btn-sm{:href => "#"} Admin View
+                    %a.btn.btn-default.btn-sm{:href => "#"} Edit
+                    %a.btn.btn-default.btn-sm{:href => "#"} Delete
+              %tr
+                %td Other Event Title
+                %td
+                  .btn-group{"aria-label" => "...", :role => "group"}
+                    %a.btn.btn-default.btn-sm{:href => "#"} Admin View
+                    %a.btn.btn-default.btn-sm{:href => "#"} Edit
+                    %a.btn.btn-default.btn-sm{:href => "#"} Delete
+              %tr
+                %td Yet another event title
+                %td
+                  .btn-group{"aria-label" => "...", :role => "group"}
+                    %a.btn.btn-default.btn-sm{:href => "#"} Admin View
+                    %a.btn.btn-default.btn-sm{:href => "#"} Edit
+                    %a.btn.btn-default.btn-sm{:href => "#"} Delete
+        / <a href="#" class="btn btn-primary btn-lg">Create New Event</a>
+      / <div class="panel-footer">Panel Footer</div>
+  .col-lg-3
+    .panel.panel-primary
+      .panel-heading Actions Panel
+      .panel-body.action-panel-styling
+        %ul.actions-wrapper
+          %li
+            = link_to new_event_path, class: "new-event-action" do
+              %span.glyphicon.glyphicon-list-alt.custom-glyphicon{"aria-hidden" => "true"}>
+              CREATE NEW EVENT
+          %li
+            = link_to new_user_path, class: "new-user-action" do
+              %span.glyphicon.glyphicon-user.custom-glyphicon{"aria-hidden" => "true"}>
+              CREATE NEW USER
