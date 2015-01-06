@@ -3,6 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /*Event Elements Styling*/
 
+/* Override Bootstrap 3 font locations */
+
+/*Date Time picker CSS Include*/
+// /*import bootstrap-sprockets before bootstrap if using bootstrap >= 3.2*/
+@import "bootstrap-sprockets";
+// @import 'bootstrap';
+@import 'bootstrap-datetimepicker';
+
 .day-of-the-week-separator {
  background: #ededed;
  color: #333;
