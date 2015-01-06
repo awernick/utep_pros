@@ -13,7 +13,9 @@
         = @event.name
       .event-detail-view-date
         %span{:class => "fa fa-clock-o", "aria-hidden" => "true"}
-        = parse_time_accounting_for_timezone(@event.starttime)
+        = parse_time_accounting_for_timezone(@event.starttime).strftime("%A, %B %e, %Y") 
+        @
+        = parse_time_accounting_for_timezone(@event.starttime).strftime("%I:%M %p")
       .event-detail-view-location
         %span{:class => "fa fa-location-arrow", "aria-hidden" => "true"}
         = @event.location
@@ -25,12 +27,16 @@
       .event-detail-view-description
         = @event.description
 
-    .col-sm-3 
+    .col-sm-3
       .event-detail-view-counter 8 going
       .event-detail-view-counter-items-wrapper
         .event-detail-view-counter-items-element
           .attendee-name Guillermo Vargas
-          .attendee-clearance Admin, Event Host
+          .attendee-clearance Event Host
+      .event-detail-view-counter-items-wrapper
+        .event-detail-view-counter-items-element
+          .attendee-name Alan Wernick
+          .attendee-clearance Admin
 
 
 /= @event.inspect

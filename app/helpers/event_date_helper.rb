@@ -68,7 +68,7 @@ module EventDateHelper
 
 		#Parse the time object and then apply the local time zone.
 		parsedTime = DateTime.parse(unparsedUTCTStartTime.to_s)
-		zonedTime = parsedTime.in_time_zone(localTimeZone).strftime("%A, %B %e, %Y %I:%M %p")
+		zonedTime = parsedTime.in_time_zone(localTimeZone)
 
 		return zonedTime
 	end
