@@ -72,16 +72,29 @@
 .action-button-component {
 	float: left;
 }
+.join-or-alert-button a:visited {
+	color: #ffffff;
+}
 .join-or-alert-button a {
 	background: #CD2928;
 	color: #ffffff;
 	padding: 10px 20px;
+	background-color: #f64051;
+	border-width: 0 0 6px 0;
+	border-color: #ea3348;
+	border-style: solid;
 }
 .event-alert a {
-	background-color: #CD2928;
+	background-color: #f64051;
+	border-width: 0 0 6px 0;
+	border-color: #ea3348;
+	border-style: solid;
 }
 a.event-join {
 	background-color: #77cc33;
+	border-width: 0 0 6px 0;
+	border-color: #71b33b;
+	border-style: solid;
 }
 .back-button-component {
 margin: 0 0 30px -15px;
