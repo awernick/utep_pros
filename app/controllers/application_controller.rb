@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
     #   @current_user = User.find(session[:user_id])
     # end
     #Temporary user stuff
-    return User.second
+    return User.first
   end
 
   helper_method :current_user

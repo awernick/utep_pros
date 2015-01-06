@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150103010820) do
+ActiveRecord::Schema.define(version: 20150105231307) do
 
   create_table "activities", force: true do |t|
     t.integer  "trackable_id"
@@ -128,6 +128,28 @@ ActiveRecord::Schema.define(version: 20150103010820) do
     t.string   "params"
     t.datetime "lastResetTime"
     t.integer  "resetCount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "evaluations", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "eventdate"
+    t.string   "referral"
+    t.integer  "question2_1"
+    t.integer  "question2_2"
+    t.integer  "question2_3"
+    t.integer  "question2_4"
+    t.integer  "question2_5"
+    t.integer  "question2_6"
+    t.integer  "question2_7"
+    t.integer  "question3_1"
+    t.integer  "question3_2"
+    t.integer  "question3_3"
+    t.string   "question4"
+    t.string   "question5"
+    t.string   "question6"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

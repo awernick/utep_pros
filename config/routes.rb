@@ -10,12 +10,15 @@ Rails.application.routes.draw do
   resources :dashboard
   resources :events
   resources :users
+  resources :evaluations
 
   get 'dashboard/new'
   get 'dashboard/create'
   get 'static_pages/home'
   get 'static_pages/about'
   get 'static_pages/contact'
+  get 'evaluations/create'
+  get 'evaluations/create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
