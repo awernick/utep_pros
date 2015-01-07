@@ -20,6 +20,7 @@
 //= require angular
 //= require moment
 //= require bootstrap-datetimepicker
+//= require froala_editor.min.js
 
 $(document).ready(function() {
   if ($('.pagination').length) {
