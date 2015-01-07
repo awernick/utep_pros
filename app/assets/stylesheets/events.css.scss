@@ -96,6 +96,11 @@ a.event-join {
 	border-color: #71b33b;
 	border-style: solid;
 }
+a.event-join:hover {
+	background: #77cc33;
+	text-decoration: none;
+	border-color: #77cc33;
+}
 .back-button-component {
 margin: 0 0 30px -15px;
 }

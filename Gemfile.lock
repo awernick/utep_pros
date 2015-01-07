@@ -74,6 +74,8 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.2.2)
+    font-awesome-rails (4.2.0.0)
+      railties (>= 3.2, < 5.0)
     font-kit-rails (1.1.0)
       rails
     foreigner (1.7.1)
@@ -223,6 +225,9 @@ GEM
       railties (~> 4.0)
       sprockets-rails (>= 2.0, < 4.0)
     will_paginate (3.0.7)
+    wysiwyg-rails (1.2.4)
+      font-awesome-rails (= 4.2.0.0)
+      railties (>= 3.2, < 5.0)
 
 PLATFORMS
   ruby
@@ -261,3 +266,4 @@ DEPENDENCIES
   utep_sso
   web-console
   will_paginate
+  wysiwyg-rails
