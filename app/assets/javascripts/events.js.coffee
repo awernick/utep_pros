@@ -9,3 +9,8 @@ $ ->
     
     $.getScript $(this).attr('href'), ->
       loading_events = false
+
+# Editor for the event details
+$ ->
+  $("#descriptionField").editable inlineMode: false
+  return
