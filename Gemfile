@@ -53,6 +53,10 @@ gem 'momentjs-rails', '>= 2.8.1'
 gem 'bootstrap3-datetimepicker-rails', '~> 3.1.3'
 # Mailboxer gem for the user to user messaging system
 gem 'mailboxer'
+#Gem for WYSIWYG Editor
+gem "wysiwyg-rails"
+#Lorem Ipsum generator
+gem 'lorem-ipsum'
 # Use unicorn as the app server
 # gem 'unicorn'
 # Use debugger

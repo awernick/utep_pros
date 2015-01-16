@@ -7,5 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 (1..100).each do |i|
-	Event.create!(name: "Event  Test #{i}", starttime: Time.now, gallery_tags: "#{(0..i)}")
+	Event.create!(name: "Event  Test #{i}", starttime: Time.now, gallery_tags: "#{(0..i)}", description: "Description goes here")
 end

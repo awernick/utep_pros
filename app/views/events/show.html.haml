@@ -24,8 +24,8 @@
         - @event.parse_tags.each do |tag|
           %span{:class => "label label-default event-tag-label"}
             = tag
-      .event-detail-view-description
-        = @event.description
+      .event-detail-view-description.froala-element
+        = @event.description.html_safe
 
     .col-sm-3
       .event-detail-view-counter 8 going

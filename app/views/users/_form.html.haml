@@ -1,5 +1,6 @@
 = simple_form_for(@user) do |f|
   = f.error_notification
+<<<<<<< HEAD
   .form-inputs
     = f.input :name
     = f.input :username
@@ -15,4 +16,24 @@
     = f.input :lastResetTime
     = f.input :resetCount
   .form-actions
+=======
+  .container
+    .form-inputs
+      .form-group
+        = f.input :name, :class => "form-control custom-at-colors"
+      = f.input :username, :class => "form-control custom-at-colors"
+      = f.input :email, :class => "form-control custom-at-colors"
+      = f.input :password, :class => "form-control custom-at-colors"
+      = f.input :usertype, :class => "form-control custom-at-colors"
+      = f.input :block
+      = f.input :sendEmail
+      = f.input :registerDate
+      = f.input :lastvisitDate
+      = f.input :activation
+      = f.input :params
+      = f.input :lastResetTime
+      = f.input :resetCount
+
+    .form-actions
+>>>>>>> users-interface
     = f.button :submit
