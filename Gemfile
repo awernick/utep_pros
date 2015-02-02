@@ -55,6 +55,8 @@ gem 'bootstrap3-datetimepicker-rails', '~> 3.1.3'
 gem 'mailboxer'
 #Gem for WYSIWYG Editor
 gem "wysiwyg-rails"
+#Lorem Ipsum generator
+gem 'lorem-ipsum'
 # Use unicorn as the app server
 # gem 'unicorn'
 # Use debugger

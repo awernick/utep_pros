@@ -18,7 +18,6 @@ Rails.application.routes.draw do
   get 'static_pages/about'
   get 'static_pages/contact'
   get 'evaluations/create'
-  get 'evaluations/create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -26,9 +25,10 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  #Front End
+  #Front End Static Pages
   root 'static_pages#home'
   match '/contact', to: 'static_pages#contact', as: 'contact', via: [:get, :post]
+  match '/about', to: 'static_pages#about', as: 'about', via: [:get, :post]
 
   #Single Sign On Routes
   match '/create_session', to: 'sessions#create', as: 'create_session', via: [:get, :post]
