@@ -97,9 +97,21 @@
 			.panel-body
 				.event-list-element-wrapper.table-responsive
 				.dashboard-event-list-wrapper
-					.dashboard-event-floating-event.float-left Event Title and Name
-					.dashboard-event-floating-event.float-left Event Actions
-				
+					.dashboard-event-floating-event.float-left
+						%h2 Software Defined radio with HackRF
+						%p An awesome course on Digital Signal Processing
+					.dashboard-event-floating-event.float-left
+						.btn-group{:role => "group"}
+							= link_to "Admin View", :class => "btn btn-default", :type => "button"
+							-#  %a{:type => "button", :class => "btn btn-default", :href => "#"} Admin View
+				.dashboard-event-list-wrapper
+					.dashboard-event-floating-event.float-left
+						%h2 Software Defined radio with HackRF
+						%p An awesome course on Digital Signal Processing
+					.dashboard-event-floating-event.float-left
+						.btn-group{:role => "group"}
+							-#  %a{:type => "button", :class => "btn btn-default", :href => "#"} Admin View
+
 	.col-lg-3
 		.panel.panel-primary
 			.panel-heading Actions Panel
@@ -111,6 +123,11 @@
 								CREATE NEW EVENT
 					%li
 						= link_to new_user_path, :class => "new-user-action" do
+<<<<<<< HEAD
 							%span{:class => "fa fa-users custom-glyphicon", "aria-hidden" => "true"} 
 								CREATE NEW USER
 >>>>>>> users-interface
+=======
+							%span{:class => "fa fa-users custom-glyphicon", "aria-hidden" => "true"}
+								CREATE NEW USER
+>>>>>>> staging

@@ -1,13 +1,17 @@
-- provide(:title, "Events")
+- provide(:title, "All Events")
+
 .container.body-content-wrapper
-  %h1 All events
-  .btn-group.btn-group-justified{"aria-label" => "Justified button group", :role => "group"}
-    %a.btn.btn-default{:href => "/events", :role => "button"} List View
-    %a.btn.btn-default{:href => "#", :role => "button"} Calendar View
-  / Render the components that have the search functions.
-  = render 'search_and_sort_components'
+  %h1 All Events
+  .btn-group.btn-group-justified{:role => "group", "aria-label" => "Justified button group"}
+    = link_to "List View", events_path, :class => "btn btn-default", :role => "button"
+    = link_to "My Events", "#", :class => "btn btn-default", :role => "button"
+
+  -# Render the components that have the search functions
+  = render "event", :locals => { :events => @events }
+
   .event-elements-wrapper
-    = render "event", :locals => { :events => @events}
-  .col-md-12
-    = link_to 'Load More Events', events_path(:page => @events.next_page), :class => 'load-more-events btn btn-default', :remote => true if @events.next_page
+    = render "event", :locals => { :events => @events }
+
+    = link_to "Load More Events", events_path(:page => @events.next_page), :class => 'load-more-events btn btn-default', :remote => true if @events.next_page
+
   = link_to 'New Event', new_event_path
