@@ -25,17 +25,19 @@ class SubscriptionsController < ApplicationController
   # POST /subscriptions.json
   def create
     @subscription = Subscription.new(subscription_params)
-    respond_to do |format|
-      if @subscription.save
-        @subscription.create_activity :subscribed, owner: User.find_by_id(@subscription.user_id), 
-                                                   recipient: Event.find_by_id(@subscription.event_id)
-        format.html { redirect_to @subscription, notice: 'Subscription was successfully created.' }
-        format.json { render :show, status: :created, location: @subscription }
-      else
-        format.html { render :new }
-        format.json { render json: @subscription.errors, status: :unprocessable_entity }
-      end
-    end
+    
+    redirect_to request.referer
+    # respond_to do |format|
+    #   if @subscription.save
+    #     @subscription.create_activity :subscribed, owner: User.find_by_id(@subscription.user_id), 
+    #                                                recipient: Event.find_by_id(@subscription.event_id)
+    #     format.html { redirect_to @subscription, notice: 'Subscription was successfully created.' }
+    #     format.json { render :show, status: :created, location: @subscription }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @subscription.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /subscriptions/1

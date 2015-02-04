@@ -101,6 +101,19 @@ a.event-join:hover {
 	text-decoration: none;
 	border-color: #77cc33;
 }
+
+a.event-unsubscribe {
+	background-color: #f0ad4e;
+	border-width: 0 0 6px 0;
+	border-color: #eea236;
+	border-style: solid;
+}
+a.event-unsubscribe:hover {
+	background: #eea236;
+	text-decoration: none;
+	border-color: #eea236;
+}
+
 .back-button-component {
 margin: 0 0 30px -15px;
 }
