@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150105231307) do
+ActiveRecord::Schema.define(version: 20150204223530) do
 
   create_table "activities", force: true do |t|
     t.integer  "trackable_id"
@@ -85,31 +85,6 @@ ActiveRecord::Schema.define(version: 20150105231307) do
     t.string   "gallery_tags"
     t.boolean  "allday"
     t.boolean  "featured"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "atw_rseventspro_users", force: true do |t|
-    t.integer  "event_id"
-    t.integer  "user_id"
-    t.string   "name"
-    t.string   "email"
-    t.datetime "date"
-    t.boolean  "state"
-    t.string   "verification"
-    t.integer  "SubmissionId"
-    t.string   "gateway"
-    t.string   "ip"
-    t.string   "URL"
-    t.string   "params"
-    t.decimal  "discount"
-    t.decimal  "early_fee"
-    t.decimal  "late_fee"
-    t.decimal  "tax"
-    t.string   "log"
-    t.string   "lang"
-    t.string   "coupon"
-    t.string   "ideal"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -206,6 +181,11 @@ ActiveRecord::Schema.define(version: 20150105231307) do
 
   add_index "mailboxer_receipts", ["notification_id"], name: "index_mailboxer_receipts_on_notification_id"
   add_index "mailboxer_receipts", ["receiver_id", "receiver_type"], name: "index_mailboxer_receipts_on_receiver_id_and_receiver_type"
+
+  create_table "subscriptions", force: true do |t|
+    t.integer "user_id"
+    t.integer "event_id"
+  end
 
   create_table "taggings", force: true do |t|
     t.integer  "event_id"

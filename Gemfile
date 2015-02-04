@@ -26,7 +26,7 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 # Mysql for production
-gem 'mysql2'
+gem 'mysql2', group: :production
 # Use UTEPSSO to authenticate and fetch user info
 gem 'utep_sso'
 # Twitter Bootstrap

@@ -2,7 +2,7 @@ class Event < ActiveRecord::Base
 	include PublicActivity::Common
 	
 	has_many :subscriptions
-	has_many :users, :through => :subscriptions
+	has_many :subscribers, :through => :subscriptions, source: :user
 	
 	#Database look up name.
 	self.table_name = "atw_rseventspro_events"

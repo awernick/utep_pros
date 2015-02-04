@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 	acts_as_messageable
 
 	has_many :subscriptions
-	has_many :events, :foreign_key => 'owner'
+	has_many :subscribed_events, through: :subscriptions, source: :event
 	
 	self.table_name = "atw_users"
 
@@ -36,10 +36,25 @@ class User < ActiveRecord::Base
 		# return[:full_name]
 		return current_user.email
 	end
+
 	def mailboxer_email(object)
 		# return user.email
 		return current_user.email
 	end
 
+	# Subscribes to an event
+	def subscribe(event)
+		subscriptions.create(event_id: event.id)
+	end
+
+	# Unsubscribed from event
+	def unsubscribe(event)
+		subscriptions.find_by(event_id: event.id).destroy
+	end
+
+	# Retunrs true if current user is subscribed to the event
+	def subscribed?(event)
+		subscribed_events.include?(event)
+	end
 
 end
