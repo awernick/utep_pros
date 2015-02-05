@@ -1,0 +1,36 @@
+.container.custom-container-header
+  %nav.navbar.navbar-default{:role => "navigation"}
+    .container-fluid
+      / Brand and toggle get grouped for better mobile display
+      .navbar-header
+        %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        .navbar-header
+          %a.navbar-brand{:href => "/"}
+            = image_tag "at_logo_retina.png"
+      / Collect the nav links, forms, and other content for toggling
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        %ul#custom-navbar.nav.navbar-nav.navbar-right.custom-menu-wrapper
+        .page-title UTEP PROFESSIONAL DEVELOPMENT
+    %li.custom-nav-pills{:role => "presentation"}= link_to "Home", root_path
+    %li.custom-nav-pills{:role => "presentation"}= link_to "Contact" , contact_path
+    %li.custom-nav-pills{:role => "presentation"}= link_to 'All Events', events_path
+    %li.custom-nav-pills{:role => "presentation"}= link_to 'About'
+    %li.custom-nav-pills{:role => "presentation"}= link_to 'Evaluation Form', evaluations_path
+    %li.custom-nav-pills{:role => "presentation"}
+      = link_to 'Subscriptions', subscriptions_path
+    %li.custom-nav-pills{:role => "presentation"}
+      = link_to 'Activities', activities_path
+    %li.custom-nav-pills{:role => "presentation"}
+      - if session[:user_id] && UTEPSSO.authenticated?(cookies[:UTEP_SE], cookies[:UTEP_SA])
+        - @current_user = current_user
+        = link_to "#{@current_user.name.split(' ').first}, Sign Out", signout_path, id: "sign_out"
+      - else
+        = link_to 'Sign-In', "https://adminapps.utep.edu/sso?redirectURL=#{create_session_url}"
+    %li.custom-nav-pills{:role => "presentation"}
+      %a{:href => "#"} RSS
+/ /.navbar-collapse
+/ /.container-fluid

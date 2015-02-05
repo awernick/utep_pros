@@ -1,13 +1,18 @@
 require 'utep_sso'
 
 class User < ActiveRecord::Base
-	#Add support for the messaging system
-	acts_as_messageable
+	self.table_name = "atw_users"
+	
+	validates :username, presence: true
+	validates :name, presence: true
+	validates :email, presence: true
 
 	has_many :subscriptions
-	has_many :events, :foreign_key => 'owner'
+	has_many :subscribed_events, through: :subscriptions, source: :event
 	
-	self.table_name = "atw_users"
+	# Add support for the messaging system
+	acts_as_messageable
+
 
 	def self.from_sso(utep_cookie, utep_salt)
 		user = User.new
@@ -36,10 +41,25 @@ class User < ActiveRecord::Base
 		# return[:full_name]
 		return current_user.email
 	end
+
 	def mailboxer_email(object)
 		# return user.email
 		return current_user.email
 	end
 
+	# Subscribes to an event
+	def subscribe(event)
+		subscriptions.create(event_id: event.id)
+	end
+
+	# Unsubscribed from event
+	def unsubscribe(event)
+		subscriptions.find_by(event_id: event.id).destroy
+	end
+
+	# Retunrs true if current user is subscribed to the event
+	def subscribed?(event)
+		subscribed_events.include?(event)
+	end
 
 end

@@ -41,24 +41,6 @@ module EventDateHelper
 		end
 	end
 
-	def check_if_event_has_passed
-
-		#Get the time that the event is going to start and the current time
-		timeRightNow = Time.new.to_i
-		endingEventTime = @event.endtime.to_i
-		startEventTime = @event.starttime.to_i
-
-		#Compare the two times
-		if startEventTime < timeRightNow and timeRightNow > endingEventTime
-			answer = -1
-		elsif startEventTime > timeRightNow and endingEventTime > timeRightNow
-			answer = 1
-		elsif startEventTime <= timeRightNow and endingEventTime > timeRightNow
-			answer =  0
-		end
-		return answer
-	end
-
 	def parse_time_accounting_for_timezone (unparsedUTCTStartTime)
 
 		# Get the starte event time and then parse it.

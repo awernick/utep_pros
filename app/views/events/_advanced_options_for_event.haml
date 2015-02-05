@@ -1,0 +1,192 @@
+#accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
+  .panel.panel-default
+    #headingOne.panel-heading{:role => "tab"}
+      %h4.panel-title
+        %a{"aria-controls" => "collapseOne", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
+          Collapsible Group Item #1
+    #collapseOne.panel-collapse.collapse.in{"aria-labelledby" => "headingOne", :role => "tabpanel"}
+      .panel-body
+        .field
+          = f.label :created
+          %br/
+          = f.datetime_select :createdtime
+        .field
+          = f.label :URL
+          %br/
+          = f.text_field :URL
+        .field
+          = f.label :email
+          %br/
+          = f.text_field :email
+        .field
+          = f.label :phone
+          %br/
+          = f.text_field :phone
+        .field
+          = f.label :metaname
+          %br/
+          = f.text_field :metaname
+        .field
+          = f.label :metakeywords
+          %br/
+          = f.text_field :metakeywords
+        .field
+          = f.label :metadescription
+          %br/
+          = f.text_field :metadescription
+        .field
+          = f.label :recurring
+          %br/
+          = f.check_box :recurring
+        .field
+          = f.label :registration
+          %br/
+          = f.check_box :registration
+        .field
+          = f.label :comments
+          %br/
+          = f.check_box :comments
+        .field
+          = f.label :icon
+          %br/
+          = f.text_field :icon
+        .field
+          = f.label :repeat_interval
+          %br/
+          = f.number_field :repeat_interval
+        .field
+          = f.label :repeat_type
+          %br/
+          = f.number_field :repeat_type
+        .field
+          = f.label :repeat_end
+          %br/
+          = f.datetime_select :repeat_end
+        .field
+          = f.label :repeat_also
+          %br/
+          = f.text_field :repeat_also
+        .field
+          = f.label :start_registration
+          %br/
+          = f.datetime_select :start_registration
+        .field
+          = f.label :end_registration
+          %br/
+          = f.datetime_select :end_registration
+        .field
+          = f.label :unsubscribe_date
+          %br/
+          = f.datetime_select :unsubscribe_date
+        .field
+          = f.label :payments
+          %br/
+          = f.check_box :payments
+        .field
+          = f.label :max_tickets
+          %br/
+          = f.number_field :max_tickets
+        .field
+          = f.label :max_tickets_amount
+          %br/
+          = f.number_field :max_tickets_amount
+        .field
+          = f.label :notify_me
+          %br/
+          = f.check_box :notify_me
+        .field
+          = f.label :notify_me_unsubscribe
+          %br/
+          = f.check_box :notify_me_unsubscribe
+        .field
+          = f.label :overbooking
+          %br/
+          = f.check_box :overbooking
+        .field
+          = f.label :overbooking_amount
+          %br/
+          = f.number_field :overbooking_amount
+        .field
+          = f.label :show_registered
+          %br/
+          = f.check_box :show_registered
+        .field
+          = f.label :automatically_approve
+          %br/
+          = f.check_box :automatically_approve
+        .field
+          = f.label :paypal_email
+          %br/
+          = f.text_field :paypal_email
+        .field
+          = f.label :discounts
+          %br/
+          = f.check_box :discounts
+        .field
+          = f.label :form
+          %br/
+          = f.check_box :form
+        .field
+          = f.label :early_fee
+          %br/
+          = f.check_box :early_fee
+        .field
+          = f.label :early_fee_type
+          %br/
+          = f.number_field :early_fee_type
+        .field
+          = f.label :early_fee_end
+          %br/
+          = f.datetime_select :early_fee_end
+        .field
+          = f.label :late_fee
+          %br/
+          = f.number_field :late_fee
+        .field
+          = f.label :late_fee_type
+          %br/
+          = f.number_field :late_fee_type
+        .field
+          = f.label :late_fee_start
+          %br/
+          = f.datetime_select :late_fee_start
+        .field
+          = f.label :options
+          %br/
+          = f.text_field :options
+        .field
+          = f.label :archived
+          %br/
+          = f.check_box :archived
+        .field
+          = f.label :published
+          %br/
+          = f.check_box :published
+        .field
+          = f.label :completed
+          %br/
+          = f.check_box :completed
+        .field
+          = f.label :approved
+          %br/
+          = f.check_box :approved
+        .field
+          = f.label :ticket_pdf
+          %br/
+          = f.check_box :ticket_pdf
+        .field
+          = f.label :ticket_pdf_layout
+          %br/
+          = f.text_field :ticket_pdf_layout
+        .field
+          = f.label :properties
+          %br/
+          = f.text_field :properties
+        .field
+          = f.label :allday
+          %br/
+          = f.check_box :allday
+        .field
+          = f.label :featured
+          %br/
+          = f.check_box :featured
