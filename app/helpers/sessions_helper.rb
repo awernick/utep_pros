@@ -3,13 +3,14 @@ module SessionsHelper
 
   # TODO: Integrate SSO to determine if logged in or not 
   def current_user
-    #@current_user ||= User.find_by(id: session[:user_id])
-    #
+    return User.first if Rails.env.development? 
+
+    @current_user ||= User.find_by(id: session[:user_id])
     # if session[:user_id]
     #   @current_user = User.find(session[:user_id])
     # end
     #Temporary user stuff
-    User.first
+    
   end
 
   def log_in(user)
@@ -17,7 +18,7 @@ module SessionsHelper
   end
 
   def logged_in?
-    !current_user.nil?
+    !current_user.nil? && UTEPSSO.authenticated(cookies[:UTEP_SE], cookies[:UTEP_SA])
   end
 
   def log_out
