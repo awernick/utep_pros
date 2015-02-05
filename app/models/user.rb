@@ -1,13 +1,18 @@
 require 'utep_sso'
 
 class User < ActiveRecord::Base
-	#Add support for the messaging system
-	acts_as_messageable
+	self.table_name = "atw_users"
+	
+	validates :username, presence: true
+	validates :name, presence: true
+	validates :email, presence: true
 
 	has_many :subscriptions
 	has_many :subscribed_events, through: :subscriptions, source: :event
 	
-	self.table_name = "atw_users"
+	# Add support for the messaging system
+	acts_as_messageable
+
 
 	def self.from_sso(utep_cookie, utep_salt)
 		user = User.new
