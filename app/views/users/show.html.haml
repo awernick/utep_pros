@@ -1,0 +1,43 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @user.name
+%p
+  %strong Username:
+  = @user.username
+%p
+  %strong Email:
+  = @user.email
+%p
+  %strong Password:
+  = @user.password
+%p
+  %strong Usertype:
+  = @user.usertype
+%p
+  %strong Block:
+  = @user.block
+%p
+  %strong Sendemail:
+  = @user.sendEmail
+%p
+  %strong Registerdate:
+  = @user.registerDate
+%p
+  %strong Lastvisitdate:
+  = @user.lastvisitDate
+%p
+  %strong Activation:
+  = @user.activation
+%p
+  %strong Params:
+  = @user.params
+%p
+  %strong Lastresettime:
+  = @user.lastResetTime
+%p
+  %strong Resetcount:
+  = @user.resetCount
+= link_to 'Edit', edit_user_path(@user)
+|
+\#{link_to 'Back', users_path}
