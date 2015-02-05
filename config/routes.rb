@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   match '/contact', to: 'static_pages#contact', as: 'contact', via: [:get, :post]
   match '/about', to: 'static_pages#about', as: 'about', via: [:get, :post]
+  match '/calendar', to: 'static_pages#calendar', as: 'calendar', via: [:get, :post]
 
   #Single Sign On Routes
   match '/create_session', to: 'sessions#create', as: 'create_session', via: [:get, :post]

@@ -1,6 +1,8 @@
 .container.action-button-wrapper
   .action-button-component.back-button-component
-    = link_to 'Back', events_path
+    -# = link_to 'Back', events_path
+    - eventId = @event.id
+    = link_to "Back", events_path(anchor: eventId)
   .action-button-component.join-or-alert-button{:style => "float:right !important; margin-right:-15px"}
     - if check_if_event_has_passed == -1
       = link_to 'Sorry, the event has passed!', events_path
@@ -13,7 +15,7 @@
         = @event.name
       .event-detail-view-date
         %span{:class => "fa fa-clock-o", "aria-hidden" => "true"}
-        = parse_time_accounting_for_timezone(@event.starttime).strftime("%A, %B %e, %Y") 
+        = parse_time_accounting_for_timezone(@event.starttime).strftime("%A, %B %e, %Y")
         @
         = parse_time_accounting_for_timezone(@event.starttime).strftime("%I:%M %p")
       .event-detail-view-location
@@ -37,6 +39,13 @@
         .event-detail-view-counter-items-element
           .attendee-name Alan Wernick
           .attendee-clearance Admin
+
+      .event-action-button
+        .action-button-component.join-or-alert-button{:style => "float:right !important; margin-right:-15px"}
+          - if check_if_event_has_passed == -1
+            = link_to 'Sorry, the event has passed!', events_path
+          - elsif check_if_event_has_passed == 1
+            = link_to "Tap here to RSVP", "#", :class => "event-join"
 
 
 /= @event.inspect
