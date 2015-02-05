@@ -9,7 +9,7 @@ module SessionsHelper
     #   @current_user = User.find(session[:user_id])
     # end
     #Temporary user stuff
-    return User.first
+    User.first
   end
 
   def log_in(user)
