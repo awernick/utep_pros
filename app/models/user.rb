@@ -41,4 +41,5 @@ class User < ActiveRecord::Base
 		return current_user.email
 	end
 
+
 end
