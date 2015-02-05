@@ -18,7 +18,9 @@ module SessionsHelper
   end
 
   def logged_in?
-    !current_user.nil? && UTEPSSO.authenticated(cookies[:UTEP_SE], cookies[:UTEP_SA])
+    return true if Rails.env.development?
+
+    !current_user.nil? && UTEPSSO.authenticated?(cookies[:UTEP_SE], cookies[:UTEP_SA])
   end
 
   def log_out
