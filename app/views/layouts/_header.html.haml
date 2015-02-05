@@ -25,11 +25,10 @@
     %li.custom-nav-pills{:role => "presentation"}
       = link_to 'Activities', activities_path
     %li.custom-nav-pills{:role => "presentation"}
-      - if session[:user_id] && UTEPSSO.authenticated?(cookies[:UTEP_SE], cookies[:UTEP_SA])
-        - @current_user = current_user
-        = link_to "#{@current_user.name.split(' ').first}, Sign Out", signout_path, id: "sign_out"
+      - if logged_in? 
+        = link_to "#{current_user.name.split(' ').first}, Sign Out", session, :method => delete
       - else
-        = link_to 'Sign-In', "https://adminapps.utep.edu/sso?redirectURL=#{create_session_url}"
+        = link_to 'Sign-In', "https://adminapps.utep.edu/sso?redirectURL=#{url_for controller: :sessions, action: :create }"
     %li.custom-nav-pills{:role => "presentation"}
       %a{:href => "#"} RSS
 / /.navbar-collapse
