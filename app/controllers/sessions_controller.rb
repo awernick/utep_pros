@@ -1,5 +1,8 @@
 class SessionsController < ApplicationController
-	
+
+	def new
+		redirect_to "https://adminapps.utep.edu/sso?redirectURL=#{create_session_url}"
+	end
 	#TODO: Return to previous page
 	def create
 		user = User.from_sso(cookies[:UTEP_SE], cookies[:UTEP_SA])

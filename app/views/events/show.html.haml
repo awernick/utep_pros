@@ -2,16 +2,15 @@
   .action-button-component.back-button-component
     = link_to 'Back', events_path
   .action-button-component.join-or-alert-button{:style => "float:right !important; margin-right:-15px"}
-    - if logged_in?
-      - if @event.has_passed?
-        = link_to 'Sorry, the event has passed!', '#'
-      - elsif current_user.subscribed?(@event)
-        = form_for(current_user.subscriptions.find_by(event_id: @event.id), html: { method: :delete }) do |f|
-          = f.submit "Unsubscribe", class: "event-unsubscribe"
-      - else
-        = form_for(current_user.subscriptions.build) do |f|
-          = hidden_field_tag :event_id, @event.id
-          = f.submit "Subscribe", class: "event-join"
+    - if @event.has_passed?
+      = link_to 'Sorry, the event has passed!', '#'
+    - elsif current_user.subscribed?(@event)
+      = form_for(current_user.subscriptions.find_by(event_id: @event.id), html: { method: :delete }) do |f|
+        = f.submit "Unsubscribe", class: "event-unsubscribe"
+    - else
+      = form_for(current_user.subscriptions.build) do |f|
+        = hidden_field_tag :event_id, @event.id
+        = f.submit "Subscribe", class: "event-join"
 .container
   .row
     .col-sm-9
