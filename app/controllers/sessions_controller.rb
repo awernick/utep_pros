@@ -1,9 +1,9 @@
 class SessionsController < ApplicationController
+	
+	#TODO: Return to previous page
 	def create
 		user = User.from_sso(cookies[:UTEP_SE], cookies[:UTEP_SA])
-		if user
-			session[:user_id] = user.id
-		end
+		session[:user_id] = user.id if user
 		redirect_to root_url
 	end
 
