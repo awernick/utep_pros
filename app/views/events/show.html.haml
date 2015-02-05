@@ -1,13 +1,16 @@
 .container.action-button-wrapper
   .action-button-component.back-button-component
-    -# = link_to 'Back', events_path
-    - eventId = @event.id
-    = link_to "Back", events_path(anchor: eventId)
+    = link_to "Back", events_path(anchor: @event.id)
   .action-button-component.join-or-alert-button{:style => "float:right !important; margin-right:-15px"}
-    - if check_if_event_has_passed == -1
-      = link_to 'Sorry, the event has passed!', events_path
-    - elsif check_if_event_has_passed == 1
-      = link_to "Tap here to RSVP", "#", :class => "event-join"
+    - if @event.has_passed?
+      = link_to 'Sorry, the event has passed!', '#'
+    - elsif current_user.subscribed?(@event)
+      = form_for(current_user.subscriptions.find_by(event_id: @event.id), html: { method: :delete }) do |f|
+        = f.submit "Unsubscribe", class: "event-unsubscribe"
+    - else
+      = form_for(current_user.subscriptions.build) do |f|
+        = hidden_field_tag :event_id, @event.id
+        = f.submit "Subscribe", class: "event-join"
 .container
   .row
     .col-sm-9
@@ -42,9 +45,9 @@
 
       .event-action-button
         .action-button-component.join-or-alert-button{:style => "float:right !important; margin-right:-15px"}
-          - if check_if_event_has_passed == -1
+          - if @event.has_passed?
             = link_to 'Sorry, the event has passed!', events_path
-          - elsif check_if_event_has_passed == 1
+          - else
             = link_to "Tap here to RSVP", "#", :class => "event-join"
 
 

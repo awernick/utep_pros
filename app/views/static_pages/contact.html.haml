@@ -1,0 +1,23 @@
+- provide(:title, "Contact Us")
+.container{:style => "padding-bottom: 20px;"}
+  %h1 Contact Us
+  %p Thank you for your interest in professional development at The University of Texas at El Paso.  Academic Technologies hopes that your experiences are meaningful and yield the desired outcomes you seek.
+  %p If we can be of further assistance to you, connect you with presenters or presentation materials, or if you simply have suggestions for future workshop and training offerings, please contact us by using the form below.
+  .contact-form-wrapper
+    .row
+      .col-sm-5.contact-form-wrapper
+        %form
+          .form-group
+            %label.custom-contact-label{:for => "firstNameField"} What is your name?
+            %input#firstNameField.form-control.custom-at-colors{"ng-required" => "true", :placeholder => "John Doe", :type => "field"}/
+          .form-group
+            %label.custom-contact-label{:for => "emailField"} What is your email?
+            %input#emailField.form-control.custom-at-colors{"ng-model" => "text", "ng-required" => "true", :placeholder => "john@email.com", :type => "email"}/
+          .form-group
+            %label.custom-contact-label{:for => "subjectField"} Subject
+            %input#subjectField.form-control.custom-at-colors{:placeholder => "Awesome stuff", :type => "field"}/
+          .form-group
+            %label.custom-contact-label{:for => "messageField"} Message
+            %textarea#messageField.form-control.custom-at-colors{:placeholder => "Type your message to us here."}
+          %button.btn.btn-default.col-sm-3.btn-custom-black{:type => "submit"} Submit
+      .col-sm-4

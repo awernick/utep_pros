@@ -1,0 +1,8 @@
+- user = User.find_by_id(activity.owner_id)
+- event = Event.find_by_id(activity.trackable_id)
+- if user && event
+  %li.list-group-item
+    .list-group-item-title
+      Event Canceled
+    .list-group-item-info-wrapper
+      By #{user.name}

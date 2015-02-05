@@ -11,13 +11,13 @@ Rails.application.routes.draw do
   resources :events
   resources :users
   resources :evaluations
+  resources :subscriptions, only: [:create, :destroy]
 
   get 'dashboard/new'
   get 'dashboard/create'
   get 'static_pages/home'
   get 'static_pages/about'
   get 'static_pages/contact'
-  get 'evaluations/create'
   get 'evaluations/create'
 
 

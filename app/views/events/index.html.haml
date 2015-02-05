@@ -9,7 +9,6 @@
   .event-elements-wrapper
     = render "event", :locals => { :events => @events }
 
-  .col-md-12
     = link_to "Load More Events", events_path(:page => @events.next_page), :class => 'load-more-events btn btn-default', :remote => true if @events.next_page
 
   = link_to 'New Event', new_event_path
