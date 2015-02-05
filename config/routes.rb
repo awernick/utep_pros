@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :users
   resources :evaluations
   resources :sessions, only: [ :create, :destroy ]
+  resources :subscriptions, only: [:create, :destroy]
 
   get 'dashboard/new'
   get 'dashboard/create'

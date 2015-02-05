@@ -1,0 +1,6 @@
+[submodule "android"]
+	path = android
+	url = git@git.at.utep.edu:applications-development/android-uteppros.git
+[submodule "ios"]
+	path = ios
+	url = git@git.at.utep.edu:applications-development/ios-uteppros.git

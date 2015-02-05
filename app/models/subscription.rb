@@ -1,9 +1,11 @@
 class Subscription < ActiveRecord::Base
 	include PublicActivity::Common
+
   # tracked owner
   belongs_to :user
   belongs_to :event
+  validates :user_id, presence: true
+  validates :event_id, presence: true
 
-	self.table_name = "atw_rseventspro_users"
 end
 
