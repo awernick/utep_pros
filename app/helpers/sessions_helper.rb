@@ -1,16 +1,10 @@
 module SessionsHelper
   require 'savon'
 
-  # TODO: Integrate SSO to determine if logged in or not 
   def current_user
     return User.first if Rails.env.development? 
 
     @current_user ||= User.find_by(id: session[:user_id])
-    # if session[:user_id]
-    #   @current_user = User.find(session[:user_id])
-    # end
-    #Temporary user stuff
-    
   end
 
   def log_in(user)
