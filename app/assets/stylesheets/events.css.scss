@@ -31,7 +31,7 @@
 .event-element a:hover {
 	background-color: #00ABC4;
 	text-decoration: none;
-} 
+}
 .event-element-title {
 	font-weight: bold;
 	font-size: 1.7em;
@@ -84,6 +84,10 @@
 	border-color: #ea3348;
 	border-style: solid;
 }
+.join-or-alert-button a:hover {
+  background:#ea3348;
+  text-decoration:none;
+}
 .event-alert a {
 	background-color: #f64051;
 	border-width: 0 0 6px 0;
@@ -104,14 +108,23 @@ a.event-join:hover {
 .back-button-component {
 margin: 0 0 30px -15px;
 }
+
+.back-button-component a:visited {
+  color:#ffffff;
+}
 .back-button-component a {
 	background: #00ABC4;
 	padding: 10px 20px;
 	text-align: center;
 	color: #ffffff;
+  border-width: 0 0 6px 0;
+  border-color: #2486AA;
+  border-style: solid;
 }
+
 .back-button-component a:hover {
 	text-decoration: none;
+  background:#2486AA;
 }
 .event-detail-view-wrapper {
 	background: #F2F2F2;
