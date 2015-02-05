@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150105231307) do
+ActiveRecord::Schema.define(version: 20150204223530) do
 
   create_table "activities", force: true do |t|
     t.integer  "trackable_id"
@@ -206,6 +206,11 @@ ActiveRecord::Schema.define(version: 20150105231307) do
 
   add_index "mailboxer_receipts", ["notification_id"], name: "index_mailboxer_receipts_on_notification_id"
   add_index "mailboxer_receipts", ["receiver_id", "receiver_type"], name: "index_mailboxer_receipts_on_receiver_id_and_receiver_type"
+
+  create_table "subscriptions", force: true do |t|
+    t.integer "user_id"
+    t.integer "event_id"
+  end
 
   create_table "taggings", force: true do |t|
     t.integer  "event_id"
