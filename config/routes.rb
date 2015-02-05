@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :events
   resources :users
   resources :evaluations
-  resources :sessions, only: [ :create, :destroy ]
+  resources :sessions, only: [ :new, :create, :destroy ]
   resources :subscriptions, only: [:create, :destroy]
 
   get 'dashboard/new'

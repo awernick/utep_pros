@@ -61,5 +61,4 @@ class User < ActiveRecord::Base
 	def subscribed?(event)
 		subscribed_events.include?(event)
 	end
-
 end
