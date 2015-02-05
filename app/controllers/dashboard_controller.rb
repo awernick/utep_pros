@@ -1,6 +1,7 @@
 class DashboardController < ApplicationController
+  before_action :logged_in_user
+
   def index
-  	redirect_to root_path unless current_user
   end
 
   def new
