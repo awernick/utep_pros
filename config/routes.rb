@@ -10,12 +10,12 @@ Rails.application.routes.draw do
   resources :events
   resources :users
   resources :evaluations
-  resources :sessions, only: [ :new, :create, :destroy ]
   resources :subscriptions, only: [:create, :destroy]
   resources :dashboard
 
-  delete 'logout'  => 'sessions#destroy'
-  get 'create_session' => 'session#create'
+  get   'login'            => 'sessions#new'
+  get   'create_session'   => 'sessions#create'
+  delete 'logout'          => 'sessions#destroy'
 
   get 'static_pages/home'
   get 'static_pages/about'
