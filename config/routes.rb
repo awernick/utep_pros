@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   match '/contact', to: 'static_pages#contact', as: 'contact', via: [:get, :post]
   match '/about', to: 'static_pages#about', as: 'about', via: [:get, :post]
+  match '/calendar', to: 'static_pages#calendar', as: 'calendar', via: [:get, :post]
 
 
   #Routes for conversations

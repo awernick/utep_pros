@@ -1,10 +1,10 @@
 .container.action-button-wrapper
   .action-button-component.back-button-component
-    = link_to 'Back', events_path
+    = link_to "Back", events_path(anchor: @event.id)
   .action-button-component.join-or-alert-button{:style => "float:right !important; margin-right:-15px"}
     - if logged_in?
       - if @event.has_passed?
-        = link_to 'Sorry, the event has passed!', '#'
+        = link_to "Sorry the event has passed", events_path(anchor: @event.id)
       - elsif current_user.subscribed?(@event)
         = form_for(current_user.subscriptions.find_by(event_id: @event.id), html: { method: :delete }) do |f|
           = f.submit "Unsubscribe", class: "event-unsubscribe"
@@ -19,7 +19,7 @@
         = @event.name
       .event-detail-view-date
         %span{:class => "fa fa-clock-o", "aria-hidden" => "true"}
-        = parse_time_accounting_for_timezone(@event.starttime).strftime("%A, %B %e, %Y") 
+        = parse_time_accounting_for_timezone(@event.starttime).strftime("%A, %B %e, %Y")
         @
         = parse_time_accounting_for_timezone(@event.starttime).strftime("%I:%M %p")
       .event-detail-view-location
@@ -34,15 +34,29 @@
         = @event.description.html_safe
 
     .col-sm-3
-      .event-detail-view-counter 8 going
+      .event-detail-view-counter Who is going?
       .event-detail-view-counter-items-wrapper
         .event-detail-view-counter-items-element
-          .attendee-name Guillermo Vargas
-          .attendee-clearance Event Host
-      .event-detail-view-counter-items-wrapper
         .event-detail-view-counter-items-element
-          .attendee-name Alan Wernick
-          .attendee-clearance Admin
+        .event-detail-view-counter-items-element
+        .event-detail-view-counter-items-element
+        .event-detail-view-counter-items-element
+        .event-detail-view-counter-items-element
+        .event-detail-view-counter-items-element{ :style => "background-image:url(http://icons.iconarchive.com/icons/3xhumed/mega-games-pack-40/256/Fallout-New-Vegas-3-icon.png); background-size:cover;"}
+
+
+      .event-action-button
+        .action-button-component.join-or-alert-button{:style => "float:right !important; margin-right:-15px"}
+          - if logged_in?
+            - if @event.has_passed?
+              = link_to "Sorry the event has passed", events_path(anchor: @event.id)
+            - elsif current_user.subscribed?(@event)
+              = form_for(current_user.subscriptions.find_by(event_id: @event.id), html: { method: :delete }) do |f|
+                = f.submit "Unsubscribe", class: "event-unsubscribe"
+            - else
+              = form_for(current_user.subscriptions.build) do |f|
+                = hidden_field_tag :event_id, @event.id
+                = f.submit "Subscribe", class: "event-join"
 
 
 /= @event.inspect
