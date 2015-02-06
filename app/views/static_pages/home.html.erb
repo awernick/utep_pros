@@ -59,10 +59,10 @@
 			<%= link_to 'View Events', events_path %>
 		</div>
 		<div class="home-button-component">
-			<% if session[:user_id] %>
-			<%= link_to 'Sign Out', signout_path, id: "sign_out" %>
+			<% if logged_in? %>
+			<%= link_to 'Sign Out', logout_path, id: "sign_out", method: "delete" %>
 			<% else %>
-			<%= link_to 'Sign In', "https://adminapps.utep.edu/sso?redirectURL=#{request.original_url}create_session" %>
+			<%= link_to 'Sign In', "https://adminapps.utep.edu/sso?redirectURL=#{create_session_url}" %>
 			<% end %>
 		</div>
 		</div>
