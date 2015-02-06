@@ -38,7 +38,7 @@
               %li{ :role => "presentation"}
                 = link_to "Profile", dashboard_index_path, { :role => "menuitem", :tabindex => "-1"}
               %li{ :role => "presentation" }
-                = link_to "Sign Out", logout_path, { :role => "menuitem", :tabindex => "-1", method: "delete" }
+                = link_to "Sign Out", logout_path, { :role => "menuitem", :tabindex => "-1", method: "delete"}
           - else
             = link_to 'Sign-In', "https://adminapps.utep.edu/sso?redirectURL=#{url_for controller: :sessions, action: :create }"
           %li.custom-nav-pills{:role => "presentation"}
