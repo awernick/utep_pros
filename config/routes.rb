@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   resources :dashboard
 
   delete 'logout'  => 'sessions#destroy'
+  get 'create_session' => 'session#create'
+
   get 'static_pages/home'
   get 'static_pages/about'
   get 'static_pages/contact'
