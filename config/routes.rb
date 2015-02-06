@@ -7,15 +7,16 @@ Rails.application.routes.draw do
 
   resources :activities
   resources :subscriptions
-  resources :dashboard
   resources :events
   resources :users
   resources :evaluations
-  resources :sessions, only: [ :new, :create, :destroy ]
   resources :subscriptions, only: [:create, :destroy]
+  resources :dashboard
 
-  get 'dashboard/new'
-  get 'dashboard/create'
+  get   'login'            => 'sessions#new'
+  get   'create_session'   => 'sessions#create'
+  delete 'logout'          => 'sessions#destroy'
+
   get 'static_pages/home'
   get 'static_pages/about'
   get 'static_pages/contact'
@@ -33,9 +34,6 @@ Rails.application.routes.draw do
   match '/about', to: 'static_pages#about', as: 'about', via: [:get, :post]
   match '/calendar', to: 'static_pages#calendar', as: 'calendar', via: [:get, :post]
 
-  #Single Sign On Routes
-  match '/create_session', to: 'sessions#create', as: 'create_session', via: [:get, :post]
-  match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
   #Routes for conversations
   resources :conversations, only: [:index, :show, :new, :create] do
