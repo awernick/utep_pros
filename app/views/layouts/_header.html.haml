@@ -14,22 +14,34 @@
       / Collect the nav links, forms, and other content for toggling
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         %ul#custom-navbar.nav.navbar-nav.navbar-right.custom-menu-wrapper
-        .page-title UTEP PROFESSIONAL DEVELOPMENT
-    %li.custom-nav-pills{:role => "presentation"}= link_to "Home", root_path
-    %li.custom-nav-pills{:role => "presentation"}= link_to "Contact" , contact_path
-    %li.custom-nav-pills{:role => "presentation"}= link_to 'All Events', events_path
-    %li.custom-nav-pills{:role => "presentation"}= link_to 'About'
-    %li.custom-nav-pills{:role => "presentation"}= link_to 'Evaluation Form', evaluations_path
-    %li.custom-nav-pills{:role => "presentation"}
-      = link_to 'Subscriptions', subscriptions_path
-    %li.custom-nav-pills{:role => "presentation"}
-      = link_to 'Activities', activities_path
-    %li.custom-nav-pills{:role => "presentation"}
-      - if logged_in? 
-        = link_to "#{current_user.name.split(' ').first}, Sign Out", session, :method => delete
-      - else
-        = link_to 'Sign-In', "https://adminapps.utep.edu/sso?redirectURL=#{url_for controller: :sessions, action: :create }"
-    %li.custom-nav-pills{:role => "presentation"}
-      %a{:href => "#"} RSS
+          .page-title UTEP PROFESSIONAL DEVELOPMENT
+          %li.custom-nav-pills{:role => "presentation"}
+            = link_to "Home", root_path
+          %li.custom-nav-pills{:role => "presentation"}
+            = link_to "Contact" , contact_path
+          %li.custom-nav-pills{:role => "presentation"}
+            = link_to 'All Events', events_path
+          %li.custom-nav-pills{:role => "presentation"}
+            = link_to 'About'
+          %li.custom-nav-pills{:role => "presentation"}
+            = link_to 'Evaluation Form', evaluations_path
+          %li.custom-nav-pills{:role => "presentation"}
+            = link_to 'Subscriptions', subscriptions_path
+          %li.custom-nav-pills{:role => "presentation"}
+            = link_to 'Activities', activities_path
+          - if logged_in?
+            %li.custom-nav-pills#dropdownMenu1{:role => "presentation", 'data-toggle' => "dropdown", 'aria-expanded' => "true"}
+              = link_to "#", {:id => 'dropdownMenu1'} do
+                = "#{current_user.name.split(' ').first}"
+                %span.caret
+            %ul.dropdown-menu{ :role => "menu", 'aria-labelledby'=>"dropdownMenu1" }
+              %li{ :role => "presentation"}
+                = link_to "Profile", dashboard_index_path, { :role => "menuitem", :tabindex => "-1"}
+              %li{ :role => "presentation" }
+                = link_to "Sign Out", logout_path, { :role => "menuitem", :tabindex => "-1", method: "delete" }
+          - else
+            = link_to 'Sign-In', "https://adminapps.utep.edu/sso?redirectURL=#{url_for controller: :sessions, action: :create }"
+          %li.custom-nav-pills{:role => "presentation"}
+            %a{:href => "#"} RSS
 / /.navbar-collapse
 / /.container-fluid
