@@ -4,10 +4,7 @@
   %h1 All Events
   .btn-group.btn-group-justified{:role => "group", "aria-label" => "Justified button group"}
     = link_to "List View", events_path, :class => "btn btn-default", :role => "button"
-    = link_to "My Events", "#", :class => "btn btn-default", :role => "button"
-
-  -# Render the components that have the search functions
-  = render "event", :locals => { :events => @events }
+    = link_to "Calendar View", calendar_path, :class => "btn btn-default", :role => "button"
 
   .event-elements-wrapper
     = render "event", :locals => { :events => @events }

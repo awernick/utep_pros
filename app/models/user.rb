@@ -1,8 +1,12 @@
 require 'utep_sso'
 
 class User < ActiveRecord::Base
-	self.table_name = "atw_users"
+	#Friendly Ids
+	extend FriendlyId
+	friendly_id :username, use: :slugged
 	
+	self.table_name = "atw_users"
+
 	validates :username, presence: true
 	validates :name, presence: true
 	validates :email, presence: true
@@ -10,7 +14,7 @@ class User < ActiveRecord::Base
 	# Event Subscriptions
 	has_many :subscriptions
 	has_many :subscribed_events, through: :subscriptions, source: :event
-	
+
 	# Add support for the messaging system
 	acts_as_messageable
 
@@ -24,6 +28,7 @@ class User < ActiveRecord::Base
 		unless user
 			user.name = sso_response[:full_name]
 			user.username = sso_response[:user_name]
+			user.slug = sso_response[:user_name]
 			user.email = sso_response[:email_address]
 			user.params = " "
 			user.save!

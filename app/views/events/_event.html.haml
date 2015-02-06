@@ -1,11 +1,11 @@
 - @events.each do |event|
-  .event
+  .event{ :id => "#{event.id}"}
     .day-of-the-week-separator= parse_date(event.starttime)
     .event-element
       = link_to event do
         .event-element-title= event.name
         .event-element-date
-          Time: #{parse_time_accounting_for_timezone(event.starttime)}
+          Time: #{parse_time_accounting_for_timezone(event.starttime).strftime("%A, %B %e, %Y")}
         .event-element-location
           Location: #{event.location}
         .event-element-categories
