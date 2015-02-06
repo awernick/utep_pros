@@ -62,7 +62,7 @@
 			<% if logged_in? %>
 			<%= link_to 'Sign Out', logout_path, id: "sign_out", method: "delete" %>
 			<% else %>
-			<%= link_to 'Sign In', "https://adminapps.utep.edu/sso?redirectURL=#{create_session_url}" %>
+			<%= link_to 'Sign In', login_path %>
 			<% end %>
 		</div>
 		</div>
