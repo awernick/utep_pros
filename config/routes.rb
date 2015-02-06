@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
 
-
-  get 'conversations/new'
-
-  get 'conversations/create'
-
   resources :activities
   resources :subscriptions
   resources :events
@@ -13,39 +8,38 @@ Rails.application.routes.draw do
   resources :subscriptions, only: [:create, :destroy]
   resources :dashboard
 
-  get   'login'            => 'sessions#new'
-  get   'create_session'   => 'sessions#create'
-  delete 'logout'          => 'sessions#destroy'
 
-  get 'static_pages/home'
-  get 'static_pages/about'
-  get 'static_pages/contact'
-  get 'evaluations/create'
-
-
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-
-  #Front End Static Pages
+  # Static Pages
+  get  'about'              => 'static_pages#about'
+  get  'contact'            => 'static_pages#contact'
   root 'static_pages#home'
-  match '/contact', to: 'static_pages#contact', as: 'contact', via: [:get, :post]
-  match '/about', to: 'static_pages#about', as: 'about', via: [:get, :post]
 
 
-  #Routes for conversations
+  # Sessions
+  get    'login'            => 'sessions#new'
+  get    'create_session'   => 'sessions#create'
+  delete 'logout'           => 'sessions#destroy'
+
+
+  # Conversations
+  get 'conversations/new'
+  get 'conversations/create'
+
+
+  # Routes for conversations
   resources :conversations, only: [:index, :show, :new, :create] do
     member do
       post :reply
       post :trash
       post :untrash
     end
+
     collection do
       get :trashbin
       post :empty_trash
     end
   end
+  
   resources :messages do
     member do
       post :new
