@@ -57,6 +57,8 @@ gem 'mailboxer'
 gem "wysiwyg-rails"
 #Lorem Ipsum generator
 gem 'lorem-ipsum'
+# Pretty links
+gem 'friendly_id', '~> 5.1.0'
 # Use unicorn as the app server
 # gem 'unicorn'
 # Use debugger
