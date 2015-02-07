@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :users
   resources :evaluations
   resources :subscriptions, only: [:create, :destroy]
-  resources :dashboard
+  resources :dashboard, only: [:index, :show]
 
 
   # Static Pages

@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
         redirect_to login_path
       end
     end
+
+    def admin_user
+      redirect_to(dashboard_index_path) unless current_user.admin?
+    end
 end
