@@ -5,9 +5,14 @@ class Event < ActiveRecord::Base
 	validates :owner, presence: true
 	validates :location, presence: true
 
+
 	# Event Subscriptions
-	has_many :subscriptions 
-	has_many :subscribers, :through => :subscriptions, source: :user
+	has_many :subscriptions
+	has_many :subscribers, through: :subscriptions, source: :user
+
+	# Event Ownership
+	has_many :event_ownerships
+	has_many :owners, through: :event_ownerships, source: :user
 
 	# Database look up name.
 	self.table_name = "atw_rseventspro_events"

@@ -31,7 +31,7 @@
 .event-element a:hover {
 	background-color: #00ABC4;
 	text-decoration: none;
-} 
+}
 .event-element-title {
 	font-weight: bold;
 	font-size: 1.7em;
@@ -63,6 +63,14 @@
 	padding: 20px 0;
 	border-bottom: 1px solid #ddd;
 }
+.event-detail-view-counter-items-element {
+  width:50px;
+  height:50px;
+  background-image:url(http://icons.iconarchive.com/icons/3xhumed/mega-games-pack-40/256/Fallout-New-Vegas-3-icon.png);
+  background-size:cover;
+  float:left;
+  margin:3px;
+}
 /*----------------------*/
 
 /* Detail View Styling */
@@ -84,6 +92,11 @@
 	border-color: #ea3348;
 	border-style: solid;
 }
+.join-or-alert-button a:hover {
+  background:#ea3348;
+  text-decoration:none;
+}
+
 .event-alert a {
 	background-color: #f64051;
 	border-width: 0 0 6px 0;
@@ -96,6 +109,8 @@
 	border-width: 0 0 6px 0;
 	border-color: #71b33b;
 	border-style: solid;
+  padding:10px 20px;
+  margin-top:-10px;
 }
 
 .event-join:hover {
@@ -109,6 +124,8 @@
 	border-width: 0 0 6px 0;
 	border-color: #eea236;
 	border-style: solid;
+  padding: 10px 15px;
+  margin-top:-10px;
 }
 .event-unsubscribe:hover {
 	background: #eea236;
@@ -119,14 +136,23 @@
 .back-button-component {
 margin: 0 0 30px -15px;
 }
+
+.back-button-component a:visited {
+  color:#ffffff;
+}
 .back-button-component a {
 	background: #00ABC4;
 	padding: 10px 20px;
 	text-align: center;
 	color: #ffffff;
+  border-width: 0 0 6px 0;
+  border-color: #2486AA;
+  border-style: solid;
 }
+
 .back-button-component a:hover {
 	text-decoration: none;
+  background:#2486AA;
 }
 .event-detail-view-wrapper {
 	background: #F2F2F2;
