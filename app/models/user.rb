@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
 		return user
 	end
 
-	#User Identities for Mailbox
+# User Identities for Mailbox
 	def mailboxer_name
 		# return[:full_name]
 		return current_user.email
@@ -49,6 +49,8 @@ class User < ActiveRecord::Base
 		# return user.email
 		return current_user.email
 	end
+
+# Event Methods
 
 	# Subscribes to an event
 	def subscribe(event)
@@ -65,14 +67,17 @@ class User < ActiveRecord::Base
 		subscribed_events.include?(event)
 	end
 
+	# Own an event
 	def own(event)
 		event_ownerships.create(event_id: event.id)
 	end
 
+	# Stop owning an event
 	def disown(event)
 		event_ownerships.find_by(event_id: event.id).destroy
 	end
 
+	# Returns true if current_user owns the event
 	def owns?(event)
 		owned_events.include?(event)
 	end

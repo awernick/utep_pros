@@ -19,7 +19,7 @@
         = @event.name
       .event-detail-view-date
         %span{:class => "fa fa-clock-o", "aria-hidden" => "true"}
-        = parse_time_accounting_for_timezone(@event.starttime).strftime("%A, %B %e, %Y") 
+        = parse_time_accounting_for_timezone(@event.starttime).strftime("%A, %B %e, %Y")
         @
         = parse_time_accounting_for_timezone(@event.starttime).strftime("%I:%M %p")
       .event-detail-view-location
@@ -46,4 +46,5 @@
 
 
 /= @event.inspect
-= link_to 'Edit', edit_event_path(@event)
+- if logged_in? && current_user.owns?(@event)
+  = link_to 'Edit', edit_event_path(@event)

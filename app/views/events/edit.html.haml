@@ -15,7 +15,7 @@
             %li.list-group-item
               .list-group-item-title Event Created
               .list-group-item-info-wrapper By Alan Wernick
-            - subscription_activities = PublicActivity::Activity.order("created_at desc").where(:recipient_id => current_user.event_ids, trackable_type: "Subscription")
+            - subscription_activities = PublicActivity::Activity.order("created_at desc").where(:recipient_id => current_user.events_subscribed, trackable_type: "Subscription")
             - event_activities = PublicActivity::Activity.order("created_at desc").where(:recipient_id => current_user.id)
             - @activities = subscription_activities + event_activities
             - @activities.sort_by(&:created_at)

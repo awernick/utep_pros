@@ -27,6 +27,22 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
+    # puts "Start"
+    # modify_params = event_params
+    #
+    # event_params.each do |key, value|
+    #   puts "#{key},#{value}"
+    # end
+    # event_params[:owners].each do | value |
+    #   puts "#{value}"
+    # end
+    # puts event_params[:owners].count
+    # puts "Hello"
+    # puts modify_params[:owners].delete_at(0)
+    # modify_params[:owners].each do | value |
+    #   puts " Value : #{value}"
+    # end
+
     @event = Event.new(event_params)
 
     respond_to do |format|
@@ -76,7 +92,7 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through. Added the all_tags parameter
     def event_params
-      params.require(:event).permit(:parent, :name, :createdtime, :starttime, :endtime, :description, :location, :owner, :URL, :email, :phone, :metaname, :metakeywords, :metadescription, :recurring, :registration, :comments, :icon, :repeat_interval, :repeat_type, :repeat_end, :repeat_also, :start_registration, :end_registration, :unsubscribe_date, :payments, :max_tickets, :max_tickets_amount, :notify_me, :notify_me_unsubscribe, :overbooking, :overbooking_amount, :show_registered, :automatically_approve, :paypal_email, :discounts, :form, :early_fee, :early_fee_type, :early_fee_end, :late_fee, :late_fee_type, :late_fee_start, :options, :archived, :published, :completed, :approved, :ticket_pdf, :ticket_pdf_layout, :properties, :gallery_tags, :allday, :featured)
+      params.require(:event).permit(:parent, :name, :createdtime, :starttime, :endtime, :description, :location, :URL, :email, :phone, :metaname, :metakeywords, :metadescription, :recurring, :registration, :comments, :icon, :repeat_interval, :repeat_type, :repeat_end, :repeat_also, :start_registration, :end_registration, :unsubscribe_date, :payments, :max_tickets, :max_tickets_amount, :notify_me, :notify_me_unsubscribe, :overbooking, :overbooking_amount, :show_registered, :automatically_approve, :paypal_email, :discounts, :form, :early_fee, :early_fee_type, :early_fee_end, :late_fee, :late_fee_type, :late_fee_start, :options, :archived, :published, :completed, :approved, :ticket_pdf, :ticket_pdf_layout, :properties, :gallery_tags, :allday, :featured, owner_ids: [])
     end
 
 end
