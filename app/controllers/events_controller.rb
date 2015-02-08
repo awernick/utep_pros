@@ -27,22 +27,6 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    # puts "Start"
-    # modify_params = event_params
-    #
-    # event_params.each do |key, value|
-    #   puts "#{key},#{value}"
-    # end
-    # event_params[:owners].each do | value |
-    #   puts "#{value}"
-    # end
-    # puts event_params[:owners].count
-    # puts "Hello"
-    # puts modify_params[:owners].delete_at(0)
-    # modify_params[:owners].each do | value |
-    #   puts " Value : #{value}"
-    # end
-
     @event = Event.new(event_params)
 
     respond_to do |format|

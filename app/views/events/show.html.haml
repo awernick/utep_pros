@@ -34,15 +34,14 @@
         = @event.description.html_safe
 
     .col-sm-3
-      .event-detail-view-counter 8 going
-      .event-detail-view-counter-items-wrapper
-        .event-detail-view-counter-items-element
-          .attendee-name Guillermo Vargas
-          .attendee-clearance Event Host
-      .event-detail-view-counter-items-wrapper
-        .event-detail-view-counter-items-element
-          .attendee-name Alan Wernick
-          .attendee-clearance Admin
+      .event-detail-view-counter
+        = "#{@event.subscribers.count} going"
+      - @event.owners.each do |owner|
+        .event-detail-view-counter-items-wrapper
+          .event-detail-view-counter-items-element
+            .attendee-name
+              = owner.name
+            .attendee-clearance Owner
 
 
 /= @event.inspect
