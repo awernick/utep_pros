@@ -35,10 +35,10 @@
       Location of event
     = f.text_field :location, :class => 'form-control custom-at-colors', :id => 'locationField', :placeholder => 'UGLC Room 308'
   .form-group.form-field-spacer
-    = f.label :owner, :class => 'custom-contact-label', :for => 'eventOwnerField' do
-      Owner of Event
-    %br/
-    = f.select :owner, User.all.collect {|p| [ p.name, p.name]}, {}, :class => "form-control", :id => "eventOwnerField"
+    = f.label :owners, :class => 'custom-contact-label', :for => 'eventOwnerField' do
+      Event Owner(s)
+    = f.hidden_field :event_id, :value => @event.id
+    = f.collection_select(:owner_ids, User.all, :id, :name, {}, :class => "form-control", :multiple => true, :id => "eventOwnerField")
   .form-group.form-field-spacer
     = f.label :gallery_tags, :class => 'custom-contact-label', :for => 'tagsField' do
       Event Tags (Separated by commas)

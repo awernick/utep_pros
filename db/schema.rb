@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150207191601) do
+ActiveRecord::Schema.define(version: 20150207225130) do
 
   create_table "activities", force: true do |t|
     t.integer  "trackable_id"
@@ -132,7 +132,10 @@ ActiveRecord::Schema.define(version: 20150207191601) do
     t.datetime "updated_at"
     t.boolean  "admin",         default: false
     t.boolean  "event_planner", default: false
+    t.string   "slug"
   end
+
+  add_index "atw_users", ["slug"], name: "index_atw_users_on_slug", unique: true
 
   create_table "evaluations", force: true do |t|
     t.string   "title"
@@ -154,6 +157,11 @@ ActiveRecord::Schema.define(version: 20150207191601) do
     t.string   "question6"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "event_ownerships", force: true do |t|
+    t.integer "user_id"
+    t.integer "event_id"
   end
 
   create_table "mailboxer_conversation_opt_outs", force: true do |t|
