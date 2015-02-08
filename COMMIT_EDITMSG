@@ -1,0 +1,30 @@
+Fix code base cleanup merge conflicts
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+# All conflicts fixed but you are still merging.
+# Changes to be committed:
+# 
+# 	modified:   .DS_Store
+# 	modified:   app/controllers/application_controller.rb
+# 	modified:   app/controllers/dashboard_controller.rb
+# 	modified:   app/controllers/events_controller.rb
+# 	modified:   app/models/event.rb
+# 	new file:   app/models/event_ownership.rb
+# 	modified:   app/models/subscription.rb
+# 	modified:   app/models/user.rb
+# 	modified:   app/views/dashboard/index.html.haml
+# 	modified:   app/views/events/_form.html.haml
+# 	modified:   app/views/events/edit.html.haml
+# 	modified:   app/views/events/new.html.haml
+# 	modified:   app/views/events/show.html.haml
+# 	modified:   config/routes.rb
+# 	new file:   db/migrate/20150207190739_add_admin_to_users.rb
+# 	new file:   db/migrate/20150207191601_add_event_planner_to_users.rb
+# 	new file:   db/migrate/20150207225130_create_event_ownerships.rb
+# 	modified:   db/schema.rb
+# 	new file:   test/fixtures/event_ownerships.yml
+# 	new file:   test/models/event_ownership_test.rb

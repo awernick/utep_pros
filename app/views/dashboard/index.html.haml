@@ -26,14 +26,15 @@
 			.panel-heading Your events
 			.panel-body
 				.event-list-element-wrapper.table-responsive
-				.dashboard-event-list-wrapper
-					.dashboard-event-floating-event.float-left
-						%h2 Software Defined radio with HackRF
-						%p An awesome course on Digital Signal Processing
-					.dashboard-event-floating-event.float-left
-						.btn-group{:role => "group"}
-							= link_to "Admin View", :class => "btn btn-default", :type => "button"
-							-#  %a{:type => "button", :class => "btn btn-default", :href => "#"} Admin View
+					- current_user.subscribed_events.each do |event|
+						.dashboard-event-list-wrapper
+							.dashboard-event-floating-event.float-left
+								%h2= event.name
+								%p= event.description
+							.dashboard-event-floating-event.float-left
+								.btn-group{:role => "group"}
+									= link_to "Admin View", :class => "btn btn-default", :type => "button"
+									-#  %a{:type => "button", :class => "btn btn-default", :href => "#"} Admin View
 				.dashboard-event-list-wrapper
 					.dashboard-event-floating-event.float-left
 						%h2 Software Defined radio with HackRF
@@ -47,11 +48,14 @@
 			.panel-heading Actions Panel
 			.panel-body.action-panel-styling
 				%ul{:class => "actions-wrapper"}
-					%li
-						= link_to new_event_path, :class => "new-event-action" do
-							%span{:class => "fa fa-list custom-glyphicon", "aria-hidden" => "true"}
-								CREATE NEW EVENT
-					%li
-						= link_to new_user_path, :class => "new-user-action" do
-							%span{:class => "fa fa-users custom-glyphicon", "aria-hidden" => "true"} 
-								CREATE NEW USER
+					- if current_user.event_planner?
+						%li
+							= link_to new_event_path, :class => "new-event-action" do
+								%span{:class => "fa fa-list custom-glyphicon", "aria-hidden" => "true"}
+									CREATE NEW EVENT
+
+					-if current_user.admin?
+						%li
+							= link_to new_user_path, :class => "new-user-action" do
+								%span{:class => "fa fa-users custom-glyphicon", "aria-hidden" => "true"} 
+									CREATE NEW USER
