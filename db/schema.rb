@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150206073836) do
+=======
+ActiveRecord::Schema.define(version: 20150207191601) do
+>>>>>>> 517ee1f3d177d41af17e13826a6392b0384ea1cc
 
   create_table "activities", force: true do |t|
     t.integer  "trackable_id"
@@ -105,7 +109,12 @@ ActiveRecord::Schema.define(version: 20150206073836) do
     t.integer  "resetCount"
     t.datetime "created_at"
     t.datetime "updated_at"
+<<<<<<< HEAD
     t.string   "slug"
+=======
+    t.boolean  "admin",         default: false
+    t.boolean  "event_planner", default: false
+>>>>>>> 517ee1f3d177d41af17e13826a6392b0384ea1cc
   end
 
   add_index "atw_users", ["slug"], name: "index_atw_users_on_slug", unique: true

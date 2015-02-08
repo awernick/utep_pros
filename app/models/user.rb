@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 	validates :name, presence: true
 	validates :email, presence: true
 
+	# Event Subscriptions
 	has_many :subscriptions
 	has_many :subscribed_events, through: :subscriptions, source: :event
 
@@ -18,14 +19,19 @@ class User < ActiveRecord::Base
 	acts_as_messageable
 
 
+	# Return a User with SSO information
 	def self.from_sso(utep_cookie, utep_salt)
-		user = User.new
-
 		sso_response = UTEPSSO.authenticate(utep_cookie, utep_salt)
 
+<<<<<<< HEAD
 		if User.find_by_username(sso_response[:user_name])
 			User.find_by_username(sso_response[:user_name])
 		else
+=======
+		user ||= User.find_by(username: sso_response[:user_name])
+
+		unless user
+>>>>>>> 517ee1f3d177d41af17e13826a6392b0384ea1cc
 			user.name = sso_response[:full_name]
 			user.username = sso_response[:user_name]
 			user.slug = sso_response[:user_name]
@@ -35,10 +41,9 @@ class User < ActiveRecord::Base
 
 			mailboxer_name_var = sso_response[:username]
 			mailboxer_email_var = sso_response[:email_address]
-
-			return user
-
 		end
+
+		return user
 	end
 
 	#User Identities for Mailbox
@@ -57,12 +62,12 @@ class User < ActiveRecord::Base
 		subscriptions.create(event_id: event.id)
 	end
 
-	# Unsubscribed from event
+	# Unsubscribes from event
 	def unsubscribe(event)
 		subscriptions.find_by(event_id: event.id).destroy
 	end
 
-	# Retunrs true if current user is subscribed to the event
+	# Returns true if current user is subscribed to the event
 	def subscribed?(event)
 		subscribed_events.include?(event)
 	end

@@ -24,11 +24,12 @@
           %li.custom-nav-pills{:role => "presentation"}
             = link_to 'About'
           %li.custom-nav-pills{:role => "presentation"}
-            = link_to 'Evaluation Form', evaluations_path
-          %li.custom-nav-pills{:role => "presentation"}
-            = link_to 'Subscriptions', subscriptions_path
-          %li.custom-nav-pills{:role => "presentation"}
-            = link_to 'Activities', activities_path
+            = link_to 'Evaluation Form', new_evaluation_path
+          - if Rails.env.development?
+            %li.custom-nav-pills{:role => "presentation"}
+              = link_to 'Subscriptions', subscriptions_path
+            %li.custom-nav-pills{:role => "presentation"}
+              = link_to 'Activities', activities_path
           - if logged_in?
             %li.custom-nav-pills#dropdownMenu1{:role => "presentation", 'data-toggle' => "dropdown", 'aria-expanded' => "true"}
               = link_to "#", {:id => 'dropdownMenu1'} do

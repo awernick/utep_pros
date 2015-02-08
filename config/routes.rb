@@ -1,52 +1,53 @@
 Rails.application.routes.draw do
 
-
-  get 'conversations/new'
-
-  get 'conversations/create'
-
   resources :activities
   resources :subscriptions
   resources :events
   resources :users
   resources :evaluations
   resources :subscriptions, only: [:create, :destroy]
-  resources :dashboard
-
-  get   'login'            => 'sessions#new'
-  get   'create_session'   => 'sessions#create'
-  delete 'logout'          => 'sessions#destroy'
-
-  get 'static_pages/home'
-  get 'static_pages/about'
-  get 'static_pages/contact'
-  get 'evaluations/create'
+  resources :dashboard, only: [:index, :show]
 
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  # Static Pages
+  get  'about'              => 'static_pages#about'
+  get  'contact'            => 'static_pages#contact'
+  root 'static_pages#home'
 
-  # You can have the root of your site routed with "root"
 
+  # Sessions
+  get    'login'            => 'sessions#new'
+  get    'create_session'   => 'sessions#create'
+  delete 'logout'           => 'sessions#destroy'
+
+
+<<<<<<< HEAD
   #Front End Static Pages
   root 'static_pages#home'
   match '/contact', to: 'static_pages#contact', as: 'contact', via: [:get, :post]
   match '/about', to: 'static_pages#about', as: 'about', via: [:get, :post]
   match '/calendar', to: 'static_pages#calendar', as: 'calendar', via: [:get, :post]
+=======
+  # Conversations
+  get 'conversations/new'
+  get 'conversations/create'
+>>>>>>> 517ee1f3d177d41af17e13826a6392b0384ea1cc
 
 
-  #Routes for conversations
+  # Routes for conversations
   resources :conversations, only: [:index, :show, :new, :create] do
     member do
       post :reply
       post :trash
       post :untrash
     end
+
     collection do
       get :trashbin
       post :empty_trash
     end
   end
+  
   resources :messages do
     member do
       post :new
