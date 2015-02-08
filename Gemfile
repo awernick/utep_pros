@@ -10,7 +10,9 @@ gem 'savon',                            '~> 2.8.0'
 gem 'jbuilder',                         '~> 2.0'
 gem 'bcrypt',                           '~> 3.1.7'
 gem 'momentjs-rails',                   '>= 2.8.1'
+gem 'friendly_id',                      '~> 5.1.0'
 gem 'bootstrap3-datetimepicker-rails',  '~> 3.1.3'
+gem 'angularjs-rails',                  '>=1.3.10'
 gem "recaptcha",                        :require => "recaptcha/rails"
 gem 'jquery-rails'
 gem 'turbolinks'
@@ -23,20 +25,15 @@ gem 'haml-rails'
 gem 'will_paginate'
 gem 'underscore-rails'
 gem 'public_activity'
-gem 'angularjs-rails'
 gem 'mailboxer'
-gem "wysiwyg-rails"
+gem 'wysiwyg-rails'
 gem 'lorem-ipsum'
-<<<<<<< HEAD
-# Pretty links
 gem 'friendly_id', '~> 5.1.0'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-=======
->>>>>>> 517ee1f3d177d41af17e13826a6392b0384ea1cc
-
 group :doc do
   gem 'sdoc', '~> 0.4.0'
 end

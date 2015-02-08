@@ -1,10 +1,10 @@
 require 'utep_sso'
 
 class User < ActiveRecord::Base
-	#Friendly Ids
 	extend FriendlyId
 	friendly_id :username, use: :slugged
-	
+
+
 	self.table_name = "atw_users"
 
 	validates :username, presence: true
@@ -15,6 +15,10 @@ class User < ActiveRecord::Base
 	has_many :subscriptions
 	has_many :subscribed_events, through: :subscriptions, source: :event
 
+	# Event Ownership
+	has_many :event_ownerships
+	has_many :owned_events, through: :event_ownerships, source: :event
+
 	# Add support for the messaging system
 	acts_as_messageable
 
@@ -23,15 +27,9 @@ class User < ActiveRecord::Base
 	def self.from_sso(utep_cookie, utep_salt)
 		sso_response = UTEPSSO.authenticate(utep_cookie, utep_salt)
 
-<<<<<<< HEAD
-		if User.find_by_username(sso_response[:user_name])
-			User.find_by_username(sso_response[:user_name])
-		else
-=======
 		user ||= User.find_by(username: sso_response[:user_name])
 
 		unless user
->>>>>>> 517ee1f3d177d41af17e13826a6392b0384ea1cc
 			user.name = sso_response[:full_name]
 			user.username = sso_response[:user_name]
 			user.slug = sso_response[:user_name]
@@ -46,7 +44,7 @@ class User < ActiveRecord::Base
 		return user
 	end
 
-	#User Identities for Mailbox
+# User Identities for Mailbox
 	def mailboxer_name
 		# return[:full_name]
 		return current_user.email
@@ -56,6 +54,8 @@ class User < ActiveRecord::Base
 		# return user.email
 		return current_user.email
 	end
+
+# Event Methods
 
 	# Subscribes to an event
 	def subscribe(event)
@@ -70,5 +70,20 @@ class User < ActiveRecord::Base
 	# Returns true if current user is subscribed to the event
 	def subscribed?(event)
 		subscribed_events.include?(event)
+	end
+
+	# Own an event
+	def own(event)
+		event_ownerships.create(event_id: event.id)
+	end
+
+	# Stop owning an event
+	def disown(event)
+		event_ownerships.find_by(event_id: event.id).destroy
+	end
+
+	# Returns true if current_user owns the event
+	def owns?(event)
+		owned_events.include?(event)
 	end
 end

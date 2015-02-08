@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   # Static Pages
   get  'about'              => 'static_pages#about'
   get  'contact'            => 'static_pages#contact'
+  get  'calendar'           => 'static_pages#calendar'
   root 'static_pages#home'
 
 
@@ -20,18 +21,6 @@ Rails.application.routes.draw do
   get    'create_session'   => 'sessions#create'
   delete 'logout'           => 'sessions#destroy'
 
-
-<<<<<<< HEAD
-  #Front End Static Pages
-  root 'static_pages#home'
-  match '/contact', to: 'static_pages#contact', as: 'contact', via: [:get, :post]
-  match '/about', to: 'static_pages#about', as: 'about', via: [:get, :post]
-  match '/calendar', to: 'static_pages#calendar', as: 'calendar', via: [:get, :post]
-=======
-  # Conversations
-  get 'conversations/new'
-  get 'conversations/create'
->>>>>>> 517ee1f3d177d41af17e13826a6392b0384ea1cc
 
 
   # Routes for conversations
@@ -47,12 +36,15 @@ Rails.application.routes.draw do
       post :empty_trash
     end
   end
-  
+
   resources :messages do
     member do
       post :new
     end
   end
+
+  get 'conversations/new'
+  get 'conversations/create'
 
   #Administration Backend Routes
   # Example of regular route:
