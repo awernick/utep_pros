@@ -2,9 +2,8 @@ class Event < ActiveRecord::Base
 	include PublicActivity::Common
 
 	validates :name, presence: true
-	validates :owner, presence: true
+	#validates :owner, presence: true
 	validates :location, presence: true
-
 
 	# Event Subscriptions
 	has_many :subscriptions
