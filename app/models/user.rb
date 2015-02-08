@@ -2,7 +2,7 @@ require 'utep_sso'
 
 class User < ActiveRecord::Base
 	self.table_name = "atw_users"
-	
+
 	validates :username, presence: true
 	validates :name, presence: true
 	validates :email, presence: true
@@ -10,7 +10,11 @@ class User < ActiveRecord::Base
 	# Event Subscriptions
 	has_many :subscriptions
 	has_many :subscribed_events, through: :subscriptions, source: :event
-	
+
+	# Event Ownership
+	has_many :event_ownerships
+	has_many :owned_events, through: :event_ownerships, source: :event
+
 	# Add support for the messaging system
 	acts_as_messageable
 
@@ -35,7 +39,7 @@ class User < ActiveRecord::Base
 		return user
 	end
 
-	#User Identities for Mailbox
+# User Identities for Mailbox
 	def mailboxer_name
 		# return[:full_name]
 		return current_user.email
@@ -45,6 +49,8 @@ class User < ActiveRecord::Base
 		# return user.email
 		return current_user.email
 	end
+
+# Event Methods
 
 	# Subscribes to an event
 	def subscribe(event)
@@ -59,5 +65,20 @@ class User < ActiveRecord::Base
 	# Returns true if current user is subscribed to the event
 	def subscribed?(event)
 		subscribed_events.include?(event)
+	end
+
+	# Own an event
+	def own(event)
+		event_ownerships.create(event_id: event.id)
+	end
+
+	# Stop owning an event
+	def disown(event)
+		event_ownerships.find_by(event_id: event.id).destroy
+	end
+
+	# Returns true if current_user owns the event
+	def owns?(event)
+		owned_events.include?(event)
 	end
 end
