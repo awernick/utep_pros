@@ -105,8 +105,13 @@ ActiveRecord::Schema.define(version: 20150207225130) do
     t.integer  "resetCount"
     t.datetime "created_at"
     t.datetime "updated_at"
+<<<<<<< HEAD
     t.string   "slug"
 
+    t.boolean  "admin",         default: false
+    t.boolean  "event_planner", default: false
+>>>>>>> staging
+=======
     t.boolean  "admin",         default: false
     t.boolean  "event_planner", default: false
 >>>>>>> staging
