@@ -1,9 +1,9 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_event, only: [ :show, :edit, :update, :destroy ]
+  before_action :event_planner_user, only: [ :new, :edit ]
+  before_action :event_owner_user, only: [ :edit ]
   # GET /events
   # GET /events.json
-
   def index
     #@events = Event.all
     @events = Event.paginate(page: params[:page], per_page: 5).order('starttime DESC')
@@ -31,7 +31,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        @event.create_activity :create, owner: User.find_by_id(@event.owner)
+        @event.create_activity :create, owner: current_user
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
       else
@@ -69,6 +69,11 @@ class EventsController < ApplicationController
   end
 
   private
+
+    def event_planner_user
+      redirect_to(dashboard_index_path) unless current_user.event_planner?
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @event = Event.find(params[:id])
