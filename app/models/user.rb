@@ -1,6 +1,8 @@
 require 'utep_sso'
 
 class User < ActiveRecord::Base
+	# Mounting the ProfileAvatar
+	mount_uploader :profileavatar, ProfileAvatarUploader
 	extend FriendlyId
 	friendly_id :username, use: :slugged
 
@@ -21,7 +23,6 @@ class User < ActiveRecord::Base
 
 	# Add support for the messaging system
 	acts_as_messageable
-
 
 	# Return a User with SSO information
 	def self.from_sso(utep_cookie, utep_salt)

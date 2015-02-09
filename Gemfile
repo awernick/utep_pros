@@ -28,7 +28,8 @@ gem 'public_activity'
 gem 'mailboxer'
 gem 'wysiwyg-rails'
 gem 'lorem-ipsum'
-gem 'friendly_id', '~> 5.1.0'
+gem 'carrierwave'
+gem "rmagick"
 
 # Use unicorn as the app server
 # gem 'unicorn'
