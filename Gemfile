@@ -29,6 +29,7 @@ gem 'mailboxer'
 gem 'wysiwyg-rails'
 gem 'lorem-ipsum'
 gem 'carrierwave'
+gem "rmagick"
 
 # Use unicorn as the app server
 # gem 'unicorn'
