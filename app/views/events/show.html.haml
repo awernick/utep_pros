@@ -38,12 +38,10 @@
         %p Who is going?
         = "#{@event.subscribers.count} going"
       .event-detail-view-counter-items-wrapper
-        .event-detail-view-counter-items-element
-        .event-detail-view-counter-items-element
-        .event-detail-view-counter-items-element
-        .event-detail-view-counter-items-element
-        .event-detail-view-counter-items-element
-        .event-detail-view-counter-items-element
+        - @event.subscribers.each do |attendee|
+          = attendee.username
+          -# = link_to attendee.username
+          = image_tag attendee.profileavatar.url
         .event-detail-view-counter-items-element{ :style => "background-image:url(http://icons.iconarchive.com/icons/3xhumed/mega-games-pack-40/256/Fallout-New-Vegas-3-icon.png); background-size:cover;"}
         - @event.owners.each do |owner|
           .event-detail-view-counter-items-wrapper
