@@ -41,7 +41,7 @@
         .event-detail-view-counter-items-element
           - @event.subscribers.each do |attendee|
             %a{:href => "/users/#{attendee.username}"}
-              %img{:src => "#{attendee.profileavatar.url}", :class => "img-rounded"}
+              %img{:src => "#{attendee.profileavatar.url}", :class => "img-rounded", :title => "#{attendee.name}"}
         - @event.owners.each do |owner|
           .event-detail-view-counter-items-wrapper
             .event-detail-view-counter-items-element
