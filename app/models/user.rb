@@ -1,6 +1,12 @@
 require 'utep_sso'
 
 class User < ActiveRecord::Base
+	# Mounting the ProfileAvatar
+	mount_uploader :profileavatar, ProfileAvatarUploader
+	extend FriendlyId
+	friendly_id :username, use: :slugged
+
+
 	self.table_name = "atw_users"
 
 	validates :username, presence: true
@@ -18,7 +24,6 @@ class User < ActiveRecord::Base
 	# Add support for the messaging system
 	acts_as_messageable
 
-
 	# Return a User with SSO information
 	def self.from_sso(utep_cookie, utep_salt)
 		sso_response = UTEPSSO.authenticate(utep_cookie, utep_salt)
@@ -28,6 +33,7 @@ class User < ActiveRecord::Base
 		unless user
 			user.name = sso_response[:full_name]
 			user.username = sso_response[:user_name]
+			user.slug = sso_response[:user_name]
 			user.email = sso_response[:email_address]
 			user.params = " "
 			user.save!

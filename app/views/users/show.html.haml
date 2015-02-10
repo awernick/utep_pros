@@ -38,6 +38,8 @@
 %p
   %strong Resetcount:
   = @user.resetCount
+%p
+  = image_tag @user.profileavatar.url
 = link_to 'Edit', edit_user_path(@user)
 |
 \#{link_to 'Back', users_path}

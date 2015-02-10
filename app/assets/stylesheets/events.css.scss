@@ -11,57 +11,160 @@
 // @import 'bootstrap';
 @import 'bootstrap-datetimepicker';
 
+$join:  #77cc33;
+$join-border: darken( $join, 10% );
+$unsubscribe: #f0ad4e;
+$unsubscribe-border: darken( $unsubscribe, 10% );
+$past: #f64051;
+$past-border: darken( $past, 20% );
+$back: #00ABC4;
+$back-border: darken( $back, 10% );
+
+
+@mixin flat-border-color($primary, $secondary) {
+  background: $primary;
+  border-bottom: 2px solid $secondary;
+  -webkit-box-shadow: inset 0 -2px $secondary;
+  box-shadow: inset 0 -2px $secondary;
+}
+
+@mixin sink-flat-button() {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.flat-button {
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  border: 0;
+  cursor: pointer;
+  @include flat-border-color( #3498db , #2a8bcc );
+
+  &:active {
+    @include sink-flat-button;
+  }
+
+  &.join {
+    @include flat-border-color( $join , $join-border);
+
+    &:active {
+      @include sink-flat-button;
+    }
+  }
+
+  &.join {
+    @include flat-border-color( $join , $join-border);
+
+    &:active {
+      @include sink-flat-button;
+    }
+  }
+
+  &.unsubscribe {
+    @include flat-border-color( $unsubscribe , $unsubscribe-border);
+
+    &:active {
+      @include sink-flat-button;
+    }
+  }
+
+  &.past {
+    @include flat-border-color( $past , $past-border);
+
+    &:active {
+      @include sink-flat-button;
+    }
+  }
+
+  &.back {
+    @include flat-border-color( $back , $back-border);
+
+    &:active {
+      @include sink-flat-button;
+    }
+  }
+}
+
 .day-of-the-week-separator {
  background: #ededed;
  color: #333;
  margin-top: 20px;
  padding:10px;
 }
+
 .event-element {
 	margin-top: -5px;
+
+    a {
+  	padding:20px;
+  	background-color: #ffffff;
+  	color: #333;
+  	line-height: 25px;
+  	margin: 5px 0;
+  	display: block;
+
+    &:hover {
+    	background-color: #00ABC4;
+    	text-decoration: none;
+    }
+  }
 }
-.event-element a {
-	padding:20px;
-	background-color: #ffffff;
-	color: #333;
-	line-height: 25px;
-	margin: 5px 0;
-	display: block;
-}
-.event-element a:hover {
-	background-color: #00ABC4;
-	text-decoration: none;
-} 
+
 .event-element-title {
 	font-weight: bold;
 	font-size: 1.7em;
 	padding-bottom: 10px;
 }
+
 .event-element-date {
 	font-size: 1.1em;
 }
+
 .event-element-location {
 	font-size: 1.1em;
 }
+
 .event-element-categories {
 	font-size: 1.2em;
 }
+
+
 .event-tag-label a {
 	color: #ffffff !important;
 	text-decoration: none !important;
 	background-color:transparent !important;
+
+  &:hover {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+  }
 }
-.event-tag-label a:hover {
-	color: #ffffff !important;
-	text-decoration: underline !important;
-}
+
 .event-detail-view-counter {
 	font-size: 2em;
 	margin-bottom: 10px;
 }
 .event-detail-view-counter-items-wrapper {
-	padding: 20px 0;
-	border-bottom: 1px solid #ddd;
+	margin-top: 20px;
+}
+.event-detail-view-counter-items-element {
+  width:50px;
+  height:50px;
+  float:left;
+  margin:3px;
+  overflow:hidden;
+}
+.event-detail-view-counter-items-element img {
+    height: 100%;
 }
 /*----------------------*/
 
@@ -71,63 +174,9 @@
 }
 .action-button-component {
 	float: left;
-}
-.join-or-alert-button a:visited {
-	color: #ffffff;
-}
-.join-or-alert-button a {
-	background: #CD2928;
-	color: #ffffff;
-	padding: 10px 20px;
-	background-color: #f64051;
-	border-width: 0 0 6px 0;
-	border-color: #ea3348;
-	border-style: solid;
-}
-.event-alert a {
-	background-color: #f64051;
-	border-width: 0 0 6px 0;
-	border-color: #ea3348;
-	border-style: solid;
+  margin-left:-15px;
 }
 
-.event-join {
-	background-color: #77cc33;
-	border-width: 0 0 6px 0;
-	border-color: #71b33b;
-	border-style: solid;
-}
-
-.event-join:hover {
-	background: #77cc33;
-	text-decoration: none;
-	border-color: #77cc33;
-}
-
-.event-unsubscribe {
-	background-color: #f0ad4e;
-	border-width: 0 0 6px 0;
-	border-color: #eea236;
-	border-style: solid;
-}
-.event-unsubscribe:hover {
-	background: #eea236;
-	text-decoration: none;
-	border-color: #eea236;
-}
-
-.back-button-component {
-margin: 0 0 30px -15px;
-}
-.back-button-component a {
-	background: #00ABC4;
-	padding: 10px 20px;
-	text-align: center;
-	color: #ffffff;
-}
-.back-button-component a:hover {
-	text-decoration: none;
-}
 .event-detail-view-wrapper {
 	background: #F2F2F2;
 	margin-top: -20px;

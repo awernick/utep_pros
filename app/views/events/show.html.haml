@@ -1,17 +1,17 @@
+- provide(:title, @event.name )
 .container.action-button-wrapper
   .action-button-component.back-button-component
-    = link_to 'Back', events_path
+    = button_to "Back", events_path(anchor: @event.id), method: :get, class: "flat-button back"
   .action-button-component.join-or-alert-button{:style => "float:right !important; margin-right:-15px"}
     - if logged_in?
       - if @event.has_passed?
-        = link_to 'Sorry, the event has passed!', '#'
+        = button_to "Sorry the event has passed", "", method: :get, class: "flat-button past"
       - elsif current_user.subscribed?(@event)
-        = form_for(current_user.subscriptions.find_by(event_id: @event.id), html: { method: :delete }) do |f|
-          = f.submit "Unsubscribe", class: "event-unsubscribe"
+        = button_to "Unsubscribe", current_user.subscriptions.find_by(event_id: @event.id), method: :delete, class: "flat-button unsubscribe"
       - else
         = form_for(current_user.subscriptions.build) do |f|
           = hidden_field_tag :event_id, @event.id
-          = f.submit "Subscribe", class: "event-join"
+          = f.submit "Subscribe", class: "flat-button join"
 .container
   .row
     .col-sm-9
@@ -35,14 +35,19 @@
 
     .col-sm-3
       .event-detail-view-counter
+        %p Who is going?
         = "#{@event.subscribers.count} going"
-      - @event.owners.each do |owner|
-        .event-detail-view-counter-items-wrapper
-          .event-detail-view-counter-items-element
-            .attendee-name
-              = owner.name
-            .attendee-clearance Owner
-
+      .event-detail-view-counter-items-wrapper
+        .event-detail-view-counter-items-element
+          - @event.subscribers.each do |attendee|
+            %a{:href => "/users/#{attendee.username}"}
+              %img{:src => "#{attendee.profileavatar.url}", :class => "img-rounded", :title => "#{attendee.name}"}
+        - @event.owners.each do |owner|
+          .event-detail-view-counter-items-wrapper
+            .event-detail-view-counter-items-element
+              .attendee-name
+                = owner.name
+              .attendee-clearance Owner
 
 /= @event.inspect
 - if logged_in? && current_user.owns?(@event)

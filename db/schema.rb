@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150207225130) do
+ActiveRecord::Schema.define(version: 20150209063105) do
 
   create_table "activities", force: true do |t|
     t.integer  "trackable_id"
@@ -89,31 +89,6 @@ ActiveRecord::Schema.define(version: 20150207225130) do
     t.datetime "updated_at"
   end
 
-  create_table "atw_rseventspro_users", force: true do |t|
-    t.integer  "event_id"
-    t.integer  "user_id"
-    t.string   "name"
-    t.string   "email"
-    t.datetime "date"
-    t.boolean  "state"
-    t.string   "verification"
-    t.integer  "SubmissionId"
-    t.string   "gateway"
-    t.string   "ip"
-    t.string   "URL"
-    t.string   "params"
-    t.decimal  "discount"
-    t.decimal  "early_fee"
-    t.decimal  "late_fee"
-    t.decimal  "tax"
-    t.string   "log"
-    t.string   "lang"
-    t.string   "coupon"
-    t.string   "ideal"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "atw_users", force: true do |t|
     t.string   "name"
     t.string   "username"
@@ -132,7 +107,11 @@ ActiveRecord::Schema.define(version: 20150207225130) do
     t.datetime "updated_at"
     t.boolean  "admin",         default: false
     t.boolean  "event_planner", default: false
+    t.string   "slug"
+    t.string   "profileavatar"
   end
+
+  add_index "atw_users", ["slug"], name: "index_atw_users_on_slug", unique: true
 
   create_table "evaluations", force: true do |t|
     t.string   "title"
