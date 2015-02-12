@@ -15,7 +15,7 @@
 /log/*.log
 /tmp
 
-#Ignore OSX file 
+#Ignore OSX file
 */.DS_Store
 .DS_Store
 
@@ -24,3 +24,7 @@
 
 #Ignore Gemfile.lock
 Gemfile.lock
+
+#Ignore Uploads Folder
+/public/uploads
+/public/uploads/*
