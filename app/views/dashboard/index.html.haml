@@ -26,7 +26,7 @@
 			.panel-heading Your events
 			.panel-body
 				- current_user.subscribed_events.each do |event|
-					.event{ :id => "#{event.id}", :style => "margin: 5px 0;"}
+					.event{ :id => "#{event.id}", :style => "margin-bottom: 10px;"}
 						.event-element.dashboard-element
 							.event-element-title= event.name
 							.event-element-date
