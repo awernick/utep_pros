@@ -25,35 +25,20 @@
 		.panel.panel-info
 			.panel-heading Your events
 			.panel-body
-				-# .event-list-element-wrapper.table-responsive
-				-# 	- current_user.subscribed_events.each do |event|
-				-# 		.dashboard-event-list-wrapper
-				-# 			.dashboard-event-floating-event.float-left
-				-# 				%h4= event.name
-				-# 				-# %p= event.description.html_safe
-				-# 			.dashboard-event-floating-event.float-left
-				-# 				.btn-group{:role => "group"}
-				-# 					= link_to "Admin View", :class => "btn btn-default", :type => "button"
-				-# 					-#  %a{:type => "button", :class => "btn btn-default", :href => "#"} Admin View
+				- current_user.subscribed_events.each do |event|
+					.event{ :id => "#{event.id}", :style => "margin: 5px 0;"}
+						.event-element.dashboard-element
+							.event-element-title= event.name
+							.event-element-date
+							#{parse_time_accounting_for_timezone(event.starttime).strftime("%A, %B %e, %Y")}
+						.dashboard-event-actions
+							.admin-action-button
+								.btn-group.btn-group-justified{"aria-label" => "Justified button group", :role => "group"}
+									%a.btn.btn-default{:href => "#", :role => "button"} Edit Event
+									%a.btn.btn-default{:href => "#", :role => "button"} Delete Event
 
-				.event-list-element-wrapper.table-responsive
-					- current_user.subscribed_events.each do |event|
-						.dashboard-event-list-wrapper
-							.dashboard-event-floating-event.float-left
-								%h4= event.name
-								-# %p= event.description.html_safe
-							.dashboard-event-floating-event.float-left
-								.btn-group{:role => "group"}
-									= link_to "Admin View", :class => "btn btn-default", :type => "button"
-									-#  %a{:type => "button", :class => "btn btn-default", :href => "#"} Admin View
 
-				-# .dashboard-event-list-wrapper
-				-# 	.dashboard-event-floating-event.float-left
-				-# 		%h2 Software Defined radio with HackRF
-				-# 		%p An awesome course on Digital Signal Processing
-				-# 	.dashboard-event-floating-event.float-left
-				-# 		.btn-group{:role => "group"}
-				-# 			%a{:type => "button", :class => "btn btn-default", :href => "#"} Admin View
+
 
 	.col-lg-3
 		.panel.panel-primary
