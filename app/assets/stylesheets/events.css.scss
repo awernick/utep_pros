@@ -183,7 +183,7 @@ $back-border: darken( $back, 10% );
 }
 .event-detail-view-title {
 	color: #7A7A7A;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	font-size: 32px;
 	line-height: 1.2em;
 	font-weight: lighter;
@@ -193,6 +193,9 @@ $back-border: darken( $back, 10% );
 	font-weight: normal;
 	margin: 20px 0;
 }
+// .event-detail-view-date-element {
+//   float:left;
+// }
 .event-detail-view-location {
 	font-size: 1.2em;
 	margin: 0 0 10px 0;
@@ -267,4 +270,55 @@ ul.custom-dropdown-menu {
 }
 .advanced-options-btn:hover {
 	background: #ddd;
+}
+
+// Events from Meetup
+.shadedList {
+  list-style: none;
+  margin-left: -40px;
+}
+.shadedList>li {
+  padding: 8px;
+  margin-bottom: 1px;
+}
+.pintop, .pintop>.ffbox-fix, .pintop>.ffbox-flex, .topicPicker-selectionList .pintop>.topicView-action, .topicPicker-selectionList .topicPicker-topicItem .pintop>.touchList-item-actionIcon {
+  vertical-align: top;
+}
+.ffbox {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: table;
+  table-layout: auto;
+  width: 100%;
+}
+.ffbox-fix {
+  font-size: 20px;
+  padding-right:5px;
+}
+.ffbox-fix, .ffbox-flex, .topicPicker-selectionList .topicPicker-topicItem .touchList-item-actionIcon, .topicPicker-selectionList .topicView-action {
+  display: table-cell;
+  vertical-align: middle;
+}
+.pintop, .pintop>.ffbox-fix, .pintop>.ffbox-flex, .topicPicker-selectionList .pintop>.topicView-action, .topicPicker-selectionList .topicPicker-topicItem .pintop>.touchList-item-actionIcon {
+  vertical-align: top;
+}
+
+
+// Event List Details CSS
+ul.event-details-list {
+  list-style:none;
+  margin-left:-35px;
+}
+li.event-details-item {
+  vertical-align:top;
+  margin-bottom: 10px;
+}
+li.event-details-item .event-icon-box {
+  width:20px;
+  display: table-cell;
+}
+li.event-details-item .event-text-box {
+  display: table-cell;
+  font-size:14px;
 }
