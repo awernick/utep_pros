@@ -105,9 +105,9 @@ ActiveRecord::Schema.define(version: 20150209063105) do
     t.integer  "resetCount"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
     t.boolean  "admin",         default: false
     t.boolean  "event_planner", default: false
-    t.string   "slug"
     t.string   "profileavatar"
   end
 
