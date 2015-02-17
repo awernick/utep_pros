@@ -5,7 +5,6 @@ set :application, 'utep_pros'
 # set :repo_url, 'https://github.com/[user name]/[application name].git'
 set :scm, :git
 set :repo_url, 'git@git.at.utep.edu:applications-development/uteppros-templating.git'
-set :linked_dirs, fetch(:linked_dirs) + %w{public/system public/uploads}
 
 
 # Define where to put your application code
