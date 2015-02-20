@@ -3,28 +3,28 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .admin-dashboard-header {
-  background: #00ABC4;
-  padding: 10px 15px;
-  color: #fff;
-  margin-top: -20px;
+	background: #00ABC4;
+	padding: 10px 15px;
+	color: #fff;
+	margin-top: -20px;
 }
 .admin-dashboard-header h3 {
-  font-weight: lighter;
+	font-weight: lighter;
 }
 
 /*Admin action buttons*/
 .admin-action-button {
-  padding: 0;
+	padding: 0;
 }
 .admin-action-button .btn {
-  border: none;
-  padding: 10px 12px;
+	border: none;
+	padding: 10px 12px;
 }
 /*-------------------*/
 
 /*Code that follows is for the Dashboard section of the backend where you can find the global activities*/
 .admin-activity-wrapper {
-  padding-top: 20px;
+	padding-top: 20px;
 }
 
 /*Panels*/
@@ -95,70 +95,108 @@ margin-bottom: 9.5px;
 .list-group-item-title
 {
 
-  a {
-    color: #00a9c5;
+	a {
+		color: #00a9c5;
 
-    &:hover
-    {
-      color: #00a9c5;
-      background: none;
-      text-decoration: underline;
-    }
-  }
+		&:hover
+		{
+			color: #00a9c5;
+			background: none;
+			text-decoration: underline;
+		}
+	}
 }
 
 .list-group-item-info-wrapper
 {
-  a {
-    color: #aaa;
+	a {
+		color: #aaa;
 
-    &:hover {
-      color: #00a9c5;
-      background: none;
-    }
-  }
+		&:hover {
+			color: #00a9c5;
+			background: none;
+		}
+	}
 }
 
 /*This contains the styling for the Actions Panel list*/
 .action-panel-styling {
-  padding: 0;
+	padding: 0;
 }
 .action-panel-styling ul {
-  list-style: none;
+	list-style: none;
 }
 .action-panel-styling ul li {
-  margin-left: -40px;
+	margin-left: -40px;
 }
 .action-panel-styling ul li a {
-  font-weight: normal;
-  font-size: 1em;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  color: #fff;
-  display: block;
-  height: 40px;
-  padding: 12px 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+	font-weight: normal;
+	font-size: 1em;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	color: #fff;
+	display: block;
+	height: 40px;
+	padding: 12px 14px;
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 .action-panel-styling ul li a:hover {
-  font-weight: normal;
-  font-size: 1em;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  color: #fff;
-  display: block;
-  background: #333;
-  text-decoration: none;
+	font-weight: normal;
+	font-size: 1em;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	color: #fff;
+	display: block;
+	background: #333;
+	text-decoration: none;
 }
 a.new-event-action {
-   background: #59538D;
+	 background: #59538D;
 }
 a.new-user-action {
-  background: #54BD7B;
+	background: #54BD7B;
 }
 
 .custom-glyphicon {
-  margin-right: 5px;
-  top: 2px;
+	margin-right: 5px;
+	top: 2px;
 }
 /*----------------------------------------------------*/
 
+// Event control and actions
+.dashboard-element {
+	background:#efefef;
+	padding:15px 15px;
+	border-bottom: 4px solid #00ABC4;
+}
 
+span.action-button i {
+	width:100%;
+}
+span.glyphicon-class{
+	display: block;
+	text-align: center;
+	word-wrap: break-word;
+}
+
+// User Dashboard
+.user-wrapper {
+	height:110px;
+}
+.user-profile-image {
+	float:left;
+	width:100px;
+	height: 100px;
+	background-size:cover;
+	background-repeat:none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.user-profile-name {
+	float:left;
+	font-weight:bold;
+	padding-left: 10px;
+	height:100px;
+}
+.user-info {
+	padding-top:10px;
+}
