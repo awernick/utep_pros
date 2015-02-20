@@ -7,7 +7,7 @@
       - if @event.has_passed?
         = button_to "Sorry the event has passed", "", method: :get, class: "flat-button past"
       - elsif current_user.subscribed?(@event)
-        = button_to "Unsubscribe", current_user.subscriptions.find_by(event_id: @event.id), method: :delete, class: "flat-button unsubscribe"
+        = button_to "Unsuscribe", current_user.subscriptions.find_by(event_id: @event.id), method: :delete, class: "flat-button unsubscribe"
       - else
         = form_for(current_user.subscriptions.build) do |f|
           = hidden_field_tag :event_id, @event.id
@@ -61,10 +61,10 @@
         %p
           = "#{@event.subscribers.count} going"
       .event-detail-view-counter-items-wrapper
-        .event-detail-view-counter-items-element
-          - @event.subscribers.each do |attendee|
-            %a{:href => "/users/#{attendee.username}"}
-              %img{:src => "#{attendee.profileavatar.url}", :class => "img-rounded", :title => "#{attendee.name}"}
+        - @event.subscribers.each do |attendee|
+          .event-detail-view-counter-items-element
+              %a{:href => "/users/#{attendee.username}"}
+                %img{:src => "#{attendee.profileavatar.url}", :class => "img-rounded", :title => "#{attendee.name}"}
         -# - @event.owners.each do |owner|
         -#   .event-detail-view-counter-items-wrapper
         -#     .event-detail-view-counter-items-element
