@@ -7,7 +7,7 @@
       - if @event.has_passed?
         = button_to "Sorry the event has passed", "", method: :get, class: "flat-button past"
       - elsif current_user.subscribed?(@event)
-        = button_to "Unsubscribe", current_user.subscriptions.find_by(event_id: @event.id), method: :delete, class: "flat-button unsubscribe"
+        = button_to "Unsuscribe", current_user.subscriptions.find_by(event_id: @event.id), method: :delete, class: "flat-button unsubscribe"
       - else
         = form_for(current_user.subscriptions.build) do |f|
           = hidden_field_tag :event_id, @event.id

@@ -1,0 +1,22 @@
+= provide(:title, "#{current_user.name}'s Profile")
+
+.container.admin-dashboard-header
+	%h3 #{current_user.name}
+= render 'action_header'
+
+.container.admin-activity-wrapper
+	.panel.panel-info
+		.panel-heading
+			My Profile
+		.panel-body
+			.user-wrapper
+				.user-profile-image{:style => "background-image:url(#{current_user.profileavatar_url.to_s});"}
+
+				.user-profile-name
+					%h3 #{current_user.name}
+					%p #{current_user.email}
+
+			.user-info
+				%p Member since: #{parse_time_accounting_for_timezone(current_user.created_at).strftime("%B %e, %Y")}
+				%p
+					= link_to 'Edit Profile', edit_user_path(current_user.id), :class => "btn btn-default col-sm-3 btn-custom-black"
