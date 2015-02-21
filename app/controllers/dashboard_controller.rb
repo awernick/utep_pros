@@ -13,9 +13,6 @@ class DashboardController < ApplicationController
 	def calendar
 	end
 
-	def mailbox
-	end
-
 	def profile
 	end
 

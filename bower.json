@@ -8,8 +8,9 @@
     "name": "bower-rails generated vendor assets",
     "dependencies": {
       "clndr"   : "https://raw.githubusercontent.com/kylestetz/CLNDR/master/src/clndr.js",
-      "moment"  : "https://raw.githubusercontent.com/moment/moment/develop/moment.js",    
-      "underscore" : "https://raw.githubusercontent.com/jashkenas/underscore/master/underscore.js"
+      "moment"  : "https://raw.githubusercontent.com/moment/moment/develop/moment.js",
+      "underscore" : "https://raw.githubusercontent.com/jashkenas/underscore/master/underscore.js",
+      "chosen": "https://github.com/harvesthq/chosen/releases/download/v1.3.0/chosen_v1.3.0.zip"
     }
   }
 }

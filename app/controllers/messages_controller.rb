@@ -1,11 +1,10 @@
 class MessagesController < ApplicationController
- 
+
   # GET /message/new
   def new
-    @user = User.find(params[:user])
     @message = current_user.messages.new
   end
- 
+
    # POST /message/create
   def create
     @recipient = User.find(params[:user])

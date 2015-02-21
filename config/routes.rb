@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
 	#Dashboard Profile
 	get   'dashboard/profile'   => 'dashboard#profile'
+
 	get   'dashboard/activities'   => 'dashboard#activities'
 	get   'dashboard/calendar'   => 'dashboard#calendar'
 	get   'dashboard/mailbox'   => 'dashboard#mailbox'
@@ -41,6 +42,7 @@ Rails.application.routes.draw do
 			post :empty_trash
 		end
 	end
+
 
 	resources :messages do
 		member do

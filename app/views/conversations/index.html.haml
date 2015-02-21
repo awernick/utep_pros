@@ -9,9 +9,9 @@
       .mb-boxes{:collapse => "mailboxMenuCollapsed", :style => "height: 0px;"}
         .panel.panel-default.m0
           .list-group
-            = link_to "#", :class => "list-group-item" do
+            = link_to new_conversation_path, :class => "list-group-item" do
               %span{:class => "fa fa-inbox"}
-              Inbox
+              New Message
             / = link_to "#", :class => "list-group-item" do
             /   %span{:class => "glyphicon glyphicon-share-alt"}
             /   Sent
@@ -22,11 +22,13 @@
       .panel.panel-info
         .panel-heading Inbox
         .panel-body
-          - conversation = current_user.mailbox.inbox.first
-          - receipts = conversation.receipts_for current_user
-          - receipts.each do |receipt|
-            %a{:href => conversation.id, :class => "conversation-wrapper-link"}
+          - @conversations.sort_by{ |conversation| conversation.last_message.updated_at }.reverse!.each do |conversation|
+            - new_msg = conversation.last_message.is_unread?(current_user)
+            = link_to conversation_path(conversation), :class => ["conversation-wrapper-link", ("new-msg-background" if new_msg) ] do
               .conversation-wrapper
-                %h3=receipt.message.subject
-                %p=truncate(receipt.message.body)
-              .conversation-time-wrapper=conversation.updated_at.strftime("%A, %B %e, %Y %I:%M %p")
+                %h3
+                  = conversation.subject
+                  - if new_msg
+                    %span.label.label-default New
+                %p= truncate(conversation.last_message.body)
+              .conversation-time-wrapper= conversation.updated_at.strftime("%A, %B %e, %Y %I:%M %p")
