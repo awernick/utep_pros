@@ -14,6 +14,9 @@ server 'workshops.utep.edu', user: 'deployer', roles: %w{web}
 set :deploy_to, "/var/sentora/hostdata/zadmin/public_html/socrates_utep_edu"
 set :stage, :production
 
+#Stop deletion of the public uploads
+set :linked_dirs, fetch(:linked_dirs) + %w{public/system public/uploads}
+
 # SSH Options
 # See the example commented out section in the file
 # for more options.
