@@ -2,10 +2,10 @@ class EventsController < ApplicationController
   before_action :set_event, only: [ :show, :edit, :update, :destroy ]
   before_action :event_planner_user, only: [ :new, :edit ]
   before_action :event_owner_user, only: [ :edit ]
+  
   # GET /events
   # GET /events.json
   def index
-    #@events = Event.all
     @events = Event.paginate(page: params[:page], per_page: 5).order('starttime DESC')
     respond_to :json, :html
   end
