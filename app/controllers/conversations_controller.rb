@@ -1,14 +1,22 @@
 class ConversationsController < ApplicationController
   helper_method :mailbox, :conversation
+  before_action :logged_in_user
 
   def create
-    recipient_emails = conversation_params(:recipients).split(',')
-    recipients = User.where(email: recipient_emails).all
+    recipients = User.where(id: conversation_params(:recipients)).all
 
     conversation = current_user.
       send_message(recipients, *conversation_params(:body, :subject)).conversation
 
     redirect_to conversation_path(conversation)
+  end
+
+  def index
+    @conversations = current_user.mailbox.conversations
+  end
+
+  def show
+    conversation
   end
 
   def reply
@@ -26,7 +34,7 @@ class ConversationsController < ApplicationController
     redirect_to :conversations
   end
 
-  def empty_trash 
+  def empty_trash
     current_user.mailbox.trash.each do |conversation|
       conversation.receipts_for(current_user).update_all(:deleted => true)
     end

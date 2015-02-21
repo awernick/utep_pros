@@ -1,0 +1,13 @@
+{
+  "name": "underscore",
+  "_cacheHeaders": {
+    "ETag": "\"b111dfa93c0a63fdce4989a33b1ea0636667001d\"",
+    "Content-Length": "51202",
+    "Content-Type": "text/plain; charset=utf-8"
+  },
+  "_release": "e-tag:b111dfa93",
+  "main": "index.js",
+  "_source": "https://raw.githubusercontent.com/jashkenas/underscore/master/underscore.js",
+  "_target": "*",
+  "_originalSource": "https://raw.githubusercontent.com/jashkenas/underscore/master/underscore.js"
+}

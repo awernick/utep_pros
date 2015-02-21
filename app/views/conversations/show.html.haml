@@ -1,10 +1,35 @@
-= conversation.subject
+-# = conversation.subject
+-# - current_user.mailbox.conversations.each do |conversation|
+-#   = conversation.subject
+-#   A conversation with
+-#   - conversation.recipients.each do |recipient|
+-#     = recipient.name
+-#
+-# A conversation with
+-# = conversation.participants.inspect
+-# - conversation.participants.each do |participant|
+-#   = link_to participant.name, participant
+-# = content_tag_for(:li, conversation.receipts_for(current_user)) do |receipt|
+-#   - message = receipt.message
+-#   = message.sender.name
+-#   = message.body
+-#   = message.type
+-#   Sent #{conversation.updated_at.strftime("%a, %m/%e/%Y %I:%M %p")}
+
+= @conversation.subject
+%br
 A conversation with
-- conversation.participants.each do |participant|
-  - if participant != current_user
-    = link_to participant.name, participant
-= content_tag_for(:li, conversation.receipts_for(current_user)) do |receipt|
-  - message = receipt.message
+- conversation.participants.reject{ |participant| participant == current_user }.each do |participant|
+  = link_to participant.name, participant
+
+%br
+Messages
+%br
+- @conversation.messages.each do |message|
   = message.sender.name
   = message.body
-  Sent #{conversation.updated_at.strftime("%a, %m/%e/%Y %I:%M %p")}
+  %br
+%br
+= form_for :message, url: reply_conversation_path(@conversation),  html: {class: "form-inline"} do |f|
+  = f.text_field :body
+  = f.submit 'Send', class: 'btn btn-primary'

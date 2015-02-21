@@ -21,6 +21,7 @@
 //= require moment
 //= require bootstrap-datetimepicker
 //= require froala_editor.min.js
+//= require chosen
 
 $(document).ready(function() {
   if ($('.pagination').length) {

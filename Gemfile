@@ -30,6 +30,7 @@ gem 'wysiwyg-rails'
 gem 'lorem-ipsum'
 gem 'carrierwave'
 gem "rmagick"
+gem 'chosen-rails'
 
 # Use unicorn as the app server
 # gem 'unicorn'
