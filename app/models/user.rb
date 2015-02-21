@@ -36,6 +36,8 @@ class User < ActiveRecord::Base
 			user.slug = sso_response[:user_name]
 			user.email = sso_response[:email_address]
 			user.params = " "
+			user.created_at = Time.now
+			user.registerDate = Time.now
 			user.save!
 
 			mailboxer_name_var = sso_response[:username]
