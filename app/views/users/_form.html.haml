@@ -1,8 +1,9 @@
 = simple_form_for(@user) do |f|
   = f.error_notification
-  .container
-    .form-inputs
-      .form-group
+    .form-group.form-field-spacer
+      -# = f.label :name, :class => 'custom-contact-label', :for => 'firstNameField' do
+      -#   Name of Event
+      -# = f.text_field :name, :class => 'form-control custom-at-colors', :id => 'firstNameField', :placeholder => 'Software Defined Radio with HackRF'
       = f.input :name, :class => "form-control custom-at-colors"
       = f.input :username, :class => "form-control custom-at-colors"
       = f.input :email, :class => "form-control custom-at-colors"
