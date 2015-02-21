@@ -1,0 +1,5 @@
+$('.event-elements-wrapper').append('#{escape_javascript(render partial: "event", :locals => { :events => @events })}');
+$('a.load-more-events').attr('href', '#{events_path page: @events.next_page}');
+
+- unless @events.next_page
+  $('a.load-more-events').remove();
