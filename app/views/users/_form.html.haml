@@ -1,23 +1,23 @@
 = simple_form_for(@user) do |f|
   = f.error_notification
-    .form-group.form-field-spacer
-      -# = f.label :name, :class => 'custom-contact-label', :for => 'firstNameField' do
-      -#   Name of Event
-      -# = f.text_field :name, :class => 'form-control custom-at-colors', :id => 'firstNameField', :placeholder => 'Software Defined Radio with HackRF'
-      = f.input :name, :class => "form-control custom-at-colors"
-      = f.input :username, :class => "form-control custom-at-colors"
-      = f.input :email, :class => "form-control custom-at-colors"
-      = f.input :password, :class => "form-control custom-at-colors"
-      = f.input :usertype, :class => "form-control custom-at-colors"
-      = f.input :block
-      = f.input :sendEmail
-      = f.input :registerDate
-      = f.input :lastvisitDate
-      = f.input :activation
-      = f.input :params
-      = f.input :lastResetTime
-      = f.input :resetCount
-      = f.file_field :profileavatar
+  .form-group.form-field-spacer
+    = f.label :name, :class => 'custom-contact-label', :for => 'fullNameField' do
+      Full Name
+    = f.text_field :name, :class => "form-control custom-at-colors", :id => "fullNameField", :placeholder => "John Doe"
+
+    = f.label :name, :class => 'custom-contact-label', :for => 'usernameField' do
+      Username
+    = f.text_field :username, :class => "form-control custom-at-colors", :id => 'usernameField', :placeholder => "jdoe"
+
+    = f.label :name, :class => 'custom-contact-label', :for => 'fullNameField' do
+      Email
+    = f.text_field :email, :class => "form-control custom-at-colors", :id => 'emailField', :placeholder => 'jdoe@miners.utep.edu'
+
+    = f.label :name, :class => 'custom-contact-label', :for => 'fullNameField' do
+      User Type
+    = f.text_field :usertype, :class => "form-control custom-at-colors", :id => 'usertypeField'
+
+    = f.file_field :profileavatar
 
     .form-actions
-    = f.button :submit
+      = f.button :submit
