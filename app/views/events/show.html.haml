@@ -31,30 +31,6 @@
 			%h3{:style => "color:#555;"} Description
 			.event-detail-view-description.froala-element
 				= @event.description.html_safe
-
-			-# .event-detail-view-title
-			-#   = @event.name
-			-# .event-detail-view-date
-			-#   %li.ffbox.pintop
-			-#     .ffbox-fix
-			-#       %i.icon-s.icon-calendar
-			-#     .ffbox-flex.padding-left
-			-#       Wednesday Feb 18, 7:00 PM - 10:00 PM
-			-#   -# %span{:class => "fa fa-calendar", "aria-hidden" => "true"}
-			-#   -# = parse_time_accounting_for_timezone(@event.starttime).strftime("%A, %B %e, %Y")
-			-#   -# @
-			-#   -# = parse_time_accounting_for_timezone(@event.starttime).strftime("%I:%M %p")
-			-# .event-detail-view-location
-			-#   %span{:class => "fa fa-location-arrow", "aria-hidden" => "true"}
-			-#   = @event.location
-			-# .event-detail-view-tags
-			-#   .event-element-categories
-			-#   - @event.parse_tags.each do |tag|
-			-#     %span{:class => "label label-default event-tag-label"}
-			-#       = tag
-			-# .event-detail-view-description.froala-element
-			-#   = @event.description.html_safe
-
 		.col-sm-3
 			.event-detail-view-counter
 				%h4 Who is going?
@@ -63,15 +39,7 @@
 			.event-detail-view-counter-items-wrapper
 				- @event.subscribers.each do |attendee|
 					.event-detail-view-counter-items-element
-							%a{:href => "/users/#{attendee.username}"}
-								%img{:src => "#{attendee.profileavatar.url}", :class => "img-rounded", :title => "#{attendee.name}"}
-				-# - @event.owners.each do |owner|
-				-#   .event-detail-view-counter-items-wrapper
-				-#     .event-detail-view-counter-items-element
-				-#       .attendee-name
-				-#         = owner.name
-				-#       .attendee-clearance Owner
-
-/= @event.inspect
+						%a{:href => "/users/#{attendee.username}"}
+							%img{:src => "#{attendee.profileavatar.url}", :class => "img-rounded", :title => "#{attendee.name}"}
 - if logged_in? && current_user.owns?(@event)
 	= link_to 'Edit', edit_event_path(@event)
