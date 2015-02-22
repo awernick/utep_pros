@@ -1,20 +1,25 @@
 - provide(:title, "Conversation")
 
 .container.admin-dashboard-header
-  %h3 Mailbox
+	%h3 Mailbox
+= render './layouts/dashboard_action_header'
 
 .container
-  .row
-    .col-sm-6
-      %h3 Conversation
-      - conversation.participants.reject{ |participant| participant == current_user }.each do |participant|
-        = link_to participant.name, participant
-      %br
-      - @conversation.messages.each do |message|
-        -# = message.sender.name
-        = message.body
-        %br
-      %br
-      = form_for :message, url: reply_conversation_path(@conversation),  html: {class: "form-inline"} do |f|
-        = f.text_area :body, :class => 'form-control custom-at-colors', :placeholder => 'Reply here'
-        = f.submit 'Reply', class: 'btn btn-primary'
+	.row
+		.col-sm-6
+			- conversation.participants.reject{ |participant| participant == current_user }.each do |participant|
+				= link_to participant.name, participant
+			%br
+			- @conversation.messages.each do |message|
+				.user-wrapper
+					.user-profile-image{:style => "background-image:url(#{message.sender.profileavatar_url.to_s});width:50px;height:50px;"}
+					.user-profile-name{:style => "height:50px;"}
+						.sender-name-wrapper
+							#{message.sender.name}
+						.message-body-wrapper
+							#{message.body}
+						-# %p #{Time.now}
+				%br
+		= form_for :message, url: reply_conversation_path(@conversation),  html: {class: "form-inline"} do |f|
+			= f.text_area :body, :class => 'form-control', :placeholder => 'Say something nice'
+			= f.submit 'Reply', class: 'btn btn-primary', style: 'margin-top:20px;'
