@@ -5,16 +5,13 @@
 
 .container{:style => "padding-top:40px;"}
   .row
-    .col-lg-2.col-md-12
-      .mb-boxes{:collapse => "mailboxMenuCollapsed", :style => "height: 0px;"}
+    .col-lg-2.col-md-12.col-sm-12
+      .mb-boxes
         .panel.panel-default.m0
           .list-group
             = link_to new_conversation_path, :class => "list-group-item" do
               %span{:class => "fa fa-inbox"}
               New Message
-            / = link_to "#", :class => "list-group-item" do
-            /   %span{:class => "glyphicon glyphicon-share-alt"}
-            /   Sent
             = link_to "#", :class => "list-group-item" do
               %span{:class => "fa fa-trash-o"}
               Trash

@@ -1,35 +1,20 @@
--# = conversation.subject
--# - current_user.mailbox.conversations.each do |conversation|
--#   = conversation.subject
--#   A conversation with
--#   - conversation.recipients.each do |recipient|
--#     = recipient.name
--#
--# A conversation with
--# = conversation.participants.inspect
--# - conversation.participants.each do |participant|
--#   = link_to participant.name, participant
--# = content_tag_for(:li, conversation.receipts_for(current_user)) do |receipt|
--#   - message = receipt.message
--#   = message.sender.name
--#   = message.body
--#   = message.type
--#   Sent #{conversation.updated_at.strftime("%a, %m/%e/%Y %I:%M %p")}
+- provide(:title, "Conversation")
 
-= @conversation.subject
-%br
-A conversation with
-- conversation.participants.reject{ |participant| participant == current_user }.each do |participant|
-  = link_to participant.name, participant
+.container.admin-dashboard-header
+  %h3 Mailbox
 
-%br
-Messages
-%br
-- @conversation.messages.each do |message|
-  = message.sender.name
-  = message.body
-  %br
-%br
-= form_for :message, url: reply_conversation_path(@conversation),  html: {class: "form-inline"} do |f|
-  = f.text_field :body
-  = f.submit 'Send', class: 'btn btn-primary'
+.container
+  .row
+    .col-sm-6
+      %h3 Conversation
+      - conversation.participants.reject{ |participant| participant == current_user }.each do |participant|
+        = link_to participant.name, participant
+      %br
+      - @conversation.messages.each do |message|
+        -# = message.sender.name
+        = message.body
+        %br
+      %br
+      = form_for :message, url: reply_conversation_path(@conversation),  html: {class: "form-inline"} do |f|
+        = f.text_area :body, :class => 'form-control custom-at-colors', :placeholder => 'Reply here'
+        = f.submit 'Reply', class: 'btn btn-primary'
