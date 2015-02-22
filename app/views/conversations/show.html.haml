@@ -4,22 +4,51 @@
 	%h3 Mailbox
 = render './layouts/dashboard_action_header'
 
-.container
+.container{:style => "padding-top:25px;"}
 	.row
-		.col-sm-6
-			- conversation.participants.reject{ |participant| participant == current_user }.each do |participant|
-				= link_to participant.name, participant
-			%br
-			- @conversation.messages.each do |message|
-				.user-wrapper
-					.user-profile-image{:style => "background-image:url(#{message.sender.profileavatar_url.to_s});width:50px;height:50px;"}
-					.user-profile-name{:style => "height:50px;"}
-						.sender-name-wrapper
-							#{message.sender.name}
-						.message-body-wrapper
-							#{message.body}
-						-# %p #{Time.now}
-				%br
-		= form_for :message, url: reply_conversation_path(@conversation),  html: {class: "form-inline"} do |f|
-			= f.text_area :body, :class => 'form-control', :placeholder => 'Say something nice'
-			= f.submit 'Reply', class: 'btn btn-primary', style: 'margin-top:20px;'
+		.col-lg-2.col-md-12
+			.mb-boxes
+				.panel.panel-default.m0
+					.list-group
+						= link_to conversations_path, :class => "list-group-item" do
+							%span{:class => "fa fa-arrow-left"}
+							Back
+		.col-lg-10
+			.panel.panel-info
+				.panel-heading Inbox
+				.panel-body{:style => "overflow-y:scroll;height:200px;"}
+					-# - conversation.participants.reject{ |participant| participant == current_user }.each do |participant|
+					-# 	= link_to participant.name, participant
+					%br
+					- @conversation.messages.each do |message|
+						.user-wrapper{:style => "height:50px;"}
+							.user-profile-image{:style => "background-image:url(#{message.sender.profileavatar_url.to_s});width:50px;height:50px;"}
+							.user-profile-name{:style => "height:50px;"}
+								.sender-name-wrapper{:style => "font-weight:normal;font-size:14px;"}
+									#{message.sender.name}
+								.message-body-wrapper{:style => "font-weight:normal;"}
+									#{message.body}
+								-# %p #{Time.now}
+						%br
+				= form_for :message, url: reply_conversation_path(@conversation),  html: {class: "form-inline"} do |f|
+					= f.text_area :body, :class => 'form-control', :placeholder => 'Say something nice'
+					= f.submit 'Reply', class: 'btn btn-primary', style: 'margin-top:20px;'
+
+	-# 	.col-lg-10
+	-# 		.panel.panel-info
+	-# 		- conversation.participants.reject{ |participant| participant == current_user }.each do |participant|
+	-# 			= link_to participant.name, participant
+	-# 		%br
+	-# 		- @conversation.messages.each do |message|
+	-# 			.user-wrapper
+	-# 				.user-profile-image{:style => "background-image:url(#{message.sender.profileavatar_url.to_s});width:50px;height:50px;"}
+	-# 				.user-profile-name{:style => "height:50px;"}
+	-# 					.sender-name-wrapper
+	-# 						#{message.sender.name}
+	-# 					.message-body-wrapper
+	-# 						#{message.body}
+	-# 					-# %p #{Time.now}
+	-# 			%br
+	-# 	= form_for :message, url: reply_conversation_path(@conversation),  html: {class: "form-inline"} do |f|
+	-# 		= f.text_area :body, :class => 'form-control', :placeholder => 'Say something nice'
+	-# 		= f.submit 'Reply', class: 'btn btn-primary', style: 'margin-top:20px;'
