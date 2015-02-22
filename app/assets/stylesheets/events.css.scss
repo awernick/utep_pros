@@ -22,76 +22,76 @@ $back-border: darken( $back, 10% );
 
 
 @mixin flat-border-color($primary, $secondary) {
-  background: $primary;
-  border-bottom: 2px solid $secondary;
-  -webkit-box-shadow: inset 0 -2px $secondary;
-  box-shadow: inset 0 -2px $secondary;
+	background: $primary;
+	border-bottom: 2px solid $secondary;
+	-webkit-box-shadow: inset 0 -2px $secondary;
+	box-shadow: inset 0 -2px $secondary;
 }
 
 @mixin sink-flat-button() {
-  top: 1px;
-  outline: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+	top: 1px;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 .flat-button {
-  position: relative;
-  vertical-align: top;
-  width: 100%;
-  height: 50px;
-  padding: 0 20px;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-  border: 0;
-  cursor: pointer;
-  @include flat-border-color( #3498db , #2a8bcc );
+	position: relative;
+	vertical-align: top;
+	width: 100%;
+	height: 50px;
+	padding: 0 20px;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+	border: 0;
+	cursor: pointer;
+	@include flat-border-color( #3498db , #2a8bcc );
 
-  &:active {
-    @include sink-flat-button;
-  }
+	&:active {
+		@include sink-flat-button;
+	}
 
-  &.join {
-    @include flat-border-color( $join , $join-border);
+	&.join {
+		@include flat-border-color( $join , $join-border);
 
-    &:active {
-      @include sink-flat-button;
-    }
-  }
+		&:active {
+			@include sink-flat-button;
+		}
+	}
 
-  &.join {
-    @include flat-border-color( $join , $join-border);
+	&.join {
+		@include flat-border-color( $join , $join-border);
 
-    &:active {
-      @include sink-flat-button;
-    }
-  }
+		&:active {
+			@include sink-flat-button;
+		}
+	}
 
-  &.unsubscribe {
-    @include flat-border-color( $unsubscribe , $unsubscribe-border);
+	&.unsubscribe {
+		@include flat-border-color( $unsubscribe , $unsubscribe-border);
 
-    &:active {
-      @include sink-flat-button;
-    }
-  }
+		&:active {
+			@include sink-flat-button;
+		}
+	}
 
-  &.past {
-    @include flat-border-color( $past , $past-border);
+	&.past {
+		@include flat-border-color( $past , $past-border);
 
-    &:active {
-      @include sink-flat-button;
-    }
-  }
+		&:active {
+			@include sink-flat-button;
+		}
+	}
 
-  &.back {
-    @include flat-border-color( $back , $back-border);
+	&.back {
+		@include flat-border-color( $back , $back-border);
 
-    &:active {
-      @include sink-flat-button;
-    }
-  }
+		&:active {
+			@include sink-flat-button;
+		}
+	}
 }
 
 .day-of-the-week-separator {
@@ -104,19 +104,19 @@ $back-border: darken( $back, 10% );
 .event-element {
 	margin-top: -5px;
 
-    a {
-  	padding:20px;
-  	background-color: #ffffff;
-  	color: #333;
-  	line-height: 25px;
-  	margin: 5px 0;
-  	display: block;
+		a {
+		padding:20px;
+		background-color: #ffffff;
+		color: #333;
+		line-height: 25px;
+		margin: 5px 0;
+		display: block;
 
-    &:hover {
-    	background-color: #00ABC4;
-    	text-decoration: none;
-    }
-  }
+		&:hover {
+			background-color: #00ABC4;
+			text-decoration: none;
+		}
+	}
 }
 
 .event-element-title {
@@ -143,10 +143,10 @@ $back-border: darken( $back, 10% );
 	text-decoration: none !important;
 	background-color:transparent !important;
 
-  &:hover {
-    color: #ffffff !important;
-    text-decoration: underline !important;
-  }
+	&:hover {
+		color: #ffffff !important;
+		text-decoration: underline !important;
+	}
 }
 
 .event-detail-view-counter {
@@ -157,14 +157,14 @@ $back-border: darken( $back, 10% );
 	margin-top: 20px;
 }
 .event-detail-view-counter-items-element {
-  width:50px;
-  height:50px;
-  float:left;
-  margin:3px;
-  overflow:hidden;
+	width:50px;
+	height:50px;
+	float:left;
+	margin:3px;
+	overflow:hidden;
 }
 .event-detail-view-counter-items-element img {
-    height: 100%;
+		height: 100%;
 }
 /*----------------------*/
 
@@ -174,7 +174,7 @@ $back-border: darken( $back, 10% );
 }
 .action-button-component {
 	float: left;
-  margin-left:-15px;
+	margin-left:-15px;
 }
 
 .event-detail-view-wrapper {
@@ -208,7 +208,7 @@ $back-border: darken( $back, 10% );
 }
 .load-more-events
 {
-	margin: 0 42%;
+	// margin: 0 42%;
 	margin-top: 20px;
 }
 /*---------------------*/
@@ -274,51 +274,51 @@ ul.custom-dropdown-menu {
 
 // Events from Meetup
 .shadedList {
-  list-style: none;
-  margin-left: -40px;
+	list-style: none;
+	margin-left: -40px;
 }
 .shadedList>li {
-  padding: 8px;
-  margin-bottom: 1px;
+	padding: 8px;
+	margin-bottom: 1px;
 }
 .pintop, .pintop>.ffbox-fix, .pintop>.ffbox-flex, .topicPicker-selectionList .pintop>.topicView-action, .topicPicker-selectionList .topicPicker-topicItem .pintop>.touchList-item-actionIcon {
-  vertical-align: top;
+	vertical-align: top;
 }
 .ffbox {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  display: table;
-  table-layout: auto;
-  width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	display: table;
+	table-layout: auto;
+	width: 100%;
 }
 .ffbox-fix {
-  font-size: 20px;
-  padding-right:5px;
+	font-size: 20px;
+	padding-right:5px;
 }
 .ffbox-fix, .ffbox-flex, .topicPicker-selectionList .topicPicker-topicItem .touchList-item-actionIcon, .topicPicker-selectionList .topicView-action {
-  display: table-cell;
-  vertical-align: middle;
+	display: table-cell;
+	vertical-align: middle;
 }
 .pintop, .pintop>.ffbox-fix, .pintop>.ffbox-flex, .topicPicker-selectionList .pintop>.topicView-action, .topicPicker-selectionList .topicPicker-topicItem .pintop>.touchList-item-actionIcon {
-  vertical-align: top;
+	vertical-align: top;
 }
 
 
 // Event List Details CSS
 ul.event-details-list {
-  list-style:none;
-  margin-left:-35px;
+	list-style:none;
+	margin-left:-35px;
 }
 li.event-details-item {
-  vertical-align:top;
-  margin-bottom: 10px;
+	vertical-align:top;
+	margin-bottom: 10px;
 }
 li.event-details-item .event-icon-box {
-  width:20px;
-  display: table-cell;
+	width:20px;
+	display: table-cell;
 }
 li.event-details-item .event-text-box {
-  display: table-cell;
-  font-size:14px;
+	display: table-cell;
+	font-size:14px;
 }

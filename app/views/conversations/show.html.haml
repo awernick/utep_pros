@@ -22,10 +22,11 @@
 						.user-wrapper{:style => "height:50px;"}
 							-# .user-profile-image{:style => "background-image:url(#{message.sender.profileavatar_url.to_s});width:50px;height:50px;"}
 							.user-profile-name{:style => "height:50px;"}
-								.sender-name-wrapper{:style => "font-weight:normal;font-size:14px;"}
+								.sender-name-wrapper{:style => "font-weight:bold;font-size:14px;color:#999;"}
 									#{message.sender.name}
 								.message-body-wrapper{:style => "font-weight:normal;"}
 									#{message.body}
+									%hr
 								-# %p #{Time.now}
 						%br
 				= form_for :message, url: reply_conversation_path(@conversation),  html: {class: "form-inline"} do |f|
