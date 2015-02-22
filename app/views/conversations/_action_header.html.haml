@@ -1,0 +1,20 @@
+.container.admin-action-button
+	.btn-group.btn-group-justified{"aria-label" => "Justified button group", :role => "group"}
+		%a.btn.btn-default{:href => "/dashboard", :role => "button"}
+			%span.action-button
+				%i.fa.fa-list-alt
+				%span.glyphicon-class Activities
+
+		%a.btn.btn-default{:href => "/dashboard/calendar", :role => "button"}
+			%span.action-button
+			%i.fa.fa-calendar
+			%span.glyphicon-class Calendar
+
+		%a.btn.btn-default{:href => conversations_path, :role => "button"}
+			%span.action-button
+			%i.fa.fa-inbox
+			%span.glyphicon-class Messages
+		%a.btn.btn-default{:href => "/dashboard/profile", :role => "button"}
+			%span.action-button
+			%i.fa.fa-user
+			%span.glyphicon-class Profile

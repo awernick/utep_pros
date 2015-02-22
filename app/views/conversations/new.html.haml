@@ -1,3 +1,30 @@
-.container
-  %h1 Start Conversation
-  = render 'form'
+- provide(:title, "Start a conversation.")
+
+.container.admin-dashboard-header
+  %h3 Mailbox
+= render 'action_header'
+
+.container{:style => "padding-top:40px;"}
+  .row
+    .col-lg-2.col-md-12
+      .mb-boxes
+        .panel.panel-default.m0
+          .list-group
+            = link_to conversations_path, :class => "list-group-item" do
+              %span{:class => "fa fa-arrow-left"}
+              Back
+    .col-lg-10
+      .panel.panel-info
+        .panel-heading Inbox
+        .panel-body
+          = render 'form'
+          -# - @conversations.sort_by{ |conversation| conversation.last_message.updated_at }.reverse!.each do |conversation|
+          -#   - new_msg = conversation.last_message.is_unread?(current_user)
+          -#   = link_to conversation_path(conversation), :class => ["conversation-wrapper-link", ("new-msg-background" if new_msg) ] do
+          -#     .conversation-wrapper
+          -#       %h3
+          -#         = conversation.subject
+          -#         - if new_msg
+          -#           %span.label.label-default New
+          -#       %p= truncate(conversation.last_message.body)
+          -#     .conversation-time-wrapper= conversation.updated_at.strftime("%A, %B %e, %Y %I:%M %p")
