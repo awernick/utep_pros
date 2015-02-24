@@ -9,12 +9,12 @@
 	.col-lg-9
 		.panel.panel-info
 			.panel-heading
-				"Whats going on, #{current_user.name} this is the latest."
+				Whats going on, #{current_user.name} this is the latest.
 			.panel-body
 				%ul{ class: 'list-group' }
 					%li{ class: 'list-group-item' }
-						.list-group-item-title Event Created
-						.list-group-item-info-wrapper By Alan Wernick
+						-# .list-group-item-title Event Created
+						-# .list-group-item-info-wrapper By Alan Wernick
 					- subscription_activities = PublicActivity::Activity.order('created_at desc').where(recipient_id: current_user.subscribed_events, trackable_type: 'Subscription')
 					- event_activities = PublicActivity::Activity.order("created_at desc").where(:recipient_id => current_user.id)
 					- @activities = subscription_activities + event_activities
@@ -31,14 +31,12 @@
 							.event-element-title= event.name
 							.event-element-date
 							#{parse_time_accounting_for_timezone(event.starttime).strftime("%A, %B %e, %Y")}
+					- if current_user.owns?(event.id)
 						.dashboard-event-actions
 							.admin-action-button
 								.btn-group.btn-group-justified{"aria-label" => "Justified button group", :role => "group"}
-									%a.btn.btn-default{:href => "#", :role => "button"} Edit Event
-									%a.btn.btn-default{:href => "#", :role => "button"} Delete Event
-
-
-
+									= link_to 'Edit Event', edit_event_path(event.id), :class => "btn btn-default"
+									= link_to 'Delete Event', event, :method => :delete, :data => { :confirm => 'Are you sure you want to delete this event?' }, :class =>"btn btn-default"
 
 	.col-lg-3
 		.panel.panel-primary

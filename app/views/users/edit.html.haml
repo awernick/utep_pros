@@ -1,8 +1,11 @@
 - provide(:title, "Editing #{current_user.name}")
+.container.admin-dashboard-header
+	%h3 My Profile
+= render './layouts/dashboard_action_header'
 .container
-  .row
-    .col-sm-6
-      .panel.panel-info
-        .panel-heading Editing #{current_user.name}
-        .panel-body
-          = render 'form'
+	.row
+		.col-sm-6
+			.panel.panel-info
+				.panel-heading Editing #{current_user.name}
+				.panel-body
+					= render 'form'
