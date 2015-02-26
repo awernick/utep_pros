@@ -31,6 +31,7 @@ class User < ActiveRecord::Base
 		user ||= User.find_by(username: sso_response[:user_name])
 
 		unless user
+			user = User.new
 			user.name = sso_response[:full_name]
 			user.username = sso_response[:user_name]
 			user.slug = sso_response[:user_name]
